@@ -1,0 +1,8 @@
+main:
+    - { url: '/home', text: 'Home' }
+    - { url: '/about', text: 'About' }
+    - { url: '/indoorrange', text: 'Indoor Range' }
+    - { url: '/sell', text: 'Sell-or-Trade' }
+    - { url: '/auctions', text: 'Auctions & Transfers' }
+    - { url: '/events', text: 'Events' }
+    - { url: '/contacts', text: 'Contacts' }
