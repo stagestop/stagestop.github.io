@@ -15,7 +15,7 @@ permalink: /sell/
 We will make a cash offer for your used firearms on the spot, or we can accept it on consignment and post on our Online Auction service at GunBroker.com
 
 ### How does it work?
-Simply bring your gun (or gun collection) to one of our retail locations at Stage Stop Gun Shop, 5094 Jessie Street, Ste. A.,  Mariposa, CA  95338 or Stage Stop Gun Shop, 1175 Broadway Ave.,  Atwater, CA  95301.
+Simply bring your gun (or gun collection) to one of our retail locations at Stage Stop Gun Shop, 5094 Jessie Street, Ste. A.,  Mariposa, CA  95338 or Stage Stop Gun Shop, 601 Blvd.,  Atwater, CA  95301.
 
 We will sit down with you to appraise the firearm(s) and make you a cash offer for your firearm(s) or we’ll help you determine a fair starting price for a consignment. Consignments are listed on <a href="http://www.gunbroker.com/Auction/BI.aspx?IncludeSellers=2068753" target="_blank">GunBroker.com</a> and sell to the highest bidder.
 
