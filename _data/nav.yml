@@ -5,4 +5,4 @@ main:
     - { url: '/sell', text: 'Sell-or-Trade' }
     - { url: '/auctions', text: 'Auctions & Transfers' }
     - { url: '/events', text: 'Events' }
-    - { url: '/contact.html', text: 'Contacts' }
+    - { url: '/contact', text: 'Contacts' }

@@ -4,15 +4,12 @@
 @import '../_sass/syntax-highlighting';
 
 
-$scotch-primary: rgb(255, 69, 69);
-$scotch-secondary: #FF7B7B;
 
-%oswald { font-family: 'Oswald', sans-serif; }
-%roboto { font-family: 'Roboto Condensed', sans-serif; }
+
+
 
 
 body {
-    @extend %roboto;
     -webkit-font-smoothing: antialiased;
 }
 
@@ -22,6 +19,8 @@ body, html {
     width: 100%;
     margin: 0px;
     background-color: rgba(0, 0, 0, 1);
+    font-family: 'Alegreya', serif;
+    color: rgba(255, 255, 255, 1);
     overflow-x: hidden;
 }
 
@@ -209,13 +208,43 @@ h5 {
     outline: none;
 }
 
-a:hover {
-    width: 250px;
-    height: auto;
-    background-color: rgba(244, 123, 32, 1);
+a {
+    background-color: transparent;
+    text-decoration: none;
+    color: rgba(244, 123, 32, 1);
     outline: none;
+    transition: background-color .35s ease;
+    transition: color 1s ease;
 }
 
+a:hover {
+    background-color: rgba(244, 123, 32, 1);
+    text-decoration: none;
+    color: rgba(255, 255, 255, 1);
+    
+}
+
+a:visited {
+    background-color: transparent;
+    text-decoration: line-through;
+    color: rgba(255, 255, 255, 1);
+}
+
+/*!=============EMAIL STYLE=================*/
+
+.fldsz {
+    position: relative;
+    width: 25%;
+    min-width: 250px;
+    height: auto;
+    margin-bottom: 4px;
+}
+
+input {
+    color: rgba(100, 100, 100, 1)
+}
+
+/*!=============EMAIL STYLE END=================*/
 
 
 @media only screen and (max-width : 991px) {
