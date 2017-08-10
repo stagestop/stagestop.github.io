@@ -12,25 +12,25 @@
 		<h1>CONTACT US</h1>
 
 		<div class="row">
-			<div class="col-lg-6">
+			<div class="col-lg-6 animatedParent">
 
 				<form  action="//formspree.io/email@domain.com" method="POST">
-					<fieldset>
+					<fieldset class="animated fadeInLeft">
 						<label class="fldsz" for="name">Name</label><br>
 						<input class="fldsz" type="text" name="name" placeholder="Name" id="name" required>
 					</fieldset>
-					<fieldset>
+					<fieldset class="animated fadeInRight">
 						<label class="fldsz" for="_replyto">Email</label><br>
 						<input class="fldsz" type="email" name="_replyto" placeholder="example@domain.com" id="_replyto" required>
 					</fieldset>
-					<fieldset>
+					<fieldset class="animated fadeInLeft delay-250">
 						<label class="fldsz" for="message">Message</label><br>
 						<textarea class="fldsz" name="message" rows="1" placeholder="Message" id="message" required></textarea>
 					</fieldset>
 					<input class="fldsz" class="hidden" type="text" name="_gotcha" style="display:none">
 					<input class="fldsz" class="hidden" type="hidden" name="_subject" value="Message via http://domain.com">
-					<input class="send-btn" type="submit" value="Send">
-					<input type="reset" value="Reset">
+					<input class="send-btn animated fadeInLeft" type="submit" value="Send">
+					<input class="animated fadeInRight delay-500" type="reset" value="Reset">
 				</form>
 			</div>
 			<div class="col-lg-6"><h2>Staff Contacts</h2> {{content}}</div>
