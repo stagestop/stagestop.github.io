@@ -1,0 +1,19 @@
+{% include header.html %}
+
+{% include title-group.html %}
+
+<div class="row fullscreen">
+    <div class="col-lg-1"></div>
+    <div class="col-lg-10">
+        <div class="gallerynav">
+		    <ul>
+                {% for post in site.posts %}
+                <li><a href="{{ post.url }}">{{ post.content | first_image | truncatewords:30 }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+    <div class="col-lg-1"></div>
+</div>
+
+{% include footer.html %}

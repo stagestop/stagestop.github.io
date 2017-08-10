@@ -4,11 +4,6 @@
 @import '../_sass/syntax-highlighting';
 
 
-
-
-
-
-
 body {
     -webkit-font-smoothing: antialiased;
 }
@@ -20,14 +15,19 @@ body, html {
     margin: 0px;
     background-color: rgba(0, 0, 0, 1);
     font-family: 'Alegreya', serif;
-    color: rgba(255, 255, 255, 1);
     overflow-x: hidden;
 }
 
 .splash {
     position: relative;
     width: 1920px;
-    height: 100vh;
+    height: 99vh;
+}
+
+.fullscreen {
+    position: relative;
+    width: 100%;
+    height: 99vh;
 }
 
 .bg {
@@ -40,71 +40,56 @@ body, html {
 
 .masthead {
     position: fixed;
-    width: 800px;
-    height: 100vh;
-    top: 90px;
-    left: 90px;
-    background: url('../graphics/stagestop-logo-masthead-lg.png') left top no-repeat;
+    width: 100%;
+    height: 211px;
+    top: 20px;
+    background: url('../graphics/stagestop-logo-masthead-lg.png') center top no-repeat;
     background-size: 597px 211px; 
     margin-top: 0px;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 0px;
-    z-index: 101;
+    z-index: 100;
 }
 
 .cover {
     position: relative;
     height: auto;
-    background-color: transparent;
-    background-image: url();
-    background-repeat: no-repeat;
-    background-position: right bottom;
-    background-size: 100% auto;
 }
 
 .section {
     position: relative;
     height: auto;
     min-height: 99vh;
-    background-color: transparent;
-    background-image: url();
-    background-repeat: no-repeat;
-    background-position: center bottom;
-    padding-top: 100px;
+    padding-top: 250px;
     padding-left: 15px;
     padding-right: 15px;
     padding-bottom: 25px;
 }
 
+
 .section div {
     position: relative;
-    background-color: inherit;
     padding-left: 10px;
     padding-right: 10px;
     padding-bottom: 25px;
 }
 
-.section p, ul, h1, h2, h3, h4, h5 {
+.section p, .section ul, .section h1, .section h2, .section h3, .section h4, .section h5 {
     position: relative;
     width: 100%;
     min-width: 290px;
     max-width: 800px;
     margin-left: auto;
     margin-right: auto; 
-    font-size: 14pt;
 }
 
 .section ul {
-    position: relative;
-    width: 100%;
-    min-width: 200px;
-    max-width: 800px;
-    padding-right: 25px;
     font-weight: normal;
     font-size: 12pt;
     text-indent: 0px;
     color: rgba(255, 255, 255, 1);
+    
 }
 
 .section li {
@@ -120,6 +105,7 @@ body, html {
     padding-top: 15px;
     background-color: rgba(0, 0, 0, .8);
     border-top: dashed 1px rgba(244, 123, 32, 1);
+    font-size: 12px;
     text-align: center;
     z-index: 99;
 }
@@ -129,13 +115,25 @@ p {
     font-family: 'Alegreya', serif;
     font-size: 14pt;
     text-indent: 10px;
-    color: rgba(255, 255, 255, 1)
+    color: rgba(255, 255, 255, 1);
+}
+
+a {
+    width: 100vw;
+    font-size: 18px;
+    color: rgba(244, 123, 32, 1);
+}
+
+a:hover {
+    width: 100vw;
+    font-size: 18px;
+    color: rgba(255, 255, 255, 1);
+    text-decoration: none;
 }
 
 hr {
     width: 70%;
     height: 100px;
-    background-color: transparent;
     background-image: url('../graphics/hr1.png');
     background-repeat: no-repeat;
     background-position: center;
@@ -179,7 +177,7 @@ h4 {
 }
 
 h5 {
-    position: relative;;
+    position: relative;
     font-family: 'Alegreya', serif;
     font-weight: normal;
     font-size: 16pt;
@@ -188,47 +186,73 @@ h5 {
     color: rgba(244, 123, 32, 1);
 }
 
+/*!=============NAVIGATION STYLES=================*/
 .navbar {
     width: 250px;
     height: 100vh;
     top: 0px;
     background-color: rgba(0, 0, 0, .8);
-    padding-top: 30vh;
+    padding-top: 5vh;
     border-right: dashed 1px rgba(244, 123, 32, 1);
-    z-index: 100;
+    z-index: 101;
     overflow-x: hidden;
-    cursor: pointer;
 }
 
-.navbar a {
-    font-family: 'Alegreya', serif;
-    width: 250px;
+
+.gallerynav {
     height: auto;
-    background-color: transparent;
-    outline: none;
+    margin-top: 200px;
+    margin-left: 100px;
 }
 
-a {
-    background-color: transparent;
-    text-decoration: none;
-    color: rgba(244, 123, 32, 1);
-    outline: none;
-    transition: background-color .35s ease;
-    transition: color 1s ease;
+.gallerynav li {
+    margin: 5px;
+    right: 0px;
+    display: inline;
+    float: left;
 }
 
-a:hover {
-    background-color: rgba(244, 123, 32, 1);
-    text-decoration: none;
-    color: rgba(255, 255, 255, 1);
-    
+.gallerynav img {
+    width: 300px;
 }
 
-a:visited {
-    background-color: transparent;
-    text-decoration: line-through;
-    color: rgba(255, 255, 255, 1);
+.gallerynav p {
+    position: relative;
+    width: 300px;
+    height: auto;
+    font-size: 12px;
+
 }
+
+/*!=============END NAVIGATION=================*/
+
+/*!=============GUN DISPLAY STYLES=================*/
+
+.gundisplay {
+    position: relative;
+    width: 100%;
+    height: auto;
+    min-height: 99vh;
+    background-color: rgba(0, 0, 0, .8);
+    z-index: 102;
+}
+
+.gundisplay img {
+    position: relative;
+    width: 100%;
+    height: auto;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.gundisplay p {
+    position: relative;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*!=============END GUN DISPLAY STYLES=================*/
 
 /*!=============EMAIL STYLE=================*/
 
@@ -272,6 +296,7 @@ textarea {
 /*!=============EMAIL STYLE END=================*/
 
 
+
 @media only screen and (max-width : 991px) {
 pre {
         margin-left: 0;
@@ -308,13 +333,22 @@ pre {
 }
 
 .navbar {
-    width: 100%;
+    width: 100vw;
     height: auto;
-    top: 0px;
-    background-color: rgba(0, 0, 0, .95);
-    padding-top: 0vh;
+    background-color: rgba(0, 0, 0, .8);
+    padding-top: 0px;
     border-bottom: dashed 1px rgba(244, 123, 32, 1);
     border-right: none;
+    z-index: 101;
+}
+
+.navbar button {
+    border: solid 1px rgba(244, 123, 32, 1);
+    margin-right: 30px;
+}
+
+.icon-bar {
+    background-color: rgba(244, 123, 32, 1);
 }
 
 .cover {
@@ -340,7 +374,7 @@ pre {
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 0px;
-    z-index: 100;
+    z-index: 99;
 }
 
 .footer {
