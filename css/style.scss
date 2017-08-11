@@ -20,8 +20,13 @@ body, html {
 
 .splash {
     position: relative;
-    width: 1920px;
-    height: 99vh;
+    width: 100%;
+    height: 100vh;
+    background-image: url('../graphics/stagestop-splash-bg.jpg');
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: 100vw auto;
+    background-attachment: fixed;
 }
 
 .fullscreen {
@@ -313,6 +318,48 @@ textarea {
 
 /*!=============EMAIL STYLE END=================*/
 
+/*!=============SPLASH STYLES=================*/
+
+.spacer {
+    position: relative;
+    width: 100%;
+    height: 33vh;
+}
+
+.spacer-black {
+    position: relative;
+    width: 100%;
+    height: 33vh;
+    max-height: 33vh;
+    background-color: rgba(0, 0, 0, .8);
+    padding-top: 40px;
+    border-top: dashed .5px rgba(244, 123, 32, 1);
+    border-bottom: dashed .5px rgba(244, 123, 32, 1);
+    overflow: hidden;
+}
+
+.logo {
+    position: relative;
+    width: 100%;
+    height: 211px;
+    background: url('../graphics/stagestop-logo-masthead-lg.png') center top no-repeat;
+    background-size: 597px 211px; 
+    margin-top: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0px;
+}
+
+.tagline {
+    position: relative;
+    width: 100%;
+    margin: 10px;
+    font-size: 24px;
+    text-align: center;
+    color: rgba(244, 123, 32, 1);
+}
+
+/*!=============END SPLASH STYLES=================*/
 
 
 @media only screen and (max-width : 991px) {
