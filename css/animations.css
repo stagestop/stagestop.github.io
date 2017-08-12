@@ -6,9 +6,9 @@
 
 
 .animated { 
-    -webkit-animation-duration: 1s;
-	-moz-animation-duration: 1s;
-    animation-duration: 1s; 
+    -webkit-animation-duration: .45s;
+	-moz-animation-duration: .45s;
+    animation-duration: .45s; 
     -webkit-animation-fill-mode: both; 
     animation-fill-mode: both; 
 }
