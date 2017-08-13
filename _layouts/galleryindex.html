@@ -7,7 +7,7 @@
         <div class="gallerynav">
 		    <ul>
                 {% for post in site.posts %}
-                <li><a href="{{ post.url }}">{{ post.content | first_image | truncatewords:30 }}</li>
+                <li><a href="{{ post.url }}">{{ post.content | first_image | truncatewords:15 }}</li>
                 {% endfor %}
             </ul>
         </div>
