@@ -231,32 +231,52 @@ img {
     color: rgba(0, 0, 0, 1);
 }
 
+.soc {
+    position: relative;
+    list-style: none;
+}
+
+.soc li {
+    position: relative;
+    margin: 5px;
+    margin-top: 12px;
+    display: inline;
+    float: left;
+}
+
+.soc img {
+    position: relative;
+    width: auto;
+    height: 25px;
+}
 
 .gallerynav {
+    position: relative;
+    width: 100%;
     height: auto;
     margin-top: 250px;
-    margin-left: 110px;
+    padding-left: 250px;
     z-index: 95;
 }
 
+.gallerynav ul {
+    position: relative;
+    width: 100%;  
+    list-style-type: none;
+}
+
 .gallerynav li {
-    margin: 5px;
-    right: 0px;
+    position: relative;
+    max-width: 300px;
     display: inline;
     float: left;
 }
 
 .gallerynav img {
-    width: 300px;
-}
-
-.gallerynav p {
     position: relative;
-    width: 300px;
-    height: auto;
-    font-size: 12px;
-
+    width: 250px;
 }
+
 
 /*!=============END NAVIGATION=================*/
 
@@ -264,26 +284,42 @@ img {
 
 .gundisplay {
     position: relative;
-    width: 100%;
-    height: auto;
-    min-height: 99vh;
+    width: 100vw;
     background-color: rgba(0, 0, 0, .8);
-    z-index: 200;
+    padding-top: 50px;
+    padding-left: 15px;
+    padding-right: 15px;
+    z-index: 300;
 }
 
 .gundisplay img {
     position: relative;
     width: 100%;
     height: auto;
-    margin-top: 25px;
+    margin-top: 0px;
     margin-bottom: 25px;
+}
+
+.gundisplay img:hover {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0px;
+    left: 0px;
+    z-index: 301;
 }
 
 .gundisplay p {
     position: relative;
     width: 100%;
+    max-width: 800px;
     margin-left: auto;
     margin-right: auto;
+}
+
+.gundisplay .closebtn {
+    position: fixed;
+    z-index: 302;
 }
 
 /*!=============END GUN DISPLAY STYLES=================*/
@@ -334,16 +370,15 @@ textarea {
 .spacer {
     position: relative;
     width: 100%;
-    height: 33vh;
+    height: 32vh;
 }
 
 .spacer-black {
     position: relative;
     width: 100%;
     height: 33vh;
-    max-height: 33vh;
     background-color: rgba(0, 0, 0, .8);
-    padding-top: 40px;
+    padding-top: 35px;
     border-top: dashed .5px rgba(244, 123, 32, 1);
     border-bottom: dashed .5px rgba(244, 123, 32, 1);
     overflow: hidden;
@@ -373,14 +408,14 @@ textarea {
 /*!=============END SPLASH STYLES=================*/
 
 
-@media only screen and (max-width : 991px) {
+@media only screen and (max-width : 990px) {
 pre {
         margin-left: 0;
         margin-right: 0;
     }
 }
 
-@media only screen and (max-width : 480px) {
+@media only screen and (max-width : 768px) {
     .tile .featurette, .topper {
         height: 300px;
     }
@@ -401,7 +436,7 @@ pre {
     }
 
 .bg {
-    background-image: url('../graphics/splash-bg.png');
+    background-image: url('../graphics/splash-bg2.jpg');
     background-repeat: no-repeat;
     background-position: center top;
     background-size: auto 100%;
@@ -427,15 +462,38 @@ pre {
     background-color: rgba(244, 123, 32, 1);
 }
 
+.gallerynav {
+    padding-left: 0px;
+}
+
+.gallerynav img {
+    position: relative;
+    width: 250px;
+    left: -10px;
+}
+
+.gundisplay img:hover {
+    position: fixed;
+    width: 100vw;
+    height: auto;
+    top: 0px;
+    left: 0px;
+    z-index: 301;
+}
+
+
 .cover {
     position: relative;
     height: auto;
     padding-top: 100px;
     background-color: transparent;
-    background-image: url();
     background-repeat: no-repeat;
     background-position: right bottom;
     background-size: 100% auto;
+}
+
+.section {
+    padding-top: 130px;
 }
 
 .masthead {
