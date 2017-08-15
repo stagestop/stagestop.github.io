@@ -70,6 +70,7 @@ body, html {
     position: relative;
     max-width: 960px;
     height: auto;
+    top: 0px;
     min-height: 99vh;
     background-color: rgba(0, 0, 0, .3);
     padding-top: 250px;
@@ -369,7 +370,7 @@ img {
 /*!=============END GUN DISPLAY STYLES=================*/
 
 /*!=============HERO=================*/
-#mainslide {
+.hero {
     position: fixed;
     width: 100%;
     max-width: 710px;
@@ -380,7 +381,7 @@ img {
 }
 
 .carousel-indicators {
-    top: 0px !important;
+    top: 0px;
     margin-top: 10px;
 
 }
@@ -548,21 +549,27 @@ pre {
 .cover {
     position: relative;
     height: auto;
-    padding-top: 100px;
+    padding-top: 0px;
     background-color: transparent;
     background-repeat: no-repeat;
     background-position: right bottom;
     background-size: 100% auto;
 }
 
-#mainslide {
+.hero {
     position: relative;
     width: 100%;
     max-width: 800px;
     min-width: 0px;
-    height: 99vh;
+    height: auto;
     top: 0px;
     left: 0px;
+}
+
+.carousel-indicators {
+    position: relative;
+    bottom: 0px;
+
 }
 
 .masthead {
@@ -581,7 +588,17 @@ pre {
 }
 
 .section {
+    position: relative;
+    max-width: 960px;
+    height: auto;
+    top: 0px;
+    min-height: 99vh;
+    background-color: rgba(0, 0, 0, .3);
     padding-top: 100px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 25px;
+    z-index: 1;
 }
 
 
