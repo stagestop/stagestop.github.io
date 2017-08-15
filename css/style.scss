@@ -123,8 +123,13 @@ body, html {
     position: relative;
     width: 100%;
     height: 200px;
+    background-image: url('/graphics/stagestoplogo-minified.png');
+    background-position: center top;
+    background-repeat: no-repeat;
     margin-left: auto;
     margin-right: auto;
+    clear: both;
+    z-index: 1;
 }
 
 .footer {
@@ -288,11 +293,12 @@ img {
     height: auto;
     margin-top: 250px;
     padding-left: 250px;
-    z-index: 95;
+    z-index: 1;
 }
 
 .gallerynav p {
     font-size: 14px;
+    margin: 5px;
 }
 
 .gallerynav ul {
