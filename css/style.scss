@@ -377,8 +377,6 @@ img {
     height: 99vh;
     top: 0px;
     left: 250px;
-    bottom: 0px;
-    background-color: rgba(244, 123, 32, 1);
 }
 
 .carousel-indicators {
@@ -555,6 +553,16 @@ pre {
     background-repeat: no-repeat;
     background-position: right bottom;
     background-size: 100% auto;
+}
+
+#mainslide {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    min-width: 0px;
+    height: 99vh;
+    top: 0px;
+    left: 0px;
 }
 
 .masthead {
