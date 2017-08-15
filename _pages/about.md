@@ -13,3 +13,5 @@ In 2011, Stage Stop Gun Shop found its first home in the historic town of Maripo
 
 # OUR MISSION
 Stage Stop Gun Shop’s mission is to provide competitive pricing, a great selection and excellent customer service.  In the effort to achieve these goals, they will continue to add products and services to better serve their customers.
+
+<hr>
