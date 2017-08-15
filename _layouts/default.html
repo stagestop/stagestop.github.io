@@ -5,7 +5,37 @@
 {% include title-group.html %}
 		
 		<div class="row animatedParent">
-    		<div class="col-lg-6 cover animated fadeInLeft"></div>
+    		<div class="col-lg-6 cover">
+					<div id="mainslide" class="carousel slide" data-ride="carousel"> 
+							<!-- indicators -->
+							<ol class="carousel-indicators">
+							   <li data-target="#mainslide" data-slide-to="0" class="active"></li>
+							   <li data-target="#mainslide" data-slide-to="1" ></li>
+							   <li data-target="#mainslide" data-slide-to="2" ></li>
+							   <li data-target="#mainslide" data-slide-to="3" ></li>
+							</ol>
+							 
+							 <!--slide wrapper -->
+							 <div class="carousel-inner" role="listbox">
+							 
+									 <div class="item active">
+										 <img src="/images/hero/hero1.jpg" alt"slide">
+									 </div>
+								 
+									 <div class="item">
+										 <img src="/images/hero/hero1.jpg" alt"slide">
+									 </div>
+								 
+									 <div class="item">
+										 <img src="/images/hero/hero1.jpg" alt"slide">
+									 </div>
+								 
+									 <div class="item">
+										 <img src="/images/hero/hero1.jpg" alt"slide">
+									 </div>      
+							 </div>
+					 </div>
+			</div>
 
     		<div class="col-lg-6 section animated fadeInRight">
 				  {{ content }}

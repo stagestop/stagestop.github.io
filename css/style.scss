@@ -68,6 +68,7 @@ body, html {
 
 .section {
     position: relative;
+    max-width: 960px;
     height: auto;
     min-height: 99vh;
     background-color: rgba(0, 0, 0, .3);
@@ -366,6 +367,26 @@ img {
 }
 
 /*!=============END GUN DISPLAY STYLES=================*/
+
+/*!=============HERO=================*/
+#mainslide {
+    position: fixed;
+    width: 100%;
+    max-width: 710px;
+    min-width: 350px;
+    height: 99vh;
+    top: 0px;
+    left: 250px;
+    bottom: 0px;
+    background-color: rgba(244, 123, 32, 1);
+}
+
+.carousel-indicators {
+    top: 0px !important;
+    margin-top: 10px;
+
+}
+/*!=============END HERO=================*/
 
 /*!=============EMAIL STYLE=================*/
 
