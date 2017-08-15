@@ -22,29 +22,59 @@ According to the Archery Trade Association, 23.8 million Americans enjoyed arche
 
 <hr>
 
-# STORE HOURS:
+<!--DO NOT TOUCH THE CODE-->
+  <div class="storeinfo">
 
-## Atwater
-Monday - Friday  
+
+<h2>
+
+<!--EDITABLE-->STORE HOURS:
+
+</h2>
+
+ <h2>
+<!--EDITABLE-->Atwater
+
+ </h2>
+ <p>
+
+<!--EDITABLE-->
+Monday - Friday
 10:00am - 8:00pm  
 Sat-Sun  
 10:00am-6:00pm  
 
-601 Atwater Blvd. Atwater, CA  95301  
-Phone: (209) 358-4867  
-Fax: (209) 358-4863    
+<!--EDITABLE-->
+601 Atwater Blvd. Atwater, CA  95301 <br> 
+Phone: (209) 358-4867 <br> 
+Fax: (209) 358-4863   <br> 
 
-## Mariposa
+</p>
+<h2>
+<!--EDITABLE-->Mariposa
+
+</h2>
+
+<p>
+
+<!--EDITABLE-->
 Tuesday-Friday  
 10:00am - 6:00pm  
 Saturday 10-5:30  
-Closed Sunday Monday  
-   
-5094 Jessie Street, Ste. A Mariposa, CA 95338  
-Phone: (209) 966-3777  
-Fax: (209) 966-3888  
+Closed Sunday Monday 
 
-<hr>
+<!--EDITABLE-->  
+5094 Jessie Street, Ste. A Mariposa, CA 95338  <br>
+Phone: (209) 966-3777  <br>
+Fax: (209) 966-3888  <br>
+
+</p>  
+
+
+</div>
+  <hr>
+
+
       
         
 
