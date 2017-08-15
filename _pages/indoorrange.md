@@ -11,4 +11,4 @@ Military (Retired & inactive/honorable discharge and active U.S. Armed services)
 (Correctional Peace Officer) 10% off* of our annual membership packages. 
          
 ## Seasoned Shooters
-For folks 62 years of age or older. 20% off* all membership packages.
+For folks 62 years of age or older. 10% off* all membership packages.
