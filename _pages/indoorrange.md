@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: range-default
 title: Indoor Range
 permalink: /indoorrange/
 ---
