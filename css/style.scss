@@ -381,10 +381,10 @@ img {
 }
 
 .carousel-indicators {
-    top: 0px;
-    margin-top: 10px;
-
+    bottom: 0px !important;
+    margin-bottom: 200px;
 }
+
 /*!=============END HERO=================*/
 
 /*!=============EMAIL STYLE=================*/
@@ -567,9 +567,8 @@ pre {
 }
 
 .carousel-indicators {
-    position: relative;
-    bottom: 0px;
-
+    bottom: 0px !important;
+    margin-bottom: 20px;
 }
 
 .masthead {
