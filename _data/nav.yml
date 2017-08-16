@@ -1,9 +1,9 @@
 main:
-    - { url: '/home', text: 'Home' }
-    - { url: '/about', text: 'About' }
-    - { url: '/indoorrange', text: 'Indoor Range' }
+    - { url: '/home#bm', text: 'Home' }
+    - { url: '/about#bm', text: 'About' }
+    - { url: '/indoorrange#bm', text: 'Indoor Range' }
     - { url: '/featured', text: 'Featured Guns' }
-    - { url: '/sell', text: 'Sell-or-Trade' }
-    - { url: '/auctions', text: 'Auctions & Transfers' }
-    - { url: '/events', text: 'Events' }
-    - { url: '/contact', text: 'Contacts' }
+    - { url: '/sell#bm', text: 'Sell-or-Trade' }
+    - { url: '/auctions#bm', text: 'Auctions & Transfers' }
+    - { url: '/events#bm', text: 'Events' }
+    - { url: '/contact#bm', text: 'Contacts' }
