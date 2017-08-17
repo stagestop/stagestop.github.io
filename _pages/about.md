@@ -23,7 +23,8 @@ The Atwater location construction was completed in July 2017.
 - 20 lane indoor shooting range
 - 6 lane archery range
 - Two classrooms
-- VIP room 
+- VIP room  
+
 All are vailable to rent for events. 
 
 <hr>

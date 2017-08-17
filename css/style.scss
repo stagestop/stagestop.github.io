@@ -324,6 +324,24 @@ img {
     margin-top: 10px;
 }
 
+.rangegallery img {
+    width: 150px;
+    height: auto;
+    margin: 10px;
+    transition: all .35s ease-in-out;
+}
+
+.rangegallery img:active {
+    position: fixed;
+    width: 400px;
+    height: auto;
+    right: 25vh;
+    top: 40vh;
+    margin: 10px;
+    clear: both;
+    z-index: 200;
+}
+
 
 /*!=============END NAVIGATION=================*/
 
