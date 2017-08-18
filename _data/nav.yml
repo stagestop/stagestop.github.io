@@ -1,9 +1,28 @@
-main:
-    - { url: '/home#bm', text: 'Home' }
-    - { url: '/about#bm', text: 'About' }
-    - { url: '/indoorrange#bm', text: 'Indoor Range' }
-    - { url: '/featured', text: 'Featured Guns' }
-    - { url: '/sell#bm', text: 'Sell-or-Trade' }
-    - { url: '/auctions#bm', text: 'Auctions & Transfers' }
-    - { url: '/events#bm', text: 'Events' }
-    - { url: '/contact#bm', text: 'Contacts' }
+
+- title: "Home"
+  href: "/home/"
+
+- title: "About"
+  href: "/about/"
+
+- title: "Indoor Range"
+  subcategories:
+    - subtitle: "Shooting Range"
+      subhref: "#"
+    - subtitle: "Archery Range"
+      subhref: "#"
+
+- title: "Featured Guns"
+  href: "/featured/"
+
+- title: "Sell & Trade"
+  href: "/sell/"
+
+- title: "Auctions & Transfers"
+  href: "/auctions/"
+
+- title: "Events"
+  href: "/events/"
+
+- title: "Contact"
+  href: "/contact/"

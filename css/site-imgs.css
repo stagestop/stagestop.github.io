@@ -1,0 +1,29 @@
+
+
+.hero1 {
+    background-image: url('../images/hero/hero1.jpg');
+    background-repeat: no-repeat;
+    background-position: top left;
+    background-size: 100% auto;;
+}
+
+.hero2 {
+    background-image: url('../images/hero/hero2.jpg');
+    background-repeat: no-repeat;
+    background-position: top left;
+    background-size: 100% auto;;
+}
+
+.hero3 {
+    background-image: url('../images/hero/hero3.jpg');
+    background-repeat: no-repeat;
+    background-position: top left;
+    background-size: 100% auto;;
+}
+
+.hero4 {
+    background-image: url('../images/hero/hero4.jpg');
+    background-repeat: no-repeat;
+    background-position: top left;
+    background-size: 100% auto;;
+}
