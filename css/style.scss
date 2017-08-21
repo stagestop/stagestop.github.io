@@ -47,6 +47,10 @@ body, html {
     background-attachment: fixed;
 }
 
+.rowbg {
+    background-color: rgba(0, 0, 0, .3);
+}
+
 .masthead {
     position: fixed;
     width: 100%;
@@ -61,30 +65,26 @@ body, html {
     z-index: 150;
 }
 
-.cover {
-    position: relative;
-    height: auto;
-    box-shadow: 5px 20px, 10px;
-    z-index: 2;
+.coverspacer {
+    width: 250px;
 }
 
-.hero-box {
-    width: 100%;
-    height: 99vh;
+.cover {
+    position: relative;
+    width: 710px;
+    min-height: 100vh;
+    padding-left: 30px;
 }
 
 .section {
     position: relative;
-    width: 940px;
     top: 0px;
     right: 0px;
     min-height: 99vh;
-    background-color: rgba(0, 0, 0, .3);
     padding-top: 250px;
     padding-left: 15px;
     padding-right: 15px;
     padding-bottom: 25px;
-    z-index: 1;
 }
 
 
@@ -99,7 +99,7 @@ body, html {
     position: relative;
     width: 90%;
     min-width: 290px;
-    max-width: 800px;
+    max-width: 600px;
     margin-left: auto;
     margin-right: auto; 
 }
@@ -406,21 +406,32 @@ img {
 
 /*!=============HERO=================*/
 .hero {
-    position: fixed;
+    position: relative;
     width: 100%;
-    max-width: 710px;
-    min-width: 350px;
-    height: 99vh;
-    top: 0px;
-    left: 250px;
+    height: 1080px;
+    overflow: hidden;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    box-shadow: black 10px 10px 40px;
+}
+
+.hero img {
+    width: 710px;
+    height: auto;
+    bottom: 0px;
 }
 
 .carousel-indicators {
     bottom: 0px !important;
-    margin-bottom: 200px;
+    margin-bottom: 325px;
 }
 
 /*!=============END HERO=================*/
+
+.rangeinfo {
+    width: 710px;
+    height: 400px;
+}
 
 /*!=============EMAIL STYLE=================*/
 

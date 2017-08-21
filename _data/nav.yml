@@ -6,6 +6,7 @@
   href: "/about/"
 
 - title: "Indoor Range"
+  url: "/indoorrange/"
   subcategories:
     - subtitle: "Shooting Range"
       subhref: "#"
