@@ -69,13 +69,6 @@ body, html {
     width: 250px;
 }
 
-.cover {
-    position: relative;
-    width: 710px;
-    min-height: 100vh;
-    padding-left: 30px;
-}
-
 .section {
     position: relative;
     top: 0px;
@@ -200,12 +193,13 @@ a:hover {
 }
 
 hr {
-    width: 70%;
-    height: 100px;
+    width: 100%;
+    max-width: 700px;
+    height: 150px;
     background-image: url('../graphics/hr1.png');
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 100%;
+    background-size: 100% auto;
     border: none;
     opacity: .08;
 }
@@ -269,7 +263,7 @@ img {
     width: 250px;
     height: 100vh;
     top: 0px;
-    background-color: rgba(0, 0, 0, .3);
+    background-color: rgba(0, 0, 0, .8);
     padding-top: 5vh;
     border-right: dashed 1px rgba(244, 123, 32, 1);
     z-index: 200;
@@ -422,8 +416,7 @@ img {
 .hero {
     position: relative;
     width: 100%;
-    height: 1080px;
-    left: 25px;
+    height: 768px;
     overflow: hidden;
     border-bottom-left-radius: 25px;
     border-bottom-right-radius: 25px;
@@ -431,14 +424,19 @@ img {
 }
 
 .hero img {
-    width: 710px;
+    position: relative;
+    width: 100%;
     height: auto;
-    bottom: 0px;
+    top: -500px;
+    overflow: hidden;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    box-shadow: black 10px 10px 40px;
 }
+
 
 .carousel-indicators {
     bottom: 0px !important;
-    margin-bottom: 325px;
 }
 
 /*!=============END HERO=================*/

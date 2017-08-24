@@ -3,10 +3,10 @@
   href: "/home/"
 
 - title: "About"
-  href: "/about/"
+  href: "/about/#bm"
 
 - title: "Indoor Range"
-  url: "/indoorrange/"
+  url: "/indoorrange/#bm"
   subcategories:
     - subtitle: "Shooting Range"
       subhref: "#"
@@ -14,16 +14,16 @@
       subhref: "#"
 
 - title: "Featured Guns"
-  href: "/featured/"
+  href: "/featured/#bm"
 
 - title: "Sell & Trade"
-  href: "/sell/"
+  href: "/sell/#bm"
 
 - title: "Auctions & Transfers"
-  href: "/auctions/"
+  href: "/auctions/#bm"
 
 - title: "Events"
-  href: "/events/"
+  href: "/events/#bm"
 
 - title: "Contact"
-  href: "/contact/"
+  href: "/contact/#bm"

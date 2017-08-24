@@ -5,60 +5,14 @@
 {% include title-group.html %}
 		
 		<div class="row rowbg">
+				<div id="bm" class="col-lg-12 section">
+					 {{ content }}
+				</div>
 
-			<div class="col-lg-2 coverspacer"></div>
-
-    		<div class="col-lg-4 cover">
-
-					<div id="mainslide" class="carousel slide hero" data-ride="carousel"> 
-							<!-- indicators -->
-							<ol class="carousel-indicators">
-							   <li data-target="#mainslide" data-slide-to="0" class="active"></li>
-							   <li data-target="#mainslide" data-slide-to="1" ></li>
-							   <li data-target="#mainslide" data-slide-to="2" ></li>
-							   <li data-target="#mainslide" data-slide-to="3" ></li>
-							</ol>
-							 
-							 <!--slide wrapper -->
-							 <div class="carousel-inner" role="listbox">
-							 
-									<div class="row item active">
-										 <div class="col-lg-12">
-											<img src="/images/hero/hero1.jpg" />
-										 </div>
-									</div>
-								 
-									<div class="row item">
-										<div class="col-lg-12">
-											<img src="/images/hero/hero2.jpg" />
-										</div>
-									</div>
-								 
-									<div class="row item">
-										<div class="col-lg-12">
-											<img src="/images/hero/hero3.jpg" />		
-										</div>
-									</div>
-								 
-									<div class="row item">
-										<div class="col-lg-12">
-											<img src="/images/hero/hero4.jpg" />		
-										</div>
-									</div>      
-							 </div>
-					 </div>
-
-					 <div class="col-lg-12">
-						 <div class="rangeinfo"></div>
-					 </div>
+				<div class="col-lg-12">
+					<div class="rangeinfo"></div>
+				</div>
 			</div>
 
-    		<div id="bm" class="col-lg-6 section">
-
-				  {{ content }}
-				  
-				  <div class="sectionfooter"></div>
-     		</div>
-  		</div>
 
 {% include footer.html %}
