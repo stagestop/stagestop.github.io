@@ -4,6 +4,18 @@ title: Indoor Range
 permalink: /indoorrange/
 ---
 
+
+The Atwater location construction was completed in July 2017.  
+- 18,800 sq ft facility 
+- Sales floor
+- 20 lane indoor shooting range
+- 6 lane archery range
+- Two classrooms
+- VIP room  
+
+All are vailable to rent for events.
+
+
 # INDOOR RANGE
 
 ## Hero's Discount
@@ -15,12 +27,3 @@ For folks 62 years of age or older. 10% off* all membership packages.
 
 
 <hr>
-
-
-# RANGE GALLERY
-
-![IMAGE TITLE](/images/range/img_4857.jpg) ![IMAGE TITLE](/images/range/img_4860.jpg) ![IMAGE TITLE](/images/range/img_4934.jpg) ![IMAGE TITLE](/images/range/img_4936.jpg)
-![IMAGE TITLE](/images/range/img_4939.jpg) ![IMAGE TITLE](/images/range/img_4940.jpg) ![IMAGE TITLE](/images/range/img_4961.jpg) ![IMAGE TITLE](/images/range/img_4971.jpg)
-![IMAGE TITLE](/images/range/img_5053.jpg) ![IMAGE TITLE](/images/range/img_5054.jpg) ![IMAGE TITLE](/images/range/img_5082.jpg)
-![IMAGE TITLE](/images/range/img_5084.jpg) ![IMAGE TITLE](/images/range/img_5174.jpg) ![IMAGE TITLE](/images/range/img_5281.jpg)
-![IMAGE TITLE](/images/range/img_5290.jpg) ![IMAGE TITLE](/images/range/img_5332.jpg) ![IMAGE TITLE](/images/range/img_5333.jpg)
