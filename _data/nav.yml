@@ -9,9 +9,9 @@
   url: "/indoorrange/#bm"
   subcategories:
     - subtitle: "Shooting Range"
-      subhref: "#"
+      subhref: "/shooting/#bm"
     - subtitle: "Archery Range"
-      subhref: "#"
+      subhref: "/archery/#bm"
 
 - title: "Featured Guns"
   href: "/featured/#bm"
@@ -24,6 +24,14 @@
 
 - title: "Events"
   href: "/events/#bm"
+
+- title: "Galleries"
+  url: "#"
+  subcategories:
+    - subtitle: "Photos"
+      subhref: "/photos/#bm"
+    - subtitle: "Videos"
+      subhref: "/videos/#bm"  
 
 - title: "Contact"
   href: "/contact/#bm"
