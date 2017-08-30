@@ -1,19 +1,8 @@
 ---
-layout: range-default
+layout: default
 title: Indoor Range
 permalink: /indoorrange/
 ---
-
-
-The Atwater location construction was completed in July 2017.  
-- 18,800 sq ft facility 
-- Sales floor
-- 20 lane indoor shooting range
-- 6 lane archery range
-- Two classrooms
-- VIP room  
-
-All are vailable to rent for events.
 
 
 # INDOOR RANGE

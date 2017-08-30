@@ -13,6 +13,9 @@
     - subtitle: "Archery Range"
       subhref: "/archery/#bm"
 
+- title: "Training"
+  href: "/training/#bm"
+
 - title: "Featured Guns"
   href: "/featured/#bm"
 

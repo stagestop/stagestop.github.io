@@ -88,13 +88,34 @@ body, html {
     padding-bottom: 25px;
 }
 
-.section p, .section ul, .section h1, .section h2, .section h3, .section h4, .section h5 {
+.section h1, .section h2, .section h4, .section h5 {
     position: relative;
     width: 90%;
     min-width: 290px;
     max-width: 600px;
     margin-left: auto;
-    margin-right: auto; 
+    margin-right: auto;
+    margin-bottom: 30px; 
+}
+
+.section ul, .section h3 {
+    position: relative;
+    width: 90%;
+    min-width: 290px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px; 
+}
+
+.section p {
+    position: relative;
+    width: 90%;
+    min-width: 290px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px; 
 }
 
 .section ul {
@@ -102,7 +123,6 @@ body, html {
     font-size: 12pt;
     text-indent: 0px;
     color: rgba(255, 255, 255, 1);
-    
 }
 
 .section li {

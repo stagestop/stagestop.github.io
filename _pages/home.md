@@ -20,6 +20,26 @@ Welcome to our state of the art indoor range.  We have a total of 20 lanes - 8 l
 # ARCHERY
 According to the Archery Trade Association, 23.8 million Americans enjoyed archery in 2015.  Those numbers have increased each year.  If you haven’t tried archery before, now is the time to check it out and see if it’s for you.  We have 3 – 20 yard lanes available for you to shoot your bow.  We also rent bows for use in our range. We will carry Mathews, PSE, Prime and a few other brands. Memberships are available in yearly or monthly packages or you can rent a lane for the hourly rate.
 
+<hr>
+
+# Atwater
+The Atwater location construction was completed in July 2017.  
+- 18,800 sq ft facility 
+- Sales floor
+- 20 lane indoor shooting range
+- 6 lane archery range
+- Two classrooms
+- VIP room  
+
+All are vailable to rent for events.
+
+# Mariposa
+- Retail store located in Mariposa off of Hwy 140 behind Stage Stop Mini Mart
+- 1500 sq ft
+- Stock of handguns, long guns, ammunition, accessories, hunting goods and archery goods
+
+<hr>
+
 
       
         
