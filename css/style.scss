@@ -52,10 +52,10 @@ body, html {
 }
 
 .masthead {
-    position: fixed;
+    position: absolute;
     width: 100%;
     height: 211px;
-    top: 20px;
+    top: -75vh;
     background: url('../graphics/stagestop-logo-masthead-lg.png') center top no-repeat;
     background-size: 597px 211px; 
     margin-top: 0px;
@@ -80,6 +80,16 @@ body, html {
     padding-bottom: 25px;
 }
 
+.section2 {
+    position: relative;
+    top: 0px;
+    left: 10px;
+    min-height: 99vh;
+    padding-top: 250px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 25px;
+}
 
 .section div {
     position: relative;
@@ -273,10 +283,6 @@ h5 {
     color: rgba(244, 123, 32, 1);
 }
 
-img {
-    box-shadow: black 1px 1px 10px;
-    
-}
 
 /*!=============NAVIGATION STYLES=================*/
 .navbar {
@@ -338,7 +344,7 @@ img {
     position: relative;
     width: 100%;
     height: auto;
-    margin-top: 250px;
+    margin-top: 50px;
     padding-left: 250px;
     z-index: 1;
 }
@@ -391,8 +397,10 @@ img {
 /*!=============GUN DISPLAY STYLES=================*/
 
 .gundisplay {
-    position: relative;
+    position: fixed;
     width: 100vw;
+    height: 100vh;
+    top: 0px;
     background-color: rgba(0, 0, 0, .8);
     padding-top: 50px;
     padding-left: 15px;
@@ -408,15 +416,6 @@ img {
     margin-bottom: 25px;
 }
 
-.gundisplay img:hover {
-    position: fixed;
-    width: 100vw;
-    height: 100vh;
-    top: 0px;
-    left: 0px;
-    z-index: 301;
-}
-
 .gundisplay p {
     position: relative;
     width: 100%;
@@ -425,9 +424,10 @@ img {
     margin-right: auto;
 }
 
-.gundisplay .closebtn {
-    position: fixed;
-    z-index: 302;
+.closebtn {
+    position: relative;
+    left: 0px;
+    text-align: left;
 }
 
 /*!=============END GUN DISPLAY STYLES=================*/
@@ -442,18 +442,6 @@ img {
     border-bottom-right-radius: 25px;
     box-shadow: black 10px 10px 40px;
 }
-
-.hero img {
-    position: relative;
-    width: 100%;
-    height: auto;
-    top: -500px;
-    overflow: hidden;
-    border-bottom-left-radius: 25px;
-    border-bottom-right-radius: 25px;
-    box-shadow: black 10px 10px 40px;
-}
-
 
 .carousel-indicators {
     bottom: 0px !important;

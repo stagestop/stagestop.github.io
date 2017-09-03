@@ -3,8 +3,12 @@
 {% include title-group.html %}
 
 <div class="row fullscreen">
-    <div class="col-lg-12">
+    <div  id="bm" class="col-lg-12">
+
         <div class="gallerynav">
+            
+            <h1>FEATURED GUNS</h1>
+
 		    <ul>
                 {% for post in site.posts %}
                 <li><a href="{{ post.url }}">{{ post.content | first_image | truncatewords:15 }}</li>

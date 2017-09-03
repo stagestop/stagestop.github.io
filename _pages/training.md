@@ -7,11 +7,11 @@ permalink: /training/
 # TRAINING CLASSES
 Stage Stop Gun Shop & Indoor Range offers a variety of training courses.  Whether you are newer to shooting, want to improve the skills you already have, or need certification for your CCW, we have a class for you! New classes will be added soon.   Click on a class below for additional descriptions.
 
-<a href="#hunter">Hunters Safety Class</a>
-<a href="#ccw-e">CCW Entry Level Class</a> 
-<a href="#ccw-r">CCW Renewal Class</a><br>
-<a href="#holster">Holster Class</a> 
-<a href="#beginnner">Beginner Shooter Class</a>
+<a href="#hunter">Hunters Safety Class</a>  • 
+<a href="#ccw-e">CCW Entry Level Class</a>  • 
+<a href="#ccw-r">CCW Renewal Class</a><br>  • 
+<a href="#holster">Holster Class</a>  • 
+<a href="#beginner">Beginner Shooter Class</a>  • 
 <a href="#defense">Self Defense Class</a>
 <hr>
 
