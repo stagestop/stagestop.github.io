@@ -22,23 +22,6 @@ According to the Archery Trade Association, 23.8 million Americans enjoyed arche
 
 <hr>
 
-# Atwater
-The Atwater location construction was completed in July 2017.  
-- 18,800 sq ft facility 
-- Sales floor
-- 20 lane indoor shooting range
-- 6 lane archery range
-- Two classrooms
-- VIP room  
-
-All are vailable to rent for events.
-
-# Mariposa
-- Retail store located in Mariposa off of Hwy 140 behind Stage Stop Mini Mart
-- 1500 sq ft
-- Stock of handguns, long guns, ammunition, accessories, hunting goods and archery goods
-
-<hr>
 
 
       

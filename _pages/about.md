@@ -15,3 +15,23 @@ In 2011, Stage Stop Gun Shop found its first home in the historic town of Maripo
 Stage Stop Gun Shop’s mission is to provide competitive pricing, a great selection and excellent customer service.  In the effort to achieve these goals, we will continue to add products and services to better serve their customers. 
 
 <hr>
+
+# Atwater
+#### Gun Shop & Indoor Shooting Range
+The Atwater location construction was completed in July 2017.  
+- 18,800 sq ft facility 
+- Sales floor
+- 20 lane indoor shooting range
+- 6 lane archery range
+- Two classrooms
+- VIP room  
+
+All are vailable to rent for events.
+
+# Mariposa
+#### Gun Shop
+- Retail store located in Mariposa off of Hwy 140 behind Stage Stop Mini Mart
+- 1500 sq ft
+- Stock of handguns, long guns, ammunition, accessories, hunting goods and archery goods
+
+<hr>

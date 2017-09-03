@@ -4,8 +4,18 @@ title: Indoor Range
 permalink: /indoorrange/
 ---
 
+![](/graphics/therange.png)
 
-# INDOOR RANGE
+The Atwater location construction was completed in July 2017.
+
+- 18,800 sq ft facility 
+- Sales floor
+- 20 lane indoor shooting range
+- 6 lane archery range
+- Two classrooms
+- VIP room  
+
+All are vailable to rent for events.
 
 ## Hero's Discount
 Military (Retired & inactive/honorable discharge and active U.S. Armed services), Law enforcement, Firefighters. First Responders, EMT (Emergency Medical Technician) and CPO
