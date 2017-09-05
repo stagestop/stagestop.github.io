@@ -17,6 +17,8 @@ The Atwater location construction was completed in July 2017.
 
 All are vailable to rent for events.
 
+<hr>
+
 ## Hero's Discount
 Military (Retired & inactive/honorable discharge and active U.S. Armed services), Law enforcement, Firefighters. First Responders, EMT (Emergency Medical Technician) and CPO
 (Correctional Peace Officer) 10% off* of our annual membership packages. 
