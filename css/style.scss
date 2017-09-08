@@ -458,6 +458,7 @@ h5 {
     width: 90%;
     min-width: 250px;
     max-width: 300px;
+    margin: 0 auto;
     margin-bottom: 4px;
 }
 
@@ -491,7 +492,22 @@ textarea {
     height: 100px;
 }
 
+.center-form {
+    margin: 0 auto;
+}
+
 /*!=============EMAIL STYLE END=================*/
+
+/*!=============MEMBERSHIP STYLES=================*/
+
+
+.table-striped {
+    background-color: rgba(255, 255, 255, .03) !important;
+}
+
+
+
+/*!=============END MEMBERSHIP STYLES=================*/
 
 /*!=============SPLASH STYLES=================*/
 

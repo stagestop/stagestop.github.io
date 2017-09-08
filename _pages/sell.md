@@ -54,3 +54,5 @@ We pay top dollar for used firearms. Consignments are exposed to the hundreds of
 - Credit Card Payment Fees Deducted by Credit Card Companies
 - Collection of Payment
 - Retention of All Documents Pertaining to Sale as Required by the BATFE
+
+<hr>
