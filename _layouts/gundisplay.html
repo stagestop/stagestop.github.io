@@ -1,20 +1,37 @@
 {% include header.html %}
 
+    
+
 {% include title-group.html %}
-	
-<div class="row">
-	<div class="col-lg-12">
-		<div class="row gundisplay">
+		
+		<div class="row rowbg">
+
 			<div class="col-lg-2"></div>
 
-    		<div class="col-lg-8">{{content}}
+			<div id="bm" class="col-lg-9 gundisplay">
+
+					 {{ content }}
+
+					 {% include socialmedia.html %}
+			</div>
+			
+			<div class="col-lg-1">
 				
-				<hr>
+					<div class="gallerynav2">
+							
+							<ul>
+									{% for post in site.posts %}
+								<li><a href="{{ post.url }}/#bm">{{ post.content | first_image | truncatewords: 3 }}</li>
+									{% endfor %}
+							</ul>
+							
+					</div>
+
 			</div>
 
-			<div class="col-lg-2"><a class="closebtn" href="/featured/#bm">X</a></div>
 		</div>
-	</div>	  
-</div>		
+
+		<hr>
 
 {% include footer.html %}
+
