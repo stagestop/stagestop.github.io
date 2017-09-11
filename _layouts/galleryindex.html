@@ -11,7 +11,7 @@
 
 		    <ul>
                     {% for post in site.posts %}
-                <li><a href="{{ post.url }}/#bm">{{ post.content | first_image | truncatewords: 3 }}</li>
+                <li><a href="{{ post.url }}#bm">{{ post.content | first_image | truncatewords: 3 }}</li>
                     {% endfor %}
             </ul>
         </div>
@@ -20,6 +20,6 @@
     </div>
 </div>
 
-<div class=" row sectionfooter"></div>
+<div class="row sectionfooter"></div>
 
 {% include footer.html %}
