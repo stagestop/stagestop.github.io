@@ -10,9 +10,9 @@
             <h1>FEATURED GUNS</h1>
 
 		    <ul>
-                {% for post in site.posts %}
-                <li><a href="{{ post.url }}/#bm">{{ post.content | first_image | truncatewords:15 }}</li>
-                {% endfor %}
+                    {% for post in site.posts %}
+                <li><a href="{{ post.url }}/#bm">{{ post.content | first_image | truncatewords: 3 }}</li>
+                    {% endfor %}
             </ul>
         </div>
     
