@@ -15,6 +15,6 @@ permalink: /archery/
 - Not responsible for lost or damaged arrows
 - Only shoot from the shooting line
 
-<hr>
+
 
 

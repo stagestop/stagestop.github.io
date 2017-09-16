@@ -27,4 +27,3 @@ Military (Retired & inactive/honorable discharge and active U.S. Armed services)
 For folks 62 years of age or older. 10% off* all membership packages.
 
 
-<hr>

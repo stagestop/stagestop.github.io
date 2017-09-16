@@ -1,6 +1,6 @@
 
 - title: "Home"
-  href: "/home/"
+  href: "/"
 
 - title: "About"
   href: "/about/#bm"
@@ -8,12 +8,18 @@
 - title: "Indoor Range"
   url: "/indoorrange/#bm"
   subcategories:
-    - subtitle: "Membership"
-      subhref: "/membership/#bm"
     - subtitle: "Shooting Range"
       subhref: "/shooting/#bm"
     - subtitle: "Archery Range"
       subhref: "/archery/#bm"
+
+- title: "Memberships"
+  url: "#"
+  subcategories:
+    - subtitle: "Shooting"
+      subhref: "/membership/#bm"
+    - subtitle: "Archery"
+      subhref: "/membership/#bm"
 
 - title: "Training"
   href: "/training/#bm"

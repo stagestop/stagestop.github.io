@@ -33,4 +33,3 @@ In order to do this legally, your best bet is to come into our store and speak w
 - We will verify the background check and upon successful completion, transfer the firearm to the new owner
 - Our fee for private party firearm transfers is $10.00 per gun. Plus $25.00 DROS fees
 
-<hr>

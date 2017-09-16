@@ -55,4 +55,3 @@ We pay top dollar for used firearms. Consignments are exposed to the hundreds of
 - Collection of Payment
 - Retention of All Documents Pertaining to Sale as Required by the BATFE
 
-<hr>

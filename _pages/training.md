@@ -69,4 +69,3 @@ This is a hands-on self-defense class. Students from ages 13 (with parental cons
 
 <a href="#top"><img src="/graphics/top-btn.png" class="img-responsive center-block" /></a>
 
-<hr>

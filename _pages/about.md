@@ -34,4 +34,3 @@ All are vailable to rent for events.
 - 1500 sq ft
 - Stock of handguns, long guns, ammunition, accessories, hunting goods and archery goods
 
-<hr>
