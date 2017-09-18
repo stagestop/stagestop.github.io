@@ -56,7 +56,7 @@ body, html {
     position: absolute;
     width: 100%;
     height: 211px;
-    top: -75vh;
+    top: 25px;
     background: url('../graphics/stagestop-logo-masthead-lg.png') center top no-repeat;
     background-size: 597px 211px; 
     margin-top: 0px;
@@ -580,7 +580,7 @@ pre {
 }
 
 .masthead {
-    position: fixed;
+    position: absolute;
     width: 100%;
     height: 250px;
     top: 75px;
@@ -595,7 +595,7 @@ pre {
 }
 
 .hero, .hero img {
-    width: auto;
+    width: 100%;
     height: 300px;
 }
 
