@@ -44,8 +44,8 @@ body, html {
 .bg {
     background-image: url('../graphics/splash-bg2.jpg');
     background-repeat: no-repeat;
-    background-position: center top;
-    background-size: 100% auto;
+    background-position: center bottom;
+    background-size: auto 100vh;
     background-attachment: fixed;
 }
 
