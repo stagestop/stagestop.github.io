@@ -4,11 +4,11 @@
 
 /* Webfont: cambriai */@font-face {
     font-family: 'cambriai';
-    src: url('../fonts/cambriai.woff'); /* IE9 Compat Modes */
+    src: url('/fonts/cambriai.woff'); /* IE9 Compat Modes */
 }
 
 /* Webfont: cambria-Italic */@font-face {
     font-family: 'cabria';
-    src: url('../cambria-Italic.woff2'); /* IE9 Compat Modes */
+    src: url('/fonts/cambria-Italic.woff2'); /* IE9 Compat Modes */
 }
 

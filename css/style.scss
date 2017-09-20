@@ -14,7 +14,8 @@ body, html {
     width: 100%;
     margin: 0px;
     background-color: rgba(0, 0, 0, 1);
-    font-family: 'Alegreya', serif;
+    font-family: Cambria, Georgia, Times, Times New Roman, serif;
+    font-style: normal;
     overflow-x: hidden;
 }
 
@@ -142,7 +143,6 @@ body, html {
 .storeinfo {
         position: relative;
         width: 350px;
-        font-family: 'Alegreya', serif;
         font-size: 14pt;
         text-indent: 0px;
         text-align: center;
@@ -188,7 +188,6 @@ body, html {
 
 
 p {
-    font-family: 'Alegreya', serif;
     font-size: 14pt;
     text-indent: 10px;
     color: rgba(255, 255, 255, 1);
@@ -229,7 +228,6 @@ hr {
 h1 {
     margin-top: 20px;
     margin-bottom: 20px;
-    font-family: 'Alegreya', serif;
     font-weight: normal;
     font-size: 30pt;
     text-align: center;
@@ -237,7 +235,6 @@ h1 {
 }
 
 h2 {
-    font-family: 'Alegreya', serif;
     font-weight: normal;
     font-size: 24pt;
     text-align: center;
@@ -245,7 +242,6 @@ h2 {
 }
 
 h3 {
-    font-family: 'Alegreya', serif;
     font-weight: normal;
     font-size: 14pt;
     text-align: left;
@@ -253,7 +249,6 @@ h3 {
 }
 
 h4 {
-    font-family: 'Alegreya', serif;
     font-weight: normal;
     font-size: 14pt;
     text-align: center;
@@ -262,7 +257,6 @@ h4 {
 
 h5 {
     position: relative;
-    font-family: 'Alegreya', serif;
     font-weight: normal;
     font-size: 12pt;
     text-align: right;
@@ -396,7 +390,7 @@ h5 {
     max-width: 700px;
     margin-left: auto;
     margin-right: auto;
-    text-align: right;
+    text-align: left;
 }
 .socialmedia a {
     font-size: 24px;
