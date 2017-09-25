@@ -4,15 +4,14 @@
 
 /* Create three columns of equal width */
 .columns {
-    float: left;
     width: 30%;
-    max-width: 290px;
     background-color: rgba(255, 255, 255, .02);
     border-radius: 25px;
     border-left: 1px dashed rgba(244, 123, 32, 1);
     border-right: 1px dashed rgba(244, 123, 32, 1);
-    margin: 3px; 
-    padding: 8px;
+    margin: 10px; 
+    padding:0px;
+    float: left;
 }
 
 /* Style the list */
@@ -39,13 +38,27 @@
     color: rgba(0, 0, 0, 1);
     font-size: 20px;
     font-weight: bold;
+    margin: 0px !important;
 }
 
 /* List items */
+
+.price ul {
+    font-weight: normal;
+    font-size: 12pt;
+    text-indent: 0px;
+    color: rgba(255, 255, 255, 1);
+}
+
 .price li {
     border-bottom: none;
-    padding: 20px;
+    margin-bottom: 20px;
+    padding: 0px;
+    font-weight: normal;
+    font-size: 12pt;
     text-align: center;
+    text-indent: 0px;
+    color: rgba(255, 255, 255, 1);
 }
 
 /* Grey list item */
@@ -54,21 +67,16 @@
     font-size: 20px;
 }
 
-/* The "Sign Up" button */
-.button {
-    background-color: #4CAF50;
-    border: none;
-    color: rgba(0, 0, 0, 1);
-    padding: 10px 25px;
-    text-align: center;
-    text-decoration: none;
-    font-size: 18px;
+.smallprint {
+    padding-top: 30px;
+    font-size: 11px !important;
+    text-align: center !important;
 }
 
 /* Change the width of the three columns to 100%
 (to stack horizontally on small screens) */
 @media only screen and (max-width: 600px) {
     .columns {
-        width: 100%;
+        width: 90%;
     }
 }

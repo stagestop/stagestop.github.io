@@ -4,6 +4,7 @@ title: Indoor Range
 permalink: /indoorrange/
 ---
 
+# INDOOR RANGE
 The Atwater location construction was completed in July 2017.
 
 - 18,800 sq ft facility 

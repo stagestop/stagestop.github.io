@@ -42,7 +42,10 @@
     - subtitle: "Photos"
       subhref: "/photos/#bm"
     - subtitle: "Videos"
-      subhref: "/videos/#bm"  
+      subhref: "/videos/#bm"
+
+- title: "Sponsors"
+  href: "/sponsors/#bm"  
 
 - title: "Contact"
   href: "/contact/#bm"

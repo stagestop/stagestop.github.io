@@ -4,6 +4,7 @@ title: Shooting Range
 permalink: /shooting/
 ---
 
+# SHOOTING RANGE
 
 # Shooting Range Rules
 
