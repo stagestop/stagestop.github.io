@@ -391,7 +391,7 @@ h6 {
     position: relative;
     width: 100%;
     height: auto;
-    padding-top: 250px;
+    margin-top: 50px;
     padding-left: 250px;
     z-index: 1;
 }
@@ -657,16 +657,16 @@ pre {
 }
 
 .follow {
-    position: fixed;
-    width: 50px;
+    position: absolute;
+    width: 250px;
     height: auto;
-    top: 20vh;
+    bottom: 0px;
     right: 0px;
     background-color: rgba(0, 0, 0, 0.5);
     padding: 10px;
     font-size: 14pt;
     border-top-left-radius: 25px;
-    border-bottom-left-radius: 25px;
+    border-bottom-left-radius: 0px;
     display: block;
     z-index: 100;
 }
