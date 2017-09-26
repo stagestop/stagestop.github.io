@@ -330,7 +330,6 @@ h6 {
 }
 
 
-
 /*!=============NAVIGATION STYLES=================*/
 .navbar {
     width: 250px;
@@ -468,10 +467,6 @@ h6 {
 
 /*!=============GUN DISPLAY STYLES=================*/
 
-.gundisplay {
-    padding-top: 250px;
-}
-
 .gundisplay p {
     position: relative;
     width: 80%;
@@ -488,7 +483,7 @@ h6 {
     position: relative;
     width: 100%;
     height: auto;
-    margin-top: 30px;
+    margin-top: 250px;
     margin-bottom: 25px;
 }
 
@@ -564,6 +559,10 @@ textarea {
     background-color: rgba(255, 255, 255, .03) !important;
 }
 
+.top-margin-offset {
+    margin-top: 250px;
+}
+
 
 
 /*!=============END MEMBERSHIP STYLES=================*/
@@ -632,12 +631,28 @@ pre {
 
 .gallerynav img {
     position: relative;
-    width: 150px;
-    left: -10px;
+    width: 75px;
+    display: inline;
+    float: left;
 }
 
-.gundisplay {
-    padding-top: 200px;
+.gallerynav2 img {
+    position: relative;
+    width: 75px;
+    margin: 10px;
+    display: inline;
+    float: left;
+}
+
+.gallerynav2 {
+    position: relative;
+    width: 90%;
+    margin: auto;
+    border: none;
+}
+
+.gundisplay div img {
+    margin-top: 200px;
 }
 
 
@@ -687,7 +702,6 @@ pre {
     height: auto;
     top: 0px;
     background-color: rgba(0, 0, 0, .3);
-    padding-top: 40px;
     padding-left: 15px;
     padding-right: 15px;
     padding-bottom: 25px;
@@ -724,12 +738,6 @@ pre {
     text-indent: 0px;
 }
 
-p, h1, h2, h3, h4, h5, h6 {
-    width: 80%;
-}
-
-
-
 hr {
     width: 100%;
     height: 50px;
@@ -746,6 +754,10 @@ hr {
     position: relative;
     border-right: none;
     border-bottom: solid 2px rgba(255, 255, 255, .2); 
+}
+
+.top-margin-offset {
+    margin-top: 200px;
 }
 
 
