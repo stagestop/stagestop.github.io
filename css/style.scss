@@ -637,9 +637,10 @@ pre {
 }
 
 .gundisplay {
-    width: 80%;
     padding-top: 200px;
 }
+
+
 .carousel-indicators {
     bottom: 0px !important;
     margin-bottom: 20px;
@@ -721,6 +722,10 @@ pre {
     font-size: 14px;
     text-align: center;
     text-indent: 0px;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+    width: 80%;
 }
 
 
