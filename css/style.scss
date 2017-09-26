@@ -253,12 +253,6 @@ table {
      text-align: left !important;
  }
 
-form {
-    margin: auto;
-    width: 50% !important;
-    color: rgba(255, 255, 255, 1) 
- }
-
 hr {
     width: 100%;
     max-width: 700px;
@@ -509,6 +503,11 @@ h6 {
 
 /*!=============EMAIL STYLE=================*/
 
+form {
+    width: 80%;
+    max-width: 400px;
+}
+
 .fldsz {
     position: relative;
     width: 100%;
@@ -525,7 +524,6 @@ input, textarea {
     color: rgba(100, 100, 100, 1);
     border: dashed .5px rgba(244, 123, 32, 1);
     padding: 5px;
-    transition: all .35s ease;
 }
 
 input:active, textarea:active {
@@ -547,7 +545,7 @@ textarea {
 }
 
 .center-form {
-    margin: 0 auto;
+    margin: auto;
 }
 
 /*!=============EMAIL STYLE END=================*/
