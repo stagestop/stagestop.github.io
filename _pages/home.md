@@ -8,6 +8,8 @@ Your local Shooting Sports, Archery and Fishing headquarters!!!!
                 
 Stop in today to browse our excellent selection of firearms, ammo, archery supplies and fishing tackle.
 
+<hr>
+
 # PERSONAL SECURITY
 Many gun owners, when asked, will cite personal security as their main reason for owning a firearm. Choosing a firearm is a personal choice.  What is your main reason for purchasing a firearm? Are you able to manipulate the firearm? Is it comfortable for your size and hand structure?  Do you intend to conceal carry it or will it remain locked in a safe/case until it’s needed (or until your next practice session at our indoor range)? These are all questions that you, and only you, can answer when selecting a firearm. You may own a firearm and never have to use it for the protection of yourself or your family members just as you may have vehicle or homeowners insurance and never file a claim but in the event that you needed it, wouldn’t you prefer to be prepared? We are happy to help guide you and answer any additional questions you may have in your decision-making process.
  <br><a href="#"><img src="/graphics/go-btn.png" class="img-responsive pull-right" /></a>
