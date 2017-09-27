@@ -3,6 +3,9 @@ layout: default
 title: Indoor Range
 permalink: /indoorrange/
 ---
+<div>
+<img src="/graphics/therange.png" />
+</div>
 
 # INDOOR RANGE
 The Atwater location construction was completed in July 2017.
