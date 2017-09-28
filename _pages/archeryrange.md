@@ -1,5 +1,5 @@
 ---
-layout: default-archery
+layout: default
 title: Archery Range
 permalink: /archery/
 ---
