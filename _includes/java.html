@@ -21,8 +21,8 @@
     }
   </script>
 
-{% for source in site.data.global %}
+{% for source in site.data.global.googleaccess %}
 <script async defer
-src="https://maps.googleapis.com/maps/api/js?key={{ data.global.googleaccess }}&callback=initMap">
+src="https://maps.googleapis.com/maps/api/js?key={{ site.data.global.googleaccess }}&callback=initMap">
 </script>
 {% endfor %}
