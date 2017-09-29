@@ -1,0 +1,10 @@
+latitude: 52.741865
+longitude: -8.772812
+zoom: 11
+height: 548px
+main-brand-colour: "#398A8D"
+main-marker: assets/images/marker.png
+secondary-marker: assets/images/marker-2.png
+title: Cozy Cottage
+# description refers to a markdown file that will be the source
+# for a HTML string included in the JS variable
