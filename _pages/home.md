@@ -1,6 +1,9 @@
 ---
 layout: default
 title: Home
+lati: -73.7236504
+longi: 43.2294791
+locations: Californa
 permalink: /
 ---
 

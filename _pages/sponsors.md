@@ -50,7 +50,18 @@ We are part of America's leading flooring retail group, our 500-store nationwide
 
 <a href="https://agents.farmers.com/ca/merced/david-wagner" target="_blank"><img src="/images/sponsors/farmers.png" alt="Farmers Insurance" /></a>
 
-As your local Farmers® agent in Merced, CA, I help customers like you identify the insurance coverage that best fits your needs. This process is straightforward and personalized to help make you smarter about insurance. I have the knowledge and experience to help you better understand your coverage options--whether that's auto, home, renters, commercial or life insurance.
+David Wagner Agency <br>
+209-355-9456 <br>
+Dwagner1@farmersagent.com <br>
+Complete Insurance Services <br>
+Auto ∙ Home ∙ Life ∙ Specialty   Commercial
+CCW ∙ Firearms <br>
+David Wagner Agency <br>
+209-355-9456 <br>
+Dwagner1@farmersagent.com <br>
+Complete Insurance Services <br>
+Auto ∙ Home ∙ Life ∙ Specialty    Commercial 
+CCW ∙ Firearms
 
 <hr>
 
@@ -105,7 +116,7 @@ Edges Electrical Group was formed from the joining of two great Northern Califor
 
 <hr>
 
-### One West Steel
+<img src="/images/sponsors/1westlanesign.png" alt="1 West Steel Builders" />
 
 
 
