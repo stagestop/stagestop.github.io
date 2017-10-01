@@ -32,7 +32,7 @@ This is a beginner shooter class.  In this class you will learn basic firearm sa
 You will need: eye and ear protection.  No low-cut shirts or open toe shoes will be allowed in the range. 
 If you have not done so within the last year, please sign the range waiver prior to your class.  
 
-
+<h5><a href="#top">Back to Top</a></h5><!--do not touch-->
 <hr>
 
 <div id="intermediate"></div>
@@ -42,7 +42,7 @@ Stage Stop Gun Shop is offering an intermediate pistol training class.  The trai
 
 You will need: Completion of Basic Shooter or CCW prior to class. Semi Auto Pistol with a minimum of 3 mags. Quality belt and a holster specifically for your pistol. 1 double mag holder or 2 single mag holders.  300 rounds of ammunition.  1 package of snap caps (caliber must match the pistol you bring with you).  Eye & Ear protection. No low-cut shirts or open toe shoes will be allowed in the range. If you have not done so within the last year, please sign the range waiver prior to your class. 
 
-
+<h5><a href="#top">Back to Top</a></h5><!--do not touch-->
 <hr>
 
 <div id="holster"></div>
@@ -52,7 +52,7 @@ This class is for shooters who want to be able to practice (train) with holsters
 
 You will need: ID, firearm, 100 rounds of ammunition and the holster you plan to use No low-cut shirts or open toe shoes will be allowed in the range.  If you have not done so within the last year, please sign the range waiver prior to your class.
 
-
+<h5><a href="#top">Back to Top</a></h5><!--do not touch-->
 <hr>
 
 <div id="ccw-e"></div>
@@ -63,7 +63,7 @@ This class is 8 hours long.  In this class, you will learn the necessary informa
 For this class you will need: ID, firearm(s) (max 3), 200 rounds of ammunition or at least 60 rounds per firearm, eye and ear protection and the holster you plan to use.  No low-cut shirts or open toe shoes will be allowed in the range. If you have not done so within the last year, please sign the range waiver prior to your class.  Please download and fill out the form “CCW Serial” and email the completed form to kcoe@ssgus.us.
 
 
-
+<h5><a href="#top">Back to Top</a></h5><!--do not touch-->
 <hr>
 
 <div id="ccw-r"></div>
@@ -73,16 +73,16 @@ This class is 4 hours and is for individuals that have an expiring CCW.  We are 
 
 You will need: ID, firearm(s) (max 3), 200 rounds of ammunition or at least 60 rounds per firearm, eye and ear protection and the holster you plan to use.  No low-cut shirts or open toe shoes will be allowed in the range. If you have not done so within the last year, please sign the range waiver prior to your class.  Please download and fill out the form “CCW Serial” and email the completed form to kcoe@ssgus.us. 
 
-
+<h5><a href="#top">Back to Top</a></h5><!--do not touch-->
 <hr>
 
 <div id="hunter"></div>
 
 ### Hunters Safety:
-California Hunter's Education Class  Please come into the shop to reserve your seat and pick up your study book. Cost for this class is $10.00 You must complete the sample test in back of the book before the class in order to get 2 hours credit. There is no age limit. Ten years old and above is recommended. They must be able to complete a one hundred question test.
-https://www.register-ed.com/programs/california/160?zip=95301&distance=50 (link to this please)
+California Hunter's Education Class Please come into the shop to reserve your seat and pick up your study book. Cost for this class is $10.00. You must complete the sample test in back of the book before the class in order to get 2 hours credit. There is no age limit. Ten years old and above is recommended. They must be able to complete a one hundred question test @
+[Register-Ed.com](https://www.register-ed.com/programs/california/160?zip=95301&distance=50){:target=_blank} 
 
-
+<h5><a href="#top">Back to Top</a></h5><!--do not touch-->
 <hr>
 
 <div id="defense"></div>
@@ -90,6 +90,5 @@ https://www.register-ed.com/programs/california/160?zip=95301&distance=50 (link 
 ### Self Defense Class:
 This is a hands-on self-defense class. Students from ages 13 (with parental consent!) and up will learn defensive techniques against various types of assault. This class will provide students with knowledge of self-awareness and personal safety
 
-
+<h5><a href="#top">Back to Top</a></h5><!--do not touch-->
 <hr>
-

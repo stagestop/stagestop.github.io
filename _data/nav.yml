@@ -14,12 +14,12 @@
       subhref: "/archery/#bm"
 
 - title: "Memberships"
-  url: "#"
+  url: "/membership/#bm"
   subcategories:
     - subtitle: "Shooting"
       subhref: "/membership/#bm"
     - subtitle: "Archery"
-      subhref: "/membership/#bm"
+      subhref: "/archery-membership/#bm"
 
 - title: "Training"
   href: "/training/#bm"
@@ -36,16 +36,11 @@
 - title: "Events"
   href: "/events/#bm"
 
-- title: "Galleries"
-  url: "#"
-  subcategories:
-    - subtitle: "Photos"
-      subhref: "/photos/#bm"
-    - subtitle: "Videos"
-      subhref: "/videos/#bm"
-
 - title: "Sponsors"
-  href: "/sponsors/#bm"  
+  href: "/sponsors/#bm"
+
+- title: "Gallery"
+  href: "/gallery/#bm"  
 
 - title: "Contact"
   href: "/contact/#bm"

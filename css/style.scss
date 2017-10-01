@@ -154,6 +154,11 @@ body, html {
     margin-bottom: 15px;
 }
 
+.section iframe {
+    width: 100%;
+    min-height: 600px;
+}
+
 .storeinfo {
         position: relative;
         width: 350px;
@@ -431,6 +436,20 @@ h6 {
     width: 100%;
     padding: 0px !important;  
     list-style-type: none;
+}
+
+p img {
+    width: 33%;
+    max-width: 600px;
+    min-width: 290px;
+    height: auto;
+    margin: 5px;
+    float: left;
+}
+
+p a img {
+    width: auto !important;
+    height: 30px !important;
 }
 
 
