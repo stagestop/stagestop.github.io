@@ -28,6 +28,8 @@ Stage Stop Gun Shop’s mission is to provide competitive pricing, a great selec
 
 #### All are vailable to rent for events.
 
+<hr>
+
 # Mariposa
 #### Gun Shop
 - Retail store located in Mariposa off of Hwy 140 behind Stage Stop Mini Mart
