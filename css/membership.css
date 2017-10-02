@@ -67,7 +67,9 @@
     font-size: 20px;
 }
 
-.smallprint {
+.smallprint, .smallprint p {
+    position: relative;
+    width: 100%;
     padding-top: 30px;
     font-size: 11px !important;
     text-align: center !important;
