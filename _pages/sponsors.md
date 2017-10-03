@@ -55,7 +55,7 @@ Realtor • Lic. #02024900 <br>
 averna@londonproperties.com <br>
 2605 1st. Street • Atwater, CA 95301 <br>
 Fax: (209) 812-4390<br>
-(http://www.londonproperties.com/agent/16059/ashley-verna/page/6102/)
+[http://www.londonproperties.com/agent/16059/ashley-verna/page/6102/](http://www.londonproperties.com/agent/16059/ashley-verna/page/6102/){:target="_blank"}
 
 Buying or selling your home is a very personal process. It is one of the most important decisions you will ever make, personally and financially. You’ll find that having someone in your corner that you can trust, rely on and seek advice from is number one in any Real Estate venture.  Ashley Verna and Larissa Sherman were both born and raised in Merced California and strive to make a difference in their community. They are passionate about Real Estate and pride themselves on going above and beyond for their clients.  Quality service, integrity and the love of helping people is what keeps them going. If you or someone you know have Real Estate needs of any kind please feel free to contact us! 
 
@@ -72,7 +72,7 @@ We are part of America's leading flooring retail group, our 500-store nationwide
 <hr>
 
 [![Farmers Insurance](/images/sponsors/farmers.png)](https://agents.farmers.com/ca/merced/david-wagner/){:target="_blank"}
-[![USCCA](/images/sponsors/uscca.png)](https://agents.farmers.com/ca/merced/david-wagner/){:target="_blank"}
+[![USCCA](/images/sponsors/USCCA.png)](https://agents.farmers.com/ca/merced/david-wagner/){:target="_blank"}
 
 
 David Wagner Agency <br>
