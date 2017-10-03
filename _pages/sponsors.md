@@ -141,7 +141,9 @@ Edges Electrical Group was formed from the joining of two great Northern Califor
 
 <hr>
 
-[![1 West Sign](/images/sponsors/1westlanesign.png)](https://#/){:target="_blank"}
+[![1 West Sign](/images/sponsors/1westlanesign.png)](https://#/){:target="_blank"}  
+
+One West Steel Builders, is your local General Contractor, specializing in steel building design and construction. Maybe you have thought of adding, or you have already decided to add, a steel building, to your personal or business property.  You likely still have questions or just aren't sure where to turn. Well look no further, We will handle your entire project, start to finish, with your total satisfaction being the priority. It starts with a great quality building.  We partner with Star Building Systems to provide the best quality buildings available. We demand the best for our customers.  Give us a call to get your project started. Our General Manager, John Clericuzio, is happy to help fine tune your potential design or create a completely custom design for a steel building,that meets & even exceeds your expectations.  oneweststeelbuilders@gmail.com (209)357-2591
 
 
 
