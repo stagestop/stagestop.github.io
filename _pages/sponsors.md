@@ -47,13 +47,9 @@ SFR • GPA • CNHS • RCC <br>
 larissarebroker@gmail.com <br>
 Fax: (209) 289-0008 • Lic.# 01869953 <br>
 2605 1st. Street • Atwater, CA 95301 <br>
-www.realestatemaniac.com
+www.realestatemaniac.com<br>
 
-<hr>
-
-[![London Properties](/images/sponsors/londonproperties.png)](http://www.londonproperties.com/propsites/agentlistings.php?agentid=14716&color=584607){:target="_blank"}
-
-### Ashley Verna
+Ashley Verna <br>
 Realtor • Lic. #02024900 <br>
 (209) 676-9454 <br>
 averna@londonproperties.com <br>
@@ -71,6 +67,8 @@ We are part of America's leading flooring retail group, our 500-store nationwide
 <hr>
 
 [![Farmers Insurance](/images/sponsors/farmers.png)](https://agents.farmers.com/ca/merced/david-wagner/){:target="_blank"}
+[![USCCA](/images/sponsors/uscca.png)](https://agents.farmers.com/ca/merced/david-wagner/){:target="_blank"}
+
 
 David Wagner Agency <br>
 209-355-9456 <br>
