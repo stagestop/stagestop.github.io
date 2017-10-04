@@ -14,7 +14,7 @@ Stage Stop Gun Shop & Indoor Range offers a variety of training courses.  Whethe
 - <a href="#holster">Holster Class</a>
 - <a href="#top">Advanced Pistol (COMING SOON!)</a>
 - <a href="#ccw-r">CCW Renewal Class</a>
-- <a href="#ccw-e">CCW Ne Applicant Class</a>
+- <a href="#ccw-e">CCW New Applicant Class</a>
 - <a href="#top">Utah CCW (COMING SOON!)</a>
 - <a href="#hunter">Hunters Safety Class</a>
 - <a href="#defense">Self Defense Class</a>
@@ -57,7 +57,7 @@ You will need: ID, firearm, 100 rounds of ammunition and the holster you plan to
 
 <div id="ccw-e"></div>
 
-### CCW Entry Level Class:
+### CCW New Applicant Class:
 This class is 8 hours long.  In this class, you will learn the necessary information for you to apply for your CCW in your county.  This class will teach the laws in CA regarding CCW and self-defense and you will qualify with the firearm(s) that you wish to have on your permit.  Taking the class does not guarantee you will be able to obtain a CCW but is a requirement prior to getting it.  We are currently certified to instruct residents of Madera, Mariposa & Merced Counties. Check back for updates regarding additional counties that may become available. 
 
 For this class you will need: ID, firearm(s) (max 3), 200 rounds of ammunition or at least 60 rounds per firearm, eye and ear protection and the holster you plan to use.  No low-cut shirts or open toe shoes will be allowed in the range. If you have not done so within the last year, please sign the range waiver prior to your class.  Please download and fill out the form “CCW Serial” and email the completed form to kcoe@ssgus.us.
