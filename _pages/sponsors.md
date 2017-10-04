@@ -28,7 +28,7 @@ The law firm of Callister, Hendricks & Spencer has been serving the legal needs 
 
 [![Cavcon](/images/sponsors/cavcon.png)](https://www.cavcon.com/){:target="_blank"}
 
-Aaron Cavellero and his team at CavCon can handle any remodel or new build you may need. CavCon is actually the company that built the new Stage Stop Gun Shop and Indoor Range facility.  They worked tirelessly to get this project completed as quickly as they could.  Aaron is happy to quote out any job that you may have no matter how big or small it is.  Call Aaron at 209-564-1784 today!
+Aaron Cavallero and his team at CavCon can handle any remodel or new build you may need. CavCon is actually the company that built the new Stage Stop Gun Shop and Indoor Range facility.  They worked tirelessly to get this project completed as quickly as they could.  Aaron is happy to quote out any job that you may have no matter how big or small it is.  Call Aaron at 209-564-1784 today!
 
 <hr>
 
@@ -81,12 +81,6 @@ Dwagner1@farmersagent.com <br>
 Complete Insurance Services <br>
 Auto ∙ Home ∙ Life ∙ Specialty   Commercial
 CCW ∙ Firearms <br>
-David Wagner Agency <br>
-209-355-9456 <br>
-Dwagner1@farmersagent.com <br>
-Complete Insurance Services <br>
-Auto ∙ Home ∙ Life ∙ Specialty    Commercial 
-CCW ∙ Firearms
 
 <hr>
 
