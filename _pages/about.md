@@ -26,7 +26,7 @@ Stage Stop Gun Shop’s mission is to provide competitive pricing, a great selec
 - Two classrooms
 - VIP room  
 
-#### All are vailable to rent for events.
+#### All are available to rent for events.
 
 <hr>
 
