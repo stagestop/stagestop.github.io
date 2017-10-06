@@ -1,16 +1,16 @@
-* {
-    box-sizing: border-box;
-}
+
 
 /* Create three columns of equal width */
 .columns {
-    width: 30%;
+    width: 300px;
+    height: auto;
     background-color: rgba(255, 255, 255, .02);
     border-radius: 25px;
     border-left: 1px dashed rgba(244, 123, 32, 1);
     border-right: 1px dashed rgba(244, 123, 32, 1);
-    margin: 10px; 
-    padding:0px;
+    margin: 2.5px;
+    margin-bottom: 10px; 
+    padding: 0px;
     float: left;
 }
 
@@ -35,6 +35,14 @@
     background-color: rgba(244, 123, 32, 1);
     border-top-left-radius: 25px;
     border-top-right-radius: 25px;
+    color: rgba(0, 0, 0, 1);
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0px !important;
+}
+
+.price .subheader {
+    background-color: rgba(244, 123, 32, 1);
     color: rgba(0, 0, 0, 1);
     font-size: 20px;
     font-weight: bold;
