@@ -1,0 +1,31 @@
+{% include header.html %}
+		
+		<div class="row rowbg">
+
+			<div class="col-lg-2"></div>
+
+			<div id="bm" class="col-lg-8 gundisplay">
+
+					 {{ content }}
+
+					 {% include socialmedia.html %}
+			</div>
+			
+			<div class="col-lg-2 section2">
+				
+					<div class="gallerynav2">
+							
+							<ul>
+									{% for post in site.posts %}
+								<li><a href="{{ post.url }}#bm">{{ post.content | first_image | truncatewords: 3 }}</li>
+									{% endfor %}
+							</ul>
+							
+					</div>
+
+			</div>
+
+		</div>
+
+{% include footer.html %}
+
