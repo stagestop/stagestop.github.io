@@ -74,6 +74,9 @@ We are part of America's leading flooring retail group, our 500-store nationwide
 [![Farmers Insurance](/images/sponsors/farmers.png)](https://agents.farmers.com/ca/merced/david-wagner/){:target="_blank"}
 [![USCCA](/images/sponsors/USCCA.png)](https://agents.farmers.com/ca/merced/david-wagner/){:target="_blank"}
 
+  As your local Farmers® agent in Merced, CA, I help customers like you identify the insurance coverage that best fits your needs. This process is straightforward and personalized to help make you smarter about insurance. I have the knowledge and experience to help you better understand your coverage options--whether that's auto, home, renters, commercial or life insurance.
+
+Give me a call at (209) 355-9456 and I'll be happy to answer any questions you might have.
 
 David Wagner Agency <br>
 209-355-9456 <br>
