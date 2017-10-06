@@ -47,7 +47,7 @@ SFR • GPA • CNHS • RCC <br>
 larissarebroker@gmail.com <br>
 Fax: (209) 289-0008 • Lic.# 01869953 <br>
 2605 1st. Street • Atwater, CA 95301 <br>
-(http://www.realestatemaniac.com){:target="_blank"}<br>
+[www.realestatemaniac.com](http://www.realestatemaniac.com){:target="_blank"}<br>
 
 Ashley Verna <br>
 Realtor • Lic. #02024900 <br>
