@@ -15,7 +15,7 @@ permalink: /sponsors/
 - <a href="#kirby">Kirby Manufactures</a>
 - <a href="#london">London Properties</a>
 - <a href="#tfca">TriCounty Flooring America</a>
-- <a href="#farmers">Farmers Insurance</a>
+- <a href="#farmers">David Wagner Agency</a>
 - <a href="#act">Act Enviro</a>
 - <a href="#supershop">Super Shop Auto</a>
 - <a href="#insidelines">Inside Lines</a>
