@@ -5,8 +5,6 @@ permalink: /archery/
 ---
 # ARCHERY RANGE
 
-#### [![Archery Lanes](/images/pageimages/archerylane.png)](/archery/)
-
 We have an indoor archery range. Our range has 6 lanes and is 20 yards. We have some recurve bows that you can rent and will be expanding that selection soon. Please click the "Sign Our Waiver" button below to sign the waiver prior to your visit.
 
 # Archery Range Rules
