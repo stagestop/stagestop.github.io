@@ -14,4 +14,4 @@ Military (Retired & inactive/honorable discharge and active U.S. Armed services)
 For folks 62 years of age or older. 10% off* all membership packages. <br>
 
 #### Go to [Shooting Memberships](/membership/)  
-#### Go to [Archery Memberships](/archery-membership
+#### Go to [Archery Memberships](/archery-membership/)
