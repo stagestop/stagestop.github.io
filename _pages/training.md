@@ -21,8 +21,8 @@ Stage Stop Gun Shop & Indoor Range offers a variety of training courses.  Whethe
 <hr>
 
 <div class="ccw"></div>
-#### [CCW Confirmation Form](/pdf/CCWCONFIRMATION.pdf)<br>
-#### [CCW Serial Form](/pdf/CCWSERIAL.pdf)
+#### [CCW Confirmation Form](/pdf/ccw-confirmation.pdf)<br>
+#### [CCW Serial Form](/pdf/ccw-serial.pdf)
 
 <hr>
 
@@ -62,7 +62,7 @@ You will need: ID, firearm, 100 rounds of ammunition and the holster you plan to
 ### CCW New Applicant Class:
 This class is 8 hours long.  In this class, you will learn the necessary information for you to apply for your CCW in your county.  This class will teach the laws in CA regarding CCW and self-defense and you will qualify with the firearm(s) that you wish to have on your permit.  Taking the class does not guarantee you will be able to obtain a CCW but is a requirement prior to getting it.  We are currently certified to instruct residents of Madera, Mariposa & Merced Counties. Check back for updates regarding additional counties that may become available. 
 
-For this class you will need: ID, firearm(s) (max 3), 200 rounds of ammunition or at least 60 rounds per firearm, eye and ear protection and the holster you plan to use.  No low-cut shirts or open toe shoes will be allowed in the range. If you have not done so within the last year, please sign the range waiver prior to your class.  Please download and fill out the form [“CCW Serial”](/pdf/ccwserial.pdf) and email the completed form to kcoe@ssgus.us.
+For this class you will need: ID, firearm(s) (max 3), 200 rounds of ammunition or at least 60 rounds per firearm, eye and ear protection and the holster you plan to use.  No low-cut shirts or open toe shoes will be allowed in the range. If you have not done so within the last year, please sign the range waiver prior to your class.  Please download and fill out the form [“CCW Serial”](/pdf/ccw-serial.pdf) and email the completed form to kcoe@ssgus.us.
 
 
 <h5><a href="#top">Back to Top</a></h5><!--do not touch-->
@@ -73,7 +73,7 @@ For this class you will need: ID, firearm(s) (max 3), 200 rounds of ammunition o
 ### CCW Renewal Class:
 This class is 4 hours and is for individuals that have an expiring CCW.  We are currently certified to instruct residents of Madera, Mariposa & Merced Counties. Check back for updates regarding additional counties that may become available. 
 
-You will need: ID, firearm(s) (max 3), 200 rounds of ammunition or at least 60 rounds per firearm, eye and ear protection and the holster you plan to use.  No low-cut shirts or open toe shoes will be allowed in the range. If you have not done so within the last year, please sign the range waiver prior to your class.  Please download and fill out the form [“CCW Serial”](/pdf/ccwserial.pdf) and email the completed form to kcoe@ssgus.us. 
+You will need: ID, firearm(s) (max 3), 200 rounds of ammunition or at least 60 rounds per firearm, eye and ear protection and the holster you plan to use.  No low-cut shirts or open toe shoes will be allowed in the range. If you have not done so within the last year, please sign the range waiver prior to your class.  Please download and fill out the form [“CCW Serial”](/pdf/ccw-serial.pdf) and email the completed form to kcoe@ssgus.us. 
 
 <h5><a href="#top">Back to Top</a></h5><!--do not touch-->
 <hr>
