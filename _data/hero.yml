@@ -1,0 +1,21 @@
+- name: Home 1
+  image: /images/hero/hero1.jpg
+  target: home
+- name: Home 2
+  image: /images/hero/hero2.jpg
+  target: home
+- name: Home 3
+  image: /images/hero/hero3.jpg
+  target: home
+- name: Home 4
+  image: /images/hero/hero4.jpg
+  target: home
+- name: Home 5
+  image: /images/hero/hero5.jpg
+  target: home
+- name: Home 6
+  image: /images/hero/hero6.jpg
+  target: home
+- name: Home 7
+  image: /images/hero/hero7.jpg
+  target: home

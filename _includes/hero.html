@@ -1,59 +1,28 @@
+{% assign slideFilter = {{include.filter}} %}
+{% assign slides = site.data.hero | where:"target",slideFilter %}
+
 <div id="mainslide" class="carousel slide hero" data-ride="carousel"> 
     <!-- indicators -->
+    {% assign counter = 0 %}
     <ol class="carousel-indicators">
-       <li data-target="#mainslide" data-slide-to="0" class="active"></li>
-       <li data-target="#mainslide" data-slide-to="1" ></li>
-       <li data-target="#mainslide" data-slide-to="2" ></li>
-       <li data-target="#mainslide" data-slide-to="3" ></li>
-       <li data-target="#mainslide" data-slide-to="4" ></li>
-       <li data-target="#mainslide" data-slide-to="5" ></li>
-       <li data-target="#mainslide" data-slide-to="6" ></li>
+      {% for slide in slides %}
+      <li data-target="#{{include.slide_id}}" data-slide-to="{{ counter }}" {% if counter == 0 %}class="active"{% endif %}></li>
+      {% capture counter %}{{counter | plus: 1}}{% endcapture %}
+      {% endfor %}
     </ol>
-     
+       
      <!--slide wrapper -->
      <div class="carousel-inner" role="listbox">
      
-            <div class="row item active">
-                <div class="col-lg-12">
-                    <img src="/images/hero/hero1.jpg" class="float-right" />
-                </div>
+    {% assign counter = 0 %}
+    {% for slide in slides %}
+        <div class="row item{% if counter == 0 %} active{% endif %}">
+            <div class="col-lg-12">
+                <img src="{{ slide.image }}" class="float-right" />
             </div>
-         
-            <div class="row item">
-                <div class="col-lg-12">
-                    <img src="/images/hero/hero2.jpg" class="float-right" />
-                </div>
-            </div>
-         
-            <div class="row item">
-                <div class="col-lg-12">
-                    <img src="/images/hero/hero3.jpg" class="float-right" />		
-                </div>
-            </div>
-         
-            <div class="row item">
-                <div class="col-lg-12">
-                    <img src="/images/hero/hero4.jpg" class="float-right" />		
-                </div>
-            </div>
-            
-            <div class="row item">
-                <div class="col-lg-12">
-                    <img src="/images/hero/hero5.jpg" class="float-right" />		
-                </div>
-            </div>
-            
-            <div class="row item">
-                <div class="col-lg-12">
-                    <img src="/images/hero/hero6.jpg" class="float-right" />		
-                </div>
-            </div>
-
-            <div class="row item">
-                <div class="col-lg-12">
-                    <img src="/images/hero/hero7.jpg" class="float-right" />		
-                </div>
-            </div>
-     </div>
+        </div>
+        {% capture counter %}{{counter | plus: 1}}{% endcapture %}
+    {% endfor %}
+ </div>
 </div>
 </div>
