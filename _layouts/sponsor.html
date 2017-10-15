@@ -1,0 +1,25 @@
+{% include header.html %}
+{% include hero.html filter="home" slide_id="home-hero" %}
+
+<div class="row rowbg">
+    <div class="col-lg-2"></div>
+    <div id="bm" class="col-lg-8 section">
+        <h1>Our Sponsors</h1>
+        {% for sponsor in site.data.sponsors %}
+            <div class="row">
+                <div class="col-md-2 col-md-offset-1">
+                    <a href="{{ sponsor.url }}" target="_blank">
+                        <img src="{{ sponsor.image }}" alt="image of {{ sponsor.name }} logo." class="img-responsive" />
+                    </a>
+                </div>
+                <div class="col-md-9">
+                    <p>{{ sponsor.summary }}</p>
+                </div>
+            </div>
+            <br />
+        {% endfor %}
+    </div>
+    <div class="col-lg-2 section2"></div>
+</div>
+    
+{% include footer.html %}
