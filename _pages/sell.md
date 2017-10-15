@@ -9,15 +9,18 @@ permalink: /sell/
 ## Turn your dusty old firearms into cold hard cash!
 
 ### Have an old gun you no longer need?
+
 ### Want some quick cash for your used firearm?
+
 ### Want to trade up to a new firearm?
 
 We will make a cash offer for your used firearms on the spot, or we can accept it on consignment and post on our Online Auction service at GunBroker.com
 
 ### How does it work?
-Simply bring your gun (or gun collection) to one of our retail locations at Stage Stop Gun Shop, 5094 Jessie Street, Ste. A.,  Mariposa, CA  95338 or Stage Stop Gun Shop, 601 Blvd.,  Atwater, CA  95301.
 
-We will sit down with you to appraise the firearm(s) and make you a cash offer for your firearm(s) or we’ll help you determine a fair starting price for a consignment. Consignments are listed on <a href="http://www.gunbroker.com/Auction/BI.aspx?IncludeSellers=2068753" target="_blank">GunBroker.com</a> and sell to the highest bidder.
+It's simple. Just call one of locations, (209-358-4867 for our Atwater location or 209-966-3777 for our Mariposa location) and our friendly staff will help you schedule an appointment with one of our appraisers.
+
+Once you have scheduled a date and time to come into one of our locations, one of our apprasier will sit down with you to appraise the firearm(s) and make you a cash offer for your firearm(s) or we’ll help you determine a fair starting price for a consignment. Consignments are listed on <a href="http://www.gunbroker.com/Auction/BI.aspx?IncludeSellers=2068753" target="_blank">GunBroker.com</a> and sell to the highest bidder.
 
 <hr>
 
