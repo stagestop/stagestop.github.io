@@ -1,115 +1,109 @@
-{% include header.html %}
+---
+layout: default
+---
 
-{% include hero.html filter="home" slide_id="home-hero" %}
-
-<div class="row rowbg">
-        
-    <div class="col-lg-3"></div>
-        
-    <div id="bm" class="col-lg-6 section">
-                <h1>SHOOTING RANGE MEMBERSHIP PRICING</h1>
-
+<section>
+    <div class="container">
+        <h2 class="section-title text-center mb-0">DISCOUNTS</h2>
+        <div class="spacer spacer-line border-primary">&nbsp;</div>
         <div class="row">
-                <div class="columns">
-                    <ul class="price">
-                      <li class="header">Single Shot</li>
-                      <li class="grey">$300.00 / Year</li>
-                      <li>Unlimited Range Time</li>
-                      <li>2 Guest Passes <br> (per membership year)</li>
-                      <li>1 Free Gun Rental <br> (per membership year)</li>
-                      <li>Lane Reservations</li>
-                      <li>Free Target w/ Each Visit</li>
-                      <li class="subheader">Archery Add-On Bundle</li>
-                      <li class="grey">$75.00 / 1 Year</li>
-                    </ul>
-                </div>
-            
-                <div class="columns">
-                    <ul class="price">
-                      <li class="header">Double Barrel</li>
-                      <li class="grey">$400.00 / Year</li>
-                      <li>Unlimited Range Time</li>
-                      <li>4 Guest Passes <br> (per membership year)</li>
-                      <li>2 Free Gun Rental <br> (per membership year)</li>
-                      <li>Lane Reservations</li>
-                      <li>Free Target w/ Each Visit</li>
-                      <li class="subheader">Archery Add-On Bundle</li>
-                      <li class="grey">$100.00 / 1 Year</li>
-                    </ul>
-                </div>
-
-                <div class="columns">
-                    <ul class="price">
-                      <li class="header">Six Shooter</li>
-                      <li class="grey">$450.00 / Year</li>
-                      <li>Unlimited Range Time</li>
-                      <li>6 Guest Passes <br> (per membership year)</li>
-                      <li>3 Free Gun Rental <br> (per membership year)</li>
-                      <li>Lane Reservations</li>
-                      <li>Free Target w/ Each Visit</li>
-                    </ul>
-                </div>
+            <div class="col-md-4 offset-md-2">
+                <div class="promo-box text-center inner-space">
+                    <i class="md-icon dp36 mb-1 box-icon bg-transparent text-primary">thumb_up</i>
+                    <h6 class="box-title"><a href="#x" class="promo-link">HERO'S DISCOUNT</a></h6>
+                    <p class="box-description">
+                        Military (Retired & inactive/honorable discharge and active U.S. Armed services), Law enforcement, Firefighters. First Responders, EMT (Emergency Medical Technician) and CPO (Correctional Peace Officer) 10% off* of our annual membership packages.
+                    </p>
+                </div><!-- / icon-block -->
+            </div><!-- / column -->
+            <div class="col-md-4">
+                <div class="promo-box text-center inner-space">
+                    <i class="md-icon dp36 mb-1 box-icon bg-transparent text-primary">favorite</i>
+                    <h6 class="box-title"><a href="#x" class="promo-link">SEASONED SHOOTER DISCOUNT</a></h6>
+                    <p class="box-description">
+                        For folks 62 years of age or older. 10% off* all membership packages.
+                    </p>
+                </div><!-- / icon-block -->
+            </div><!-- / column -->
         </div>
+    </div><!-- / container -->
+</section>
 
+<section>
+    <div class="container">
+        <h2 class="section-title text-center mb-0">SHOOTING RANGE</h2>
+        <div class="spacer spacer-line border-primary">&nbsp;</div>
         <div class="row">
-            <div class="columns">
-                    <ul class="price">
-                      <li class="header">Single Shot</li>
-                      <li class="grey">$2500.00 / Lifetime</li>
-                      <li>Unlimited Range Time</li>
-                      <li>10 Guest Passes <br> (per membership year)</li>
-                      <li>5 Free Gun Rental <br> (per membership year)</li>
-                      <li>5% Ammunition Discount</li>
-                      <li>10% Accessories & Competitions Discount</li>
-                      <li>Lane Reservations</li>
-                      <li>Free Target w/ Each Visit</li>
+        {% assign gun_plans = site.data.memberships | where:"area","guns" %}
+        {% for plan in gun_plans %}
+        <div class="col-md-4">
+            <div class="pricing-table bg-deepgrey">
+                <div class="pricing-table-title">
+                    <h5 class="pricing-title">{{plan.name}}</h5>
+                </div>
+                <div class="pricing-table-price bg-primary">
+                    <p>
+                        <span class="pricing-currency">$</span>
+                        <span class="pricing-price">{{plan.price}}</span>
+                        <span class="pricing-period">/ {{plan.type}}</span>
+                    </p>
+                </div>
+                <div class="pricing-table-content">
+                    <ul>
+                    {% for feature in plan.features %}
+                    <li>{{feature | upcase }}</li>
+                    {% endfor %}
                     </ul>
-            </div>
-
-            <div class="columns">
-                    <ul class="price">
-                      <li class="header">Double Barrel</li>
-                      <li class="grey">$3500.00 / Lifetime</li>
-                      <li>Unlimited Range Time</li>
-                      <li>10 Guest Passes <br> (per membership year)</li>
-                      <li>5 Free Gun Rental <br> (per membership year)</li>
-                      <li>5% Ammunition Discount</li>
-                      <li>10% Accessories & Competitions Discount</li>
-                      <li>Lane Reservations</li>
-                      <li>Free Target w/ Each Visit</li>
-                    </ul>
-            </div>
-
-            <div class="columns">
-                    <ul class="price">
-                      <li class="header">Six Shooter Family</li>
-                      <li class="grey">$4500.00 / Lifetime</li>
-                      <li>Unlimited Range Time</li>
-                      <li>10 Guest Passes <br> (per membership year)</li>
-                      <li>5 Free Gun Rental <br> (per membership year)</li>
-                      <li>5% Ammunition Discount</li>
-                      <li>10% Accessories & Competitions Discount</li>
-                      <li>Lane Reservations</li>
-                      <li>Free Target w/ Each Visit</li>
-                    </ul>
-            </div>
+                    <div class="pricing-table-button">
+                        <a href="#x" class="btn btn-primary">JOIN NOW</a>
+                    </div>
+                </div>
+            </div><!-- / pricing-table -->
         </div>
-        
-            <p class="smallprint">*FAMILY MEMBERSHIPS - PARENTS AND UP TO FOUR CHILDREN under the age of 21<br>
+        {% endfor %}
+        </div>
+        <p class="smallprint">
+            *FAMILY MEMBERSHIPS - PARENTS AND UP TO FOUR CHILDREN under the age of 21<br>
             (After child turns 21, they can remain on an existing lifetime membership for an additional $1000 each) <br>
-            *DUO MEMBERSHIP - TWO FAMILY MEMBERS IN THE SAME HOUSEHOLD</p>
+            *DUO MEMBERSHIP - TWO FAMILY MEMBERS IN THE SAME HOUSEHOLD
+        </p>
+    </div> <!-- / container -->
+</section>
 
-    </div>
-     
-    <div class="col-lg-3 section2">
-
-    </div>
-
-
-
-</div>
-
-
-
-
-{% include footer.html %}
+<section>
+    <div class="container">
+        <h2 class="section-title text-center mb-0">ARCHERY RANGE</h2>
+        <div class="spacer spacer-line border-primary">&nbsp;</div>
+        <div class="row">
+        {% assign gun_plans = site.data.memberships | where:"area","archery" %}
+        {% assign counter = 0 %}
+        {% for plan in gun_plans %}
+        <div class="col-md-4{% if counter == 0 %} offset-md-2{% endif %}">
+            <div class="pricing-table bg-deepgrey">
+                <div class="pricing-table-title">
+                    <h5 class="pricing-title">{{plan.name}}</h5>
+                </div>
+                <div class="pricing-table-price bg-primary">
+                    <p>
+                        <span class="pricing-currency">$</span>
+                        <span class="pricing-price">{{plan.price}}</span>
+                        <span class="pricing-period">/ {{plan.type}}</span>
+                    </p>
+                </div>
+                <div class="pricing-table-content">
+                    <ul>
+                    {% for feature in plan.features %}
+                    <li>{{feature | upcase }}</li>
+                    {% endfor %}
+                    </ul>
+                    <div class="pricing-table-button">
+                        <a href="#x" class="btn btn-primary">JOIN NOW</a>
+                    </div>
+                </div>
+            </div><!-- / pricing-table -->
+        </div>
+        {% capture counter %}{{ counter | plus: 1 }}{% endcapture %}
+        {% endfor %}
+        </div>
+    </div> <!-- / container -->
+</section>

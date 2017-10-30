@@ -1,0 +1,4 @@
+{% assign sections = site.sections | where: 'id', include.id %}
+{% for section in sections %}
+{{ section.output }}
+{% endfor %}

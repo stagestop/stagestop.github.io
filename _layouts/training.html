@@ -1,0 +1,9 @@
+---
+layout: default-container
+---
+{{ content }}
+
+{% for cls in site.training-classes %}
+    {{ cls.output }}
+    <div class="spacer">&nbsp;</div>
+{% endfor %}

@@ -1,18 +1,277 @@
-{% include header.html %}
+<!DOCTYPE html>
+<html lang="en" class="darl bg-inverse">
 
-{% include hero.html filter="home" slide_id="home-hero" %}
+<head>
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Bootstrap 4 Template">
+    <meta name="author" content="kingstudio.ro">
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.png">
+    <!-- Site Title -->
+    <title>{% if page.title %}{{ page.title }} ◊ {{ site.data.global.title }}{% elsif post.title %}{{ post.title }} {{ site.data.global.title }}{% else %}{{ site.data.global.title }} {{ site.data.global.description }}{% endif %}</title>
+    <!-- Bootstrap 4 core CSS -->
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom Styles -->
+    <link href="/css/orange.css" rel="stylesheet">
+    <link href="/css/animate.css" rel="stylesheet">
+    <link href="/css/owl.carousel.min.css" rel="stylesheet">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,800" rel="stylesheet">
+</head>
 
-		<div class="row rowbg">
+<body class="has-fixed-menu dark bg-inverse" data-spy="scroll" data-target="#nav-scroll">
 
-			<div class="col-lg-2"></div>
+    <div id="preloader">
+        <div class="preloader">
+            <span></span>
+            <span></span>
+        </div>
+    </div>
 
-			<div id="bm" class="col-lg-8 section">{{ content }}</div>
+    <div id="top"></div>
 
-			<div class="col-lg-2 section2">
-				
-			
-			</div>
-		</div>
+    <nav id="nav-scroll" class="navbar navbar-toggleable-md navbar-inverse fixed-top bg-inverse custom-menu menu-pills">
+        <div class="container">
+            <a class="navbar-brand smooth-scroll" href="#top"><img src="/graphics/stagestop-logo-masthead-lg.png" alt=""></a>
+            
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbar-toggle" aria-controls="navbar-toggle" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button><!-- / navbar-toggler -->
+
+            <div class="collapse navbar-collapse" id="navbar-toggle">
+				<ul class="navbar-nav ml-auto">
+					{% for nav in site.data.nav %}
+					<li class="nav-item">
+						{% if nav.title == page.title %}
+						<a class="nav-link active" href="{{ nav.url }}">{{ nav.title }}</a>
+						{% else %} 
+						<a class="nav-link" href="{{ nav.url }}">{{ nav.title }}</a>
+						{% endif %}
+					</li>
+					{% endfor %}
+                </ul><!-- / navbar-nav -->
+            </div><!-- / navbar-collapse -->
+        </div><!-- / container -->
+    </nav><!-- / custom-menu -->
+
+    <header class="masthead bg-img parallax fixed-menu" style="background-image: url('{{ page.header-image }}')">
+        <div class="container header-inner text-center">
+            {% if page.titlewhite && page.titleaccent %}
+            <h3 class="header-title">{{ page.titlewhite }} <span class="text-primary">{{ page.titleaccent }}</span></h3>
+            {% else %}
+            <h3 class="header-title">{{ page.title }}</h3>
+            {% endif %}
+            {% if page.description %}<p class="lead header-text">{{page.description}}</p>{% endif %}
+            {% if page.button1 %}<a href="{{ page.button1.url }}" class="btn {{ page.button1.class }} smooth-scroll mr-2">{{ page.button1.text }}</a>{% endif %}
+            {% if page.button2 %}<a href="{{ page.button2.url }}" class="btn {{ page.button2.class }} smooth-scroll mr-2">{{ page.button2.text }}</a>{% endif %}
+        </div>
+    </header>
+
+    {{ content }}
 
 
-{% include footer.html %}
+    <a href="#top" class="scroll-to-top is-hidden smooth-scroll" data-nav-status="toggle"><i class="md-icon dp18">expand_less</i></a>
+
+    <footer class="dark bg-deepgrey">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 widget">
+                    <img src="/graphics/stagestop-logo-masthead-lg.png" alt="logo" class="footer-logo">
+                    <p>
+                        Stage Stop Gun Shop, your Shooting Sports, Archery and Fishing headquarters!!! Stop in today to browse our excellent selection of firearms, ammo, archery supplies and fishing tackle.
+                    </p>
+                    <p>
+                        <a href="mailto:info@ssgs.us">info@ssgs.us</a>
+                    </p>
+                </div><!-- / column-->
+
+                <div class="col-lg-4 widget">
+                    <h3 class="widget-title"><i class="md-icon dp36 mb-1 box-icon bg-transparent text-primary">location_on</i> Atwater Location</h3>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <p>
+                                <strong>Monday - Friday</strong><br />
+                                10:00am - 8:00pm 
+                            </p><br />
+                            <p>
+                                <strong>Saturnday - Sunday</strong><br />
+                                10:00am - 6:00pm
+                            </p>
+                        </div>
+                        <div class="col-sm-6">
+                            <p>
+                                601 Atwater Blvd.<br />
+                                Atwater, CA. 95301<br />
+                            </p><br />
+                            <p>
+                                Phone: (209) 358-4867<br />
+                                Fax: (209) 358-4863<br />
+                            </p>
+                        </div>
+                    </div>
+                </div><!-- / column-->
+
+                <div class="col-lg-4 widget">
+                    <h3 class="widget-title"><i class="md-icon dp36 mb-1 box-icon bg-transparent text-primary">location_on</i> Mariposa Location</h3>
+                    <div class="row">
+                        <div class="col-sm-5">
+                            <p>
+                                <strong>Tuesday - Friday</strong><br />
+                                10:00am - 6:00pm 
+                            </p><br />
+                            <p>
+                                <strong>Saturnday</strong><br />
+                                10:00am - 5:30pm
+                            </p><br />
+                            <p>
+                                <strong>Sunday - Monday</strong><br />
+                                <em>Closed</em>
+                            </p>
+
+                        </div>
+                        <div class="col-sm-7">
+                            <p>
+                                5094 Jessie Street, Ste. A<br />
+                                Mariposa, CA. 95338<br />
+                            </p><br />
+                            <p>
+                                Phone: (209) 966-3777<br />
+                                Fax: (209) 966-3888<br />
+                            </p>
+                        </div>
+                    </div>
+                </div><!-- / column-->
+            </div><!-- / row -->
+        
+            <div class="row">
+                <div class="col-lg-8 footer-left-area">
+                    <p>Copyright © 2017. Stage Stop Gun Shop. All Rights Reserved.</p>
+                </div>
+                <div class="col-lg-4 social-icons footer-right-area">
+                    <a href="#x"><i class="fa fa-facebook"></i></a>
+                    <a href="#x"><i class="fa fa-twitter"></i></a>
+                    <a href="#x"><i class="fa fa-instagram"></i></a>
+                </div><!-- / social-icons -->
+            </div><!-- / row -->
+        </div><!-- / container -->
+    </footer>
+
+<!-- Core JavaScript -->
+<script src="/js/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0//js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+<script src="/js/bootstrap.min.js"></script>
+<!-- / Core JavaScript -->
+
+<!-- preloader -->
+<script src="/js/preloader.js"></script>
+<!-- / preloader -->
+
+<!-- Smooth Scrolling -->
+<script src="/js/jquery.easing.min.js"></script>
+<script src="/js/smooth-scroll.js"></script>
+<!-- / Smooth Scrolling -->
+
+<!-- Portfolio Script -->
+<script src="/js/jquery.shuffle.min.js"></script>
+<script src="/js/portfolio.js"></script>
+<script>
+$(document).ready(function(){
+    if (Modernizr.touch) {
+        // show the close overlay button
+        $(".close-overlay").removeClass("hidden");
+        // handle the adding of hover class when clicked
+        $(".img").click(function(e){
+            if (!$(this).hasClass("hover")) {
+                $(this).addClass("hover");
+            }
+        });
+        // handle the closing of the overlay
+        $(".close-overlay").click(function(e){
+            e.preventDefault();
+            e.stopPropagation();
+            if ($(this).closest(".img").hasClass("hover")) {
+                $(this).closest(".img").removeClass("hover");
+            }
+        });
+    } else {
+        // handle the mouseenter functionality
+        $(".img").mouseenter(function(){
+            $(this).addClass("hover");
+        })
+        // handle the mouseleave functionality
+        .mouseleave(function(){
+            $(this).removeClass("hover");
+        });
+    }
+});
+</script>
+<!-- / Portfolio Script -->
+
+<!-- Tooltips -->
+<script>
+$(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+})
+</script>
+<!-- / Tooltips -->
+
+<!-- Owl Carousel -->
+<script src="/js/owl.carousel.min.js"></script>
+<script>
+$('#testimonials-carousel-2').owlCarousel({
+    loop:true,
+    margin:10,
+    nav:true,
+    dots:false,
+    navText:["<i class='fa fa-angle-left'></i>","<i class='fa fa-angle-right'></i>"],
+    items:1,
+    animateIn: 'slideInRight',
+    animateOut: 'slideOutLeft'
+})
+</script>
+
+<script>
+$('#clients-carousel').owlCarousel({
+    loop:true,
+    margin:30,
+    dots: false,
+    autoplay:true,
+    responsive:{
+        0:{
+            items:1
+        },
+        600:{
+            items:3
+        },
+        1000:{
+            items:5
+        }
+    }
+})
+</script>
+<!-- / Owl Carousel -->
+
+<!-- Hide Nav -->
+<script src="/js/hide-nav.js"></script>
+<!-- / Hide Nav -->
+
+<!-- Google Maps -->
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBA40uewXP25u1A4o9u8ueBimZZwIdNLkY"></script>
+<script src="/js/map.js"></script>
+<!-- / Google Maps -->
+
+<!-- Contact Form -->
+<script src="/js/contact-form-validator.min.js"></script>
+<script src="/js/contact-form.js"></script>
+<!-- / Contact Form -->
+
+<script src="https://www.smartwaiver.com/m/webpl/f.js?webpl_waiver=splashpage-18496&webpl_title=Sign%20our%20waiver&webpl_align=Left&webpl_fontsize=16&webpl_background=%23f47b20&webpl_fontcolor=%23ffffff&webpl_font=Nunito%20Sans" type="text/javascript"></script>
+
+</body>
+
+</html>

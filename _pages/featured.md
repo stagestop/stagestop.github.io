@@ -1,6 +1,6 @@
 ---
 layout: galleryindex
 title: FEATURED GUNS
-permalink: /featured/
+permalink: /featured/guns
 ---
 

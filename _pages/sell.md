@@ -1,13 +1,9 @@
 ---
-layout: default
 title: Sell & Trade
+description: Have an old gun you no longer need? Want some quick cash for your used firearm? Want to trade up to a new firearm? We will make a cash offer for your used firearms on the spot, or we can accept it on consignment and post on our Online Auction service at GunBroker.com
 permalink: /sell/
+layout: default-container
 ---
-
-## Turn your dusty old firearms into cold hard cash!
-
-Have an old gun you no longer need? Want some quick cash for your used firearm? Want to trade up to a new firearm? We will make a cash offer for your used firearms on the spot, or we can accept it on consignment and post on our Online Auction service at GunBroker.com
-
 ## How does it work?
 
 It's simple. Just call one of locations, (209-358-4867 for our Atwater location or 209-966-3777 for our Mariposa location) and our friendly staff will help you schedule an appointment with one of our appraisers.

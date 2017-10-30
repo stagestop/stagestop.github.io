@@ -1,0 +1,19 @@
+---
+---
+
+<section id="{{ page.id}}">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <img src="{{ page.image }}" alt="">
+            </div><!-- / column -->
+            <div class="col-md-6">
+                <h2 class="section-title mb-0">{{ page.title | upcase }}</h2>
+                <div class="spacer spacer-line border-primary ml-0">&nbsp;</div>
+                <p class="lead mb-3">
+                {{ page.content }}
+                </p>
+            </div><!-- / column -->
+        </div><!-- / row -->
+    </div><!-- / container -->
+</section>

@@ -1,119 +1,23 @@
 ---
-layout: default
 title: Gallery
 permalink: /gallery/
+layout: default
 ---
 
-
-# STAGE STOP GALLERY
-
-
-![image](/images/archery/DSC_0001.JPG)
-![image](/images/archery/DSC_0003.JPG)
-![image](/images/archery/DSC_0004.JPG)
-![image](/images/archery/DSC_0006.JPG)
-![image](/images/archery/DSC_0007.JPG)
-![image](/images/archery/DSC_0018.JPG)
-![image](/images/archery/DSC_0020.JPG)
-![image](/images/archery/DSC_0077.JPG)
-![image](/images/archery/DSC_0104.JPG)
-![image](/images/archery/DSC_0106.JPG)
-![image](/images/archery/DSC_0171.JPG)
-![image](/images/archery/DSC_0176.JPG)
-![image](/images/archery/DSC_0199.JPG)
-![image](/images/archery/DSC_0200.JPG)
-![image](/images/archery/DSC_0211.JPG)
-![image](/images/archery/DSC_0212.JPG)
-
-
-![image](/images/gunshop/DSC_0009.JPG)
-![image](/images/gunshop/DSC_0010.JPG)
-![image](/images/gunshop/DSC_0014.JPG)
-![image](/images/gunshop/DSC_0016.JPG)
-![image](/images/gunshop/DSC_0018.JPG)
-![image](/images/gunshop/DSC_0019.JPG)
-![image](/images/gunshop/DSC_0022.JPG)
-![image](/images/gunshop/DSC_0023.JPG)
-![image](/images/gunshop/DSC_0025.JPG)
-![image](/images/gunshop/DSC_0031.JPG)
-![image](/images/gunshop/DSC_0097.JPG)
-![image](/images/gunshop/DSC_0100.JPG)
-![image](/images/gunshop/DSC_0101.JPG)
-![image](/images/gunshop/DSC_0102.JPG)
-![image](/images/gunshop/DSC_0103.JPG)
-![image](/images/gunshop/DSC_0109.JPG)
-![image](/images/gunshop/DSC_0110.JPG)
-![image](/images/gunshop/DSC_0112.JPG)
-![image](/images/gunshop/DSC_0113.JPG)
-![image](/images/gunshop/DSC_0114.JPG)
-![image](/images/gunshop/DSC_0116.JPG)
-![image](/images/gunshop/DSC_0129.JPG)
-![image](/images/gunshop/DSC_0167.JPG)
-![image](/images/gunshop/DSC_0168.JPG)
-![image](/images/gunshop/DSC_0169.JPG)
-![image](/images/gunshop/DSC_0172.JPG)
-![image](/images/gunshop/DSC_0173.JPG)
-![image](/images/gunshop/DSC_0179.JPG)
-![image](/images/gunshop/DSC_0183.JPG)
-![image](/images/gunshop/DSC_0184.JPG)
-![image](/images/gunshop/DSC_0185.JPG)
-![image](/images/gunshop/DSC_0186.JPG)
-![image](/images/gunshop/DSC_0187.JPG)
-![image](/images/gunshop/DSC_0188.JPG)
-![image](/images/gunshop/DSC_0190.JPG)
-![image](/images/gunshop/DSC_0191.JPG)
-![image](/images/gunshop/DSC_0192.JPG)
-![image](/images/gunshop/DSC_0193.JPG)
-![image](/images/gunshop/DSC_0214.JPG)
-![image](/images/gunshop/DSC_0215.JPG)
-![image](/images/gunshop/DSC_0216.JPG)
-![image](/images/gunshop/DSC_0217.JPG)
-![image](/images/gunshop/DSC_0219.JPG)
-![image](/images/gunshop/DSC_0221.JPG)
-![image](/images/gunshop/DSC_0222.JPG)
-![image](/images/gunshop/DSC_0223.JPG)
-![image](/images/gunshop/DSC_0224.JPG)
-
-
-![image](/images/rangebays/DSC_0134.JPG)
-![image](/images/rangebays/DSC_0135.JPG)
-![image](/images/rangebays/DSC_0136.JPG)
-![image](/images/rangebays/DSC_0137.JPG)
-![image](/images/rangebays/DSC_0139.JPG)
-![image](/images/rangebays/DSC_0141.JPG)
-![image](/images/rangebays/DSC_0142.JPG)
-![image](/images/rangebays/DSC_0145.JPG)
-![image](/images/rangebays/DSC_0146.JPG)
-![image](/images/rangebays/DSC_0148.JPG)
-![image](/images/rangebays/DSC_0151.JPG)
-![image](/images/rangebays/DSC_0152.JPG)
-![image](/images/rangebays/DSC_0154.JPG)
-![image](/images/rangebays/DSC_0158.JPG)
-![image](/images/rangebays/DSC_0160.JPG)
-![image](/images/rangebays/DSC_0161.JPG)
-![image](/images/rangebays/DSC_0163.JPG)
-
-
-![image](/images/rangecounter/DSC_0026.JPG)
-![image](/images/rangecounter/DSC_0033.JPG)
-![image](/images/rangecounter/DSC_0036.JPG)
-![image](/images/rangecounter/DSC_0040.JPG)
-![image](/images/rangecounter/DSC_0051.JPG)
-![image](/images/rangecounter/DSC_0052.JPG)
-![image](/images/rangecounter/DSC_0131.JPG)
-![image](/images/rangecounter/DSC_0132.JPG)
-![image](/images/rangecounter/DSC_0133.JPG)
-![image](/images/rangecounter/DSC_0164.JPG)
-
-
-![image](/images/rangeexterior/DSC_0060.JPG)
-![image](/images/rangeexterior/DSC_0061.JPG)
-![image](/images/rangeexterior/DSC_0063.JPG)
-![image](/images/rangeexterior/DSC_0068.JPG)
-![image](/images/rangeexterior/DSC_0069.JPG)
-![image](/images/rangeexterior/DSC_0071.JPG)
-![image](/images/rangeexterior/DSC_0072.JPG)
-![image](/images/rangeexterior/DSC_0073.JPG)
-![image](/images/rangeexterior/DSC_0075.JPG)
-
-
+<div class="container-fluid">
+    <ul class="row portfolio list-unstyled mb-0 lightbox shuffle" id="grid" style="position: relative; overflow: hidden; height: 676.5px; transition: height 250ms ease-out;">
+        {% for image in site.data.gallery %}
+        <!-- project -->
+        <li class="col-md-3 project shuffle-item filtered" style="position: absolute; top: 0px; left: 0px; visibility: visible; transition: transform 250ms ease-out, opacity 250ms ease-out;">
+            <div class="effect effect-1 clearfix">
+                <div class="img">
+                    <img class="img-responsive" src="{{ image.url }}" alt="">
+                    <div class="overlay">
+                        <a href="{{image.url}}" class="image-lightbox expand">+</a>
+                    </div><!-- / overlay -->
+                </div><!-- / img -->
+            </div><!-- / effect-1 -->
+        </li><!-- / project -->
+        {% endfor %}
+    </ul> <!-- / portfolio -->
+</div>

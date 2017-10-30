@@ -1,7 +1,5 @@
 ---
 layout: events
 title: Events Calendar
-permalink: /events/
+permalink: /events
 ---
-
-# EVENTS

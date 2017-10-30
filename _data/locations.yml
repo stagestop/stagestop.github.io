@@ -1,0 +1,19 @@
+- name: Atwater
+  subtitle: Gun Shop & Indoor Shooting Range
+  address: 601 Atwater Blvd. Atwater, CA. 95301
+  image: /images/rangeexterior/DSC_0060.JPG
+  features:
+    - 18,800 sq ft facility
+    - 4800 sq. ft. Sales floor
+    - 20 lane indoor shooting range
+    - 6 lane archery range
+    - Two classrooms
+    - VIP rooms
+- name: Mariposa
+  subtitle: Gun Shop
+  address: 5094 Jessie Street, Ste. A Mariposa, CA. 95338
+  image: /images/locations/mariposa.jpg
+  features:
+    - Retail store located in Mariposa off of Hwy 140 behind Stage Stop Mini Mart
+    - 1500 sq. ft. facility
+    - Stock of handguns, long guns, ammunition, accessories, hunting goods and archery goods

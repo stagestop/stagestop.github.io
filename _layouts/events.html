@@ -1,22 +1,15 @@
-{% include header.html %}
+---
+layout: default
+---
 
-{% include hero.html filter="home" slide_id="home-hero" %}
+{{ content }}
 
-<div class="row">
-    <div class="col-lg-2"></div>
-
-    <div id="bm" class="col-lg-8 section">
-      
-    <div class="googleCalendar">
+<section>
+  <div class="container">
+  <h2 class="section-title text-center mb-0">EVENT SCHEDULE</h2>
+  <div class="spacer spacer-line border-primary">&nbsp;</div>
+  <div class="googleCalendar">
       <iframe src="https://calendar.google.com/calendar/embed?src=stagestopcalendar%40gmail.com&ctz=America/Los_Angeles" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
     </div>
-
-      <hr>
-
-        {{ content }}
-      
-    </div>
-
-    <div class="col-lg-2"></div>
-</div>
-{% include footer.html %}
+  </div>
+</section>

@@ -1,0 +1,90 @@
+- name: Single Shot
+  price: 300
+  type: year
+  area: guns
+  features:
+  - Unlimited Range Time
+  - 2 Guest Passes (per membership year)
+  - 1 Free Gun Rental (per membership year)
+  - Lane Reservations
+  - Free Target w/ Each Visit
+  addons:
+  - name: Archery Add-On Bundle
+    price: $75.00/yr
+- name: Double Barrel
+  price: 400
+  type: year
+  area: guns
+  features:
+  - Unlimited Range Time
+  - 4 Guest Passes (per membership year)
+  - 2 Free Gun Rental (per membership year)
+  - Lane Reservations
+  - Free Target w/ Each Visit
+  addons:
+  - name: Archery Add-On Bundle
+    price: $100.00/yr
+- name: Six Shooter
+  price: 450
+  type: year
+  area: guns
+  features:
+  - Unlimited Range Time
+  - 6 Guest Passes (per membership year)
+  - 3 Free Gun Rental (per membership year)
+  - Lane Reservations
+  - Free Target w/ Each Visit
+- name: Single Shot
+  price: 2,500
+  type: lifetime
+  area: guns
+  features:
+  - Unlimited Range Time
+  - 10 Guest Passes (per membership year)
+  - 5 Free Gun Rental (per membership year)
+  - 5% Ammunition Discount
+  - 10% Accessories & Competitions Discount
+  - Lane Reservations
+  - Free Target w/ Each Visit
+- name: Double Barrel
+  price: 3,500
+  type: lifetime
+  area: guns
+  features:
+  - Unlimited Range Time
+  - 10 Guest Passes (per membership year)
+  - 5 Free Gun Rental (per membership year)
+  - 5% Ammunition Discount
+  - 10% Accessories & Competitions Discount
+  - Lane Reservations
+  - Free Target w/ Each Visit
+- name: Six Shooter
+  price: 4,500
+  type: lifetime
+  area: guns
+  features:
+  - Unlimited Range Time
+  - 10 Guest Passes (per membership year)
+  - 5 Free Gun Rental (per membership year)
+  - 5% Ammunition Discount
+  - 10% Accessories & Competitions Discount
+  - Lane Reservations
+  - Free Target w/ Each Visit
+- name: Single Shot
+  price: 150
+  type: year
+  area: archery
+  features:
+  - Unlimited Range Time
+  - 2 Guest Passes (per membership year)
+  - Lane Reservations
+  - Free Target w/ Each Visit
+- name: Dual Quiver
+  price: 200
+  type: year
+  area: archery
+  features:
+  - Unlimited Range Time
+  - 2 Guest Passes (per membership year)
+  - Lane Reservations
+  - Free Target w/ Each Visit

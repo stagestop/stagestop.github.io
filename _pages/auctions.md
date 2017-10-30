@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Auctions & Transfers
-permalink: /auctions/
+permalink: /auctions
 ---
 
 # AUCTIONS
