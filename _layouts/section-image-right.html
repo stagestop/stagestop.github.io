@@ -4,13 +4,13 @@
 <section id="{{ page.id}}">
     <div class="container">
         <div class="row vcenter">
-            <div class="col-md-6">
+            <div class="{{ page.left-class }}">
                 {% include section-title.html title=page.title %}
                 <p class="lead mb-3">
                     {{ page.content }}
                 </p>
             </div><!-- / column -->
-            <div class="col-md-6">
+            <div class="{{ page.right-class }}">
                 <img src="{{ page.image }}" alt="">
             </div><!-- / column -->
         </div><!-- / row -->

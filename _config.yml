@@ -51,6 +51,8 @@ defaults:
       type: sections
     values:
       layout: section-default
+      right-class: col-md-6
+      left-class: col-md-6
   - scope:
       path: ""
       type: training-classes
