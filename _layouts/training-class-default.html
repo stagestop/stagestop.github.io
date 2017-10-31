@@ -11,6 +11,14 @@
                     <a href="{{ file.url }}" class="date ml-1">{{ file.name }}</a>{% unless forloop.last %}, {% endunless %}
                 {% endfor %}
                 {% endif %}
+
+                {% if page.prereqs %}
+                <i class="fa fa-check-circle-o ml-2"></i>
+                {% for prereq in page.prereqs %}
+                    <a href="{{ prereq.url }}">{{ prereq.title }}</a>
+                {% endfor %}
+                {% endif %}
+            </p>
         </div><!-- / post-meta -->
         {{ content }}
     </div><!-- / post-content -->
