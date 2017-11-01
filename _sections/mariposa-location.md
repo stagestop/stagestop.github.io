@@ -15,10 +15,10 @@ Fax: (209) 966-3888
 - 1500 sq. ft. facility
 - Stock of handguns, long guns, ammunition, accessories, hunting goods and archery goods
 
+##### Hours
+
 Tuesday - Friday
 10:00am - 6:00pm
-
-##### Hours
 
 Saturnday
 10:00am - 5:30pm
