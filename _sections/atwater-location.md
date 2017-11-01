@@ -3,6 +3,8 @@ id: ATWATER
 title: Atwater
 left-class: col-md-7
 right-class: col-md-5
+layout: section-map
+map-id: mapAtwater
 ---
 601 Atwater Blvd.
 Atwater, CA. 95301

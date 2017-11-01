@@ -1,9 +1,10 @@
 ---
 id: MARIPOSA
 title: Mariposa
-layout: section-image-right
 left-class: col-md-5
 right-class: col-md-7
+layout: section-map-right
+map-id: mapMariposa
 ---
 5094 Jessie Street, Ste. A
 Mariposa, CA. 95338

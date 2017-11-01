@@ -25,7 +25,7 @@ Stage Stop Gun Shop’s mission is to provide competitive pricing, a great selec
 <section id="contact">
     <div class="container">
         <div class="row vcenter">
-            <div class="col-md-5">
+            <div class="col-md-6 col-offset-3">
                 <h5 class="mt-3">GET IN TOUCH</h5>
                 <div class="spacer spacer-line border-primary ml-0">&nbsp;</div>
                 <p class="lead">

@@ -1,0 +1,19 @@
+---
+---
+
+<section id="{{ page.id}}">
+    <div class="container">
+        <div class="row">
+            <div class="{{ page.left-class }}">
+                <div id="{{ page.map-id }}"></div>
+            </div><!-- / column -->
+            <div class="{{ page.right-class }}">
+                <h2 class="section-title mb-0">{{ page.title | upcase }}</h2>
+                <div class="spacer spacer-line border-primary ml-0">&nbsp;</div>
+                <p class="lead mb-3">
+                {{ page.content }}
+                </p>
+            </div><!-- / column -->
+        </div><!-- / row -->
+    </div><!-- / container -->
+</section>
