@@ -1,0 +1,12 @@
+{% assign locations = site.data.locations | where: 'id', include.id %}
+{% for location in locations %}
+{% if include.link == 'true' %}
+<a href="{{ location.address-link }}">
+{{ location.address }}<br />
+{{ location.city }}, {{ location.state }} {{ location.zip }}
+</a>
+{% else %}
+{{ location.address }}<br />
+{{ location.city }}, {{ location.state }} {{ location.zip }}
+{% endif %}
+{% endfor %}

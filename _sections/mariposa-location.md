@@ -6,11 +6,10 @@ right-class: col-md-7
 layout: section-map-right
 map-id: mapMariposa
 ---
-5094 Jessie Street, Ste. A
-Mariposa, CA. 95338
+{% include location.html id="MARIPOSA" link="true" %}
 
-Phone: (209) 966-3777
-Fax: (209) 966-3888
+Phone: {% include phone-number.html number="(209) 966-3777" %}<br />
+Fax: {% include phone-number.html number="(209) 966-3888" %}<br />
 
 - Retail store located in Mariposa off of Hwy 140 behind Stage Stop Mini Mart
 - 1500 sq. ft. facility

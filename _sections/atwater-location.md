@@ -6,11 +6,10 @@ right-class: col-md-5
 layout: section-map
 map-id: mapAtwater
 ---
-601 Atwater Blvd.
-Atwater, CA. 95301
+{% include location.html id="ATWATER" link="true" %}
 
-Phone: (209) 358-4867
-Fax: (209) 358-4863
+Phone: {% include phone-number.html number="(209) 358-4867" %}<br />
+Fax: {% include phone-number.html number="(209) 358-4863" %}<br />
 
 - 18,800 sq ft facility
 - 4800 sq. ft. Sales floor
