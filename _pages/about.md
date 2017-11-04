@@ -12,17 +12,12 @@ Stage Stop Gun Shop is a firearm and archery retailer with two California locati
 
 In 2011, Stage Stop Gun Shop found its first home in the historic town of Mariposa, California and a second location in Atwater, California was opened in 2013. In 2015, the decision was made to expand again but this time, the Verna Family decided to begin constructing a new facility in Atwater, California which would include an indoor shooting range, indoor archery range, classrooms, offices, and a VIP Lounge.  Land and the building were purchased and the planning began.  In 2017, construction officially began and in July of the same year, Stage Stop Gun Shop moved into the new location.
 
-<hr>
-
-# OUR MISSION
-Stage Stop Gun Shop’s mission is to provide competitive pricing, a great selection and excellent customer service.  In the effort to achieve these goals, we will continue to add products and services to better serve their customers. 
-
-
 {% include section.html id="ATWATER" %}
 {% include section.html id="MARIPOSA" %}
+{% include section.html id="SPONSORS" %}
 
 
-<section id="contact">
+<section>
     <div class="container">
         <div class="row vcenter">
             <div class="col-md-6 col-offset-3">

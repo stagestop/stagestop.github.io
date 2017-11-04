@@ -18,6 +18,7 @@
     <link href="/css/orange.css" rel="stylesheet">
     <link href="/css/animate.css" rel="stylesheet">
     <link href="/css/owl.carousel.min.css" rel="stylesheet">
+    <link href="/css/magnific-popup.css" rel="stylesheet">
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -285,6 +286,20 @@ $('#clients-carousel').owlCarousel({
 <script src="/js/contact-form-validator.min.js"></script>
 <script src="/js/contact-form.js"></script>
 <!-- / Contact Form -->
+
+<!-- lightbox -->
+<script src="/js/jquery.magnific-popup.min.js"></script>
+<script type="text/javascript">
+// This will create a single gallery from all elements that have class "lightbox"
+$('.lightbox').each(function() {
+    $(this).magnificPopup({
+        delegate: 'a.image-lightbox', // the selector for gallery item
+        type: 'inline'
+    });
+});
+</script>
+<!-- / lightbox -->
+
 
 <script src="https://www.smartwaiver.com/m/webpl/f.js?webpl_waiver=splashpage-18496&webpl_title=Sign%20our%20waiver&webpl_align=Left&webpl_fontsize=16&webpl_background=%23f47b20&webpl_fontcolor=%23ffffff&webpl_font=Nunito%20Sans" type="text/javascript"></script>
 
