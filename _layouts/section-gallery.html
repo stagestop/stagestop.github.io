@@ -1,0 +1,33 @@
+---
+---
+<section id="{{ page.id }}" class="portfolio-type2 no-gutter no-padding ">
+    <h3 class="section-title text-center hidden">{{ page.title | upcase }}</h3>
+    <div class="container-fluid dark bg-inverse">
+        <!-- portfolio filter -->
+        <ul class="portfolio-filter pf-type2 list-inline text-center mt-0 mb-0">
+            <li><a href="#" data-group="all" class="active pill"><i class="md-icon dp14 mr-2">layers</i> <span class="va-middle">ALL</span></a></li>
+            <li><a href="#" data-group="Archery" class="pill"><i class="md-icon dp14 mr-2">edit</i> <span class="va-middle">ARCHERY</span></a></li>
+            <li><a href="#" data-group="Shop" class="pill"><i class="md-icon dp14 mr-2">loyalty</i> <span class="va-middle">SHOP</span></a></li>
+            <li><a href="#" data-group="Bays" class="pill"><i class="md-icon dp14 mr-2">palette</i> <span class="va-middle">BAYS</span></a></li>
+            <li><a href="#" data-group="Exterior" class="pill"><i class="md-icon dp14 mr-2">palette</i> <span class="va-middle">EXTERIOR</span></a></li>
+        </ul>
+        <!-- / portfolio filter -->
+    </div><!-- / container-fluid -->
+    <div class="container-fluid">
+        <ul class="row portfolio list-unstyled mb-0 lightbox shuffle" id="grid" style="position: relative; overflow: hidden; height: 927px; transition: height 250ms ease-out;">
+            {% for image in site.data.gallery %}
+            <!-- project -->
+            <li class="col-md-4 project shuffle-item filtered" data-groups="[&quot;{{ image.category }}&quot;]" style="position: absolute; top: 0px; left: 0px; visibility: visible; transition: transform 250ms ease-out, opacity 250ms ease-out;">
+                <div class="effect effect-2 clearfix">
+                    <div class="img">
+                        <img class="img-responsive" src="{{ image.url }}" alt="">
+                        <div class="overlay">
+                            <a href="{{ image.url }}" class="image-lightbox expand">+</a>
+                        </div><!-- / overlay -->
+                    </div><!-- / img -->
+                </div><!-- / effect-2 -->
+            </li><!-- / project -->
+            {% endfor %}
+        </ul> <!-- / portfolio -->
+    </div><!-- / container-fluid -->
+</section>

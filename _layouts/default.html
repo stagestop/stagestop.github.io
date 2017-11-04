@@ -293,8 +293,19 @@ $('#clients-carousel').owlCarousel({
 // This will create a single gallery from all elements that have class "lightbox"
 $('.lightbox').each(function() {
     $(this).magnificPopup({
-        delegate: 'a.image-lightbox', // the selector for gallery item
+        delegate: 'a.inline-lightbox', // the selector for gallery item
         type: 'inline'
+    });
+});
+
+// This will create a single gallery from all elements that have class "lightbox"
+$('.lightbox').each(function() {
+    $(this).magnificPopup({
+        delegate: 'a.image-lightbox', // the selector for gallery item
+        type: 'image',
+        gallery: {
+          enabled:true
+        }
     });
 });
 </script>
