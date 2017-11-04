@@ -6,10 +6,11 @@
         <!-- portfolio filter -->
         <ul class="portfolio-filter pf-type2 list-inline text-center mt-0 mb-0">
             <li><a href="#" data-group="all" class="active pill"><i class="md-icon dp14 mr-2">layers</i> <span class="va-middle">ALL</span></a></li>
-            <li><a href="#" data-group="Archery" class="pill"><i class="md-icon dp14 mr-2">edit</i> <span class="va-middle">ARCHERY</span></a></li>
-            <li><a href="#" data-group="Shop" class="pill"><i class="md-icon dp14 mr-2">loyalty</i> <span class="va-middle">SHOP</span></a></li>
-            <li><a href="#" data-group="Bays" class="pill"><i class="md-icon dp14 mr-2">palette</i> <span class="va-middle">BAYS</span></a></li>
-            <li><a href="#" data-group="Exterior" class="pill"><i class="md-icon dp14 mr-2">palette</i> <span class="va-middle">EXTERIOR</span></a></li>
+            <li><a href="#" data-group="archery" class="pill"><i class="md-icon dp14 mr-2">edit</i> <span class="va-middle">ARCHERY</span></a></li>
+            <li><a href="#" data-group="shop" class="pill"><i class="md-icon dp14 mr-2">loyalty</i> <span class="va-middle">GUN SHOP</span></a></li>
+            <li><a href="#" data-group="bays" class="pill"><i class="md-icon dp14 mr-2">palette</i> <span class="va-middle">RANGE BAYS</span></a></li>
+            <li><a href="#" data-group="counters" class="pill"><i class="md-icon dp14 mr-2">palette</i> <span class="va-middle">RANGE COUNTERS</span></a></li>
+            <li><a href="#" data-group="exterior" class="pill"><i class="md-icon dp14 mr-2">palette</i> <span class="va-middle">EXTERIOR</span></a></li>
         </ul>
         <!-- / portfolio filter -->
     </div><!-- / container-fluid -->
@@ -20,9 +21,9 @@
             <li class="col-md-4 project shuffle-item filtered" data-groups="[&quot;{{ image.category }}&quot;]" style="position: absolute; top: 0px; left: 0px; visibility: visible; transition: transform 250ms ease-out, opacity 250ms ease-out;">
                 <div class="effect effect-2 clearfix">
                     <div class="img">
-                        <img class="img-responsive" src="{{ image.url }}" alt="">
+                        <img class="img-responsive" src="{{ image.image }}" alt="">
                         <div class="overlay">
-                            <a href="{{ image.url }}" class="image-lightbox expand">+</a>
+                            <a href="{{ image.image }}" class="image-lightbox expand">+</a>
                         </div><!-- / overlay -->
                     </div><!-- / img -->
                 </div><!-- / effect-2 -->
