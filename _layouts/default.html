@@ -291,21 +291,21 @@ $('#clients-carousel').owlCarousel({
 <script src="/js/jquery.magnific-popup.min.js"></script>
 <script type="text/javascript">
 // This will create a single gallery from all elements that have class "lightbox"
-$('.lightbox').each(function() {
-    $(this).magnificPopup({
-        delegate: 'a.inline-lightbox', // the selector for gallery item
-        type: 'inline'
-    });
-});
-
-// This will create a single gallery from all elements that have class "lightbox"
-$('.lightbox').each(function() {
+$('.gallery-lightbox').each(function() {
     $(this).magnificPopup({
         delegate: 'a.image-lightbox', // the selector for gallery item
         type: 'image',
         gallery: {
           enabled:true
         }
+    });
+});
+
+// This will create a single gallery from all elements that have class "lightbox"
+$('.sponsor-lightbox').each(function() {
+    $(this).magnificPopup({
+        delegate: 'a.inline-lightbox', // the selector for gallery item
+        type: 'inline'
     });
 });
 </script>

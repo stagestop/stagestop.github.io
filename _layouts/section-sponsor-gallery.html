@@ -1,9 +1,9 @@
 <section class="portfolio-type2 no-gutter no-padding ">
-        <h2 class="section-title text-center mb-0">{{ page.title | upcase}}</h2>
-        <div class="spacer spacer-line border-primary">&nbsp;</div>
+    <h2 class="section-title text-center mb-0">{{ page.title | upcase}}</h2>
+    <div class="spacer spacer-line border-primary">&nbsp;</div>
 
-        <div class="container-fluid">
-        <ul class="row portfolio list-unstyled mb-0 lightbox shuffle" id="grid" style="position: relative; overflow: hidden; height: 918px; transition: height 250ms ease-out;">
+    <div class="container-fluid">
+        <ul class="row portfolio list-unstyled mb-0 sponsor-lightbox lightbox shuffle" id="grid" style="position: relative; overflow: hidden; height: 918px; transition: height 250ms ease-out;">
             {% for sponsor in site.data.sponsors %}
             <!-- project -->
             <li class="col-md-3 project shuffle-item filtered" style="position: absolute; top: 0px; left: 0px; visibility: visible; transition: transform 250ms ease-out, opacity 250ms ease-out; opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1);">
@@ -11,7 +11,7 @@
                     <div class="img">
                         <img class="img-responsive" src="{{ sponsor.image }}" alt="image of {{ sponsor.name }} logo.">
                         <div class="overlay">
-                            <a href="#SPNSR-{{ sponsor.id }}" class="image-lightbox expand">+</a>
+                            <a href="#SPNSR-{{ sponsor.id }}" class="inline-lightbox expand">+</a>
                         </div><!-- / overlay -->
                     </div><!-- / img -->
                 </div><!-- / effect-2 -->
