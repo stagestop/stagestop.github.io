@@ -41,7 +41,6 @@ button1:
             <p class="lead w-75 ml-auto mr-auto mt-3 mb-3">
             We are hosting an entry level pistol class, ages 13 and up (minors must have parental consent!) We will supply your firearm and ammunition and we will train you in basic firearm safey and basic shooting skills.
             </p>
-            <a href="#membership" class="btn btn-primary smooth-scroll mt-1">SIGN UP NOW!</a>
         </div><!-- / section-content -->
     </div><!-- / container -->
 </section>
