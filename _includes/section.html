@@ -1,5 +1,5 @@
-{% assign section-list = site.sections | where: 'id', include.id %}
-
-{% for section in section-list %}
+{% assign sectionId = include.id %}
+{% assign sections = site.sections | where: 'id', sectionId %}
+{% for section in sections %}
 {{ section.output }}
 {% endfor %}
