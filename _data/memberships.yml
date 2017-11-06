@@ -9,8 +9,9 @@
   - Lane Reservations
   - Free Target w/ Each Visit
   addons:
-  - name: Archery Add-On Bundle
-    price: $75.00/yr
+    name: Archery Add-On Bundle
+    price: 75
+    type: yr
 - name: Double Barrel
   price: 400
   type: year
@@ -22,8 +23,9 @@
   - Lane Reservations
   - Free Target w/ Each Visit
   addons:
-  - name: Archery Add-On Bundle
-    price: $100.00/yr
+    name: Archery Add-On Bundle
+    price: 100
+    type: yr
 - name: Six Shooter
   price: 450
   type: year

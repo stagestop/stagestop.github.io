@@ -21,16 +21,25 @@ layout: default
                         <span class="pricing-period">/ {{plan.type}}</span>
                     </p>
                 </div>
-                <div class="pricing-table-content">
+                <div class="pricing-table-content" style="padding-bottom: 15px">
                     <ul>
                     {% for feature in plan.features %}
                     <li>{{feature | upcase }}</li>
                     {% endfor %}
                     </ul>
-                    <div class="pricing-table-button">
-                        <a href="#x" class="btn btn-primary">JOIN NOW</a>
-                    </div>
                 </div>
+                {% if plan.addons %}
+                <div class="pricing-table-title bg-darkgrey">
+                    <h5 class="pricing-title">{{ plan.addons.name }}</h5>
+                </div>
+                <div class="pricing-table-content" style="padding-bottom: 15px; padding-top: 15px">
+                    <p>
+                        <span class="pricing-currency">$</span>
+                        <span class="pricing-price">{{plan.addons.price}}</span>
+                        <span class="pricing-period">/ {{plan.addons.type}}</span>
+                    </p>
+                </div>
+                {% endif %}
             </div><!-- / pricing-table -->
         </div>
         {% endfor %}
@@ -63,15 +72,12 @@ layout: default
                         <span class="pricing-period">/ {{plan.type}}</span>
                     </p>
                 </div>
-                <div class="pricing-table-content">
+                <div class="pricing-table-content" style="padding-bottom: 15px">
                     <ul>
                     {% for feature in plan.features %}
                     <li>{{feature | upcase }}</li>
                     {% endfor %}
                     </ul>
-                    <div class="pricing-table-button">
-                        <a href="#x" class="btn btn-primary">JOIN NOW</a>
-                    </div>
                 </div>
             </div><!-- / pricing-table -->
         </div>
