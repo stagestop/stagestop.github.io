@@ -1,5 +1,5 @@
 ---
-id: "SELL"
+section-id: SELL
 title: "Turn your dusty old firearms into cold hard cash!"
 image: ""
 ---

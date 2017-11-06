@@ -1,5 +1,5 @@
 ---
-id: SPONSORS
+section-id: SPONSORS
 title: Sponsors
 layout: section-sponsor-gallery
 ---

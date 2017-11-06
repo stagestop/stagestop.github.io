@@ -1,5 +1,5 @@
 ---
-id: MEMBERSHIP
+section-id: MEMBERSHIP
 title: Membership
 layout: section-primary-bg
 ---

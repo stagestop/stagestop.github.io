@@ -1,5 +1,5 @@
 ---
-id: ARCHERY_RANGE
+section-id: ARCHERY_RANGE
 title: Archery Range
 image: /images/range/IMG_4860.JPG
 ---

@@ -1,5 +1,5 @@
 ---
-id: MARIPOSA
+section-id: MARIPOSA
 title: Mariposa
 left-class: col-md-5
 right-class: col-md-7

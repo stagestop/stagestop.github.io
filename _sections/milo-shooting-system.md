@@ -1,5 +1,5 @@
 ---
-id: SECTION_RANGE_MILO
+section-id: SECTION_RANGE_MILO
 title: Milo Range Shooting System
 image: /images/range/milo-range-system.jpg
 ---

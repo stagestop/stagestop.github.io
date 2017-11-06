@@ -1,5 +1,5 @@
 ---
-id: AUCTIONS
+section-id: AUCTIONS
 title: Auctions
 ---
 ###Check Out Our Auctions On Gun Broker!

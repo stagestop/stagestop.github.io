@@ -1,5 +1,5 @@
 ---
-id: TRANSFERS
+section-id: TRANSFERS
 title: Transfers
 image: ''
 layout: section-image-right

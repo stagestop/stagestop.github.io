@@ -1,5 +1,5 @@
 ---
-id: MEGGITT_SHOOTING_SYSTEM
+section-id: MEGGITT_SHOOTING_SYSTEM
 title: Meggitt Shooting System
 image: /images/range/meggitt-shooting-system.jpg
 layout: section-image-right

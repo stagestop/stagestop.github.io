@@ -1,5 +1,5 @@
 ---
-id: ATWATER
+section-id: ATWATER
 title: Atwater
 left-class: col-md-7
 right-class: col-md-5
