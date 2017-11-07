@@ -1,6 +1,8 @@
 ---
 layout: default
-title: Indoor Range
+title: Indoor Gun & Archery Range
+titlewhite: Indoor Gun & Archery
+titleaccent: Range
 description: Our indoor range houses 3 bays; pistol, rifle, the Meggitt and Milo Range Systems Bay, for a total of 20 lanes. Please click the "Sign Our Waiver" button below to sign the waiver prior to your visit.
 permalink: /range
 ---
@@ -22,7 +24,7 @@ permalink: /range
                 <div class="promo-box text-center inner-space">
                     <h6 class="box-title"><a href="#x" class="promo-link">BAY 2</a></h6>
                     <p class="box-description">
-                    Rifle Bay, 25 yards, 6 lanes (shoot up to a .308.), available to rent ($20.00 per hour)
+                    Rifle and Pistol Bay, 25 yards, 6 lanes (shoot up to a <strong>.308</strong>.), available to rent ($20.00 per hour)
                     </p>
                     <!-- <a href="#x" class="btn btn-primary">RESERVE NOW!</a> -->
                 </div><!-- / icon-block -->
