@@ -52,6 +52,7 @@ permalink: /range
         <h3 class="section-title text-center mb-0">Shooting Range Rules</h3>
         <div class="spacer spacer-line border-primary">&nbsp;</div>
         <ul class="text-center">
+            <li><strong>Please click on the "Sign Our Waiver" button below to sign the waiver prior to your visit.</strong></li>
             <li>Eye and Ear protection must be worn at all times</li>
             <li>Keep your finger off of the trigger until ready to shoot</li>
             <li>Keep firearm pointed down-range at all times</li>
@@ -73,6 +74,7 @@ permalink: /range
         <h3 class="section-title text-center mb-0">Archery Range Rules</h3>
         <div class="spacer spacer-line border-primary">&nbsp;</div>
         <ul class="text-center">
+            <li><strong>Please click on the "Sign Our Waiver" button below to sign the waiver prior to your visit.</strong></li>
             <li>Do not dry fire any bow</li>
             <li>Keep bow pointed in a safe direction when the arrow is knocked</li>
             <li>Make sure the down-range area is unoccupied before drawing your bow</li>
