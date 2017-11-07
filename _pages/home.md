@@ -50,16 +50,6 @@ button1:
         <div class="row">
             <div class="col-md-3">
                 <div class="promo-box text-center inner-space">
-                    <i class="md-icon dp36 mb-1 box-icon bg-transparent text-primary">lock</i>
-                    <h6 class="box-title"><a href="#x" class="promo-link">PERSONAL SECURITY</a></h6>
-                    <p class="box-description">
-                    We are happy to help guide you through your decision-making process.
-                    </p>
-                    <a href="/about" class="btn btn-black">CONTACT US</a>
-                </div><!-- / icon-block -->
-            </div><!-- / column -->
-            <div class="col-md-3">
-                <div class="promo-box text-center inner-space">
                     <i class="md-icon dp36 mb-1 box-icon bg-transparent text-primary">library_books</i>
                     <h6 class="box-title"><a href="#x" class="promo-link">TRAINING</a></h6>
                     <p class="box-description">
@@ -82,6 +72,16 @@ button1:
                     <h6 class="box-title"><a href="#x" class="promo-link">ARCHERY</a></h6>
                     <p class="box-description">Now is the time to checkout archery. See if it's for you.</p>
                     <a href="/range" class="btn btn-black">LEARN MORE</a>
+                </div><!-- / icon-block -->
+            </div><!-- / column -->
+            <div class="col-md-3">
+                <div class="promo-box text-center inner-space">
+                    <i class="md-icon dp36 mb-1 box-icon bg-transparent text-primary">lock</i>
+                    <h6 class="box-title"><a href="#x" class="promo-link">PERSONAL SECURITY</a></h6>
+                    <p class="box-description">
+                    We are happy to help guide you through your decision-making process.
+                    </p>
+                    <a href="/about" class="btn btn-black">CONTACT US</a>
                 </div><!-- / icon-block -->
             </div><!-- / column -->
         </div>
