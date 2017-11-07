@@ -40,8 +40,8 @@ permalink: /range
     </div><!-- / container -->
 </section>
 
-{% include section.html id="SECTION_RANGE_MILO" %}
 {% include section.html id="MEGGITT_SHOOTING_SYSTEM" %}
+{% include section.html id="SECTION_RANGE_MILO" %}
 {% include section.html id="MEMBERSHIP" %}
 
 
