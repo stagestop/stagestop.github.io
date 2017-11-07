@@ -15,7 +15,7 @@ permalink: /range
                     <p class="box-description">
                     Pistol Bay, 15 yards, 8 lanes, available to rent ($20.00 per hour)
                     </p>
-                    <a href="#x" class="btn btn-primary">RESERVE NOW!</a>
+                    <!-- <a href="#x" class="btn btn-primary">RESERVE NOW!</a> -->
                 </div><!-- / icon-block -->
             </div><!-- / column -->
             <div class="col-md-4">
@@ -24,7 +24,7 @@ permalink: /range
                     <p class="box-description">
                     Rifle Bay, 25 yards, 6 lanes (shoot up to a .308.), available to rent ($20.00 per hour)
                     </p>
-                    <a href="#x" class="btn btn-primary">RESERVE NOW!</a>
+                    <!-- <a href="#x" class="btn btn-primary">RESERVE NOW!</a> -->
                 </div><!-- / icon-block -->
             </div><!-- / column -->
             <div class="col-md-4">
@@ -33,7 +33,7 @@ permalink: /range
                     <p class="box-description">
                     Meggitt and Milo Range Systems, 20 yards, 6 lanes, available by reservation soon.
                     </p>
-                    <a href="#x" class="btn btn-primary">RESERVE NOW!</a>
+                    <!-- <a href="#x" class="btn btn-primary">RESERVE NOW!</a> -->
                 </div><!-- / icon-block -->
             </div><!-- / column -->
         </div>
