@@ -20,7 +20,7 @@ Fax: {% include phone-number.html number="(209) 966-3888" %}<br />
 Tuesday - Friday
 10:00am - 6:00pm
 
-Saturnday
+Saturday
 10:00am - 5:30pm
 
 Sunday - Monday

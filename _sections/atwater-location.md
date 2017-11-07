@@ -23,5 +23,5 @@ Fax: {% include phone-number.html number="(209) 358-4863" %}<br />
 Monday - Friday
 10:00am - 8:00pm
 
-Saturnday - Sunday
+Saturday - Sunday
 10:00am - 6:00pm
