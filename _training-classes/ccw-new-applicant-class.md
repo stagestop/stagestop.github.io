@@ -2,6 +2,11 @@
 id: CCW_NEW_APPLICANT_CLASS
 title: CCW New Applicant Class
 sort_order: 1
+files:
+  - name: CCW Serial Form
+    url: '/pdf/ccw-serial.pdf'
+  - name: CCW Confirmation Form
+    url: '/pdf/ccw-confirmation.pdf'
 ---
 This class is 8 hours long.  In this class, you will learn the necessary information for you to apply for your CCW in your county.  This class will teach the laws in CA regarding CCW and self-defense and you will qualify with the firearm(s) that you wish to have on your permit.  Taking the class does not guarantee you will be able to obtain a CCW but is a requirement prior to getting it.  We are currently certified to instruct residents of Madera, Mariposa & Merced Counties. Check back for updates regarding additional counties that may become available. 
 

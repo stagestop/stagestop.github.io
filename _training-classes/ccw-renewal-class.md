@@ -3,10 +3,10 @@ id: CCW_RENEWAL_CLASS
 title: CCW Renewal Class
 sort_order: 1
 files:
-  - name: 'test'
-    url: '#'
-  - name: 'test'
-    url: '#'
+  - name: CCW Serial Form
+    url: '/pdf/ccw-serial.pdf'
+  - name: CCW Confirmation Form
+    url: '/pdf/ccw-confirmation.pdf'
 ---
 This class is 4 hours and is for individuals that have an expiring CCW.  We are currently certified to instruct residents of Madera, Mariposa & Merced Counties. Check back for updates regarding additional counties that may become available. 
 

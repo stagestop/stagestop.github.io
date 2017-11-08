@@ -6,7 +6,3 @@ description: Stage Stop Gun Shop & Indoor Range offers a variety of training cou
 permalink: /training
 layout: training
 ---
-
-#### [CCW Confirmation Form](/pdf/ccw-confirmation.pdf)
-
-#### [CCW Serial Form](/pdf/ccw-serial.pdf)
