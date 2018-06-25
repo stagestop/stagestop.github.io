@@ -21,7 +21,7 @@ Tuesday - Friday
 10:00am - 6:00pm
 
 Saturday
-10:00am - 5:30pm
+10:00am - 5:00pm
 
 Sunday - Monday
 Closed
