@@ -3,7 +3,7 @@ layout: default
 title: Indoor Gun & Archery Range
 titlewhite: Indoor Gun & Archery
 titleaccent: Range
-description: Our indoor range houses 3 bays; pistol, rifle, the Meggitt and Milo Range Systems Bay, for a total of 20 lanes. Please click the "Sign Our Waiver" button below to sign the waiver prior to your visit.
+description: Our indoor range houses 3 bays; pistol, rifle, the Meggitt and Milo Range Systems Bay, for a total of 20 lanes. Please click the "Sign Our Waiver" button below to sign the waiver prior to your visit.  
 permalink: /range
 ---
 <section>
@@ -62,6 +62,7 @@ permalink: /range
             <li>No Open Toe Shoes or Wide Neck Shirts</li>
             <li>Leave Malfunctions on the table and get a staff member</li>
             <li>No Steel Core, Tracers, Incendiary gas or Explosive ammo</li>
+            <li>All rifles must have sights or a scope</li>
         </ul>
     </div>
 </section>
