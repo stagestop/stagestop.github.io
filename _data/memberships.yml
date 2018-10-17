@@ -1,4 +1,28 @@
 - name: Single Shot
+  price: 29.99
+  type: monthly
+  area: guns
+  features:
+  - Unlimited Range Time
+  - Lane Reservations
+  - Free Target w/ Each Visit
+- name: Double Barrel
+  price: 39.99
+  type: monthly
+  area: guns
+  features:
+  - Unlimited Range Time
+  - Lane Reservations
+  - Free Target w/ Each Visit
+- name: Six Shooter
+  price: 49.99
+  type: monthly
+  area: guns
+  features:
+  - Unlimited Range Time
+  - Lane Reservations
+  - Free Target w/ Each Visit
+- name: Single Shot
   price: 300
   type: year
   area: guns
@@ -70,30 +94,6 @@
   - 5 Free Gun Rental (per membership year)
   - 5% Ammunition Discount
   - 10% Accessories & Competitions Discount
-  - Lane Reservations
-  - Free Target w/ Each Visit
-- name: Single Shot
-  price: 29.99
-  type: monthly
-  area: guns
-  features:
-  - Unlimited Range Time
-  - Lane Reservations
-  - Free Target w/ Each Visit
-- name: Double Barrel
-  price: 39.99
-  type: monthly
-  area: guns
-  features:
-  - Unlimited Range Time
-  - Lane Reservations
-  - Free Target w/ Each Visit
-- name: Six Shooter
-  price: 49.99
-  type: monthly
-  area: guns
-  features:
-  - Unlimited Range Time
   - Lane Reservations
   - Free Target w/ Each Visit
 - name: Single Shot
