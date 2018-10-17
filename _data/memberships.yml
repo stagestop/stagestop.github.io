@@ -96,7 +96,7 @@
   - Unlimited Range Time
   - Lane Reservations
   - Free Target w/ Each Visit
-  - name: Single Shot
+- name: Single Shot
   price: 150
   type: year
   area: archery
