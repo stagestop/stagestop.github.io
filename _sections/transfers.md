@@ -10,7 +10,7 @@ You purchased a gun from an out-of-state dealer and want it shipped to us for fi
 
 Please call us in Mariposa at 209-966-3777or Atwater at 209-358-4867 so we  can get the process started for you.    
 
-Our fee for firearm transfers is $50.00 per firearm, plus DROS fees.
+Our fee for firearm transfers is $75.00 per firearm, plus DROS fees.
 
 #### You want to purchase a firearm from another private party?
 
