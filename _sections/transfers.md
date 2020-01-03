@@ -19,5 +19,5 @@ In order to do this legally, your best bet is to come into our store and speak w
 - The gun is transferred into our inventory and out of the seller’s name
 - You will fill out the federal firearm purchase form and present current identification and if applicable, permit to purchase
 - We will verify the background check and upon successful completion, transfer the firearm to the new owner
-- Our fee for private party firearm transfers is $10.00 per gun. Plus $25.00 DROS fees
+- Our fee for private party firearm transfers is $10.00 per gun plus DROS fees.
 
