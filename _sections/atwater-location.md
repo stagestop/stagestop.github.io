@@ -17,6 +17,7 @@ Fax: {% include phone-number.html number="(209) 358-4863" %}<br />
 - 6 lane archery range
 - Two classrooms
 - VIP rooms
+- Stock of handguns, long guns, accessories, ammo, fishing supplies and archery goods
 
 ##### Hours
 
