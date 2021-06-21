@@ -7,6 +7,7 @@ files:
     url: '/pdf/class-confirmation.pdf'
 ---
 This 3 hour beginner shooter class takes the beginner and continues to work on the basic skills by emphasizing safety and the shooting mechanics. Each shooter will initially focus on their effort to maximize accuracy and then shift the focus towards shooting "center mass"
+In order to be registered for the class, you will need to call or come into either location to pay for your spot!
 Please review the class confirmation form ["Class Confirmation"](/pdf/class-confirmation.pdf)
 
 You will need: Your own firearm, 150 rounds of ammunition, 2 magazines for your firearm, snap caps for your firearm, eye and ear protection.  No low-cut shirts or open toe shoes will be allowed in the range. 
