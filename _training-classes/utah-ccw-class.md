@@ -7,5 +7,4 @@ files:
     url: '/pdf/utah-class.pdf'
 ---
 At the end of this four hour course, you will have everything you need to get your non-resident Utah CCW. Cost is $75.00.
-Call or come in to the shop to register or register online 
-Call or come in to the shop to register or register online 
+In order to be registered for the class, you will need to call or come into either location to pay for your spot!
