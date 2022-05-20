@@ -4,7 +4,7 @@ titlewhite: VIP
 titleaccent: Stage Stop
 description: The VIP Lounge located inside of Stage Stop Gun Shop is the perfect venue for your next event
 permalink: /vip
-layout: default
+layout: default-container
 ---
 
 # VIP Rentals
@@ -25,7 +25,7 @@ Prior to your party, we will be contacting you to ask what channels the tv’s s
                 <p class="lead">
                     Complete the below form to inquire about reserving the space for your next event!
                 </p>
-                <form action="https://formspree.io/vip@ssgs.us" method="POST" id="contactForm" data-toggle="validator">
+                <form action="https://formspree.io/f/mbjwqnyp" method="POST" id="contactForm" data-toggle="validator">
                     <div class="row">
                         <div class="col-md-6 sub-col-left">
                             <div class="form-group">
