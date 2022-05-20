@@ -18,11 +18,8 @@
   url: "/events"
 - title: "Gallery"
   url: /gallery
-- title: "About"
-  url: /about
-  items:
     - title: "VIP"
-      url: /VIP
+      url: /vip
 - title: "About"
   url: /about
   items:
