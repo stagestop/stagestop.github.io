@@ -1,5 +1,5 @@
 ---
-section-id: SECTION_VIP_BAY
+section-id: VIP_BAY
 title: VIP Private Shooting Bay
 image: /images/range/vip-bay.jpg
 layout: section-image-left
