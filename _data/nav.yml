@@ -21,6 +21,11 @@
 - title: "About"
   url: /about
   items:
+    - title: "VIP"
+      url: /VIP
+- title: "About"
+  url: /about
+  items:
     - title: "Sponsors"
       url: /about/sponsors
     - title: "Contact"
