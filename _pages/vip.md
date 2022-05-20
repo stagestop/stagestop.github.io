@@ -3,7 +3,7 @@ title: Stage Stop VIP Event Space
 titlewhite: VIP
 titleaccent: Stage Stop
 description: The VIP Lounge located inside of Stage Stop Gun Shop is the perfect venue for your next event
-permalink: /VIP
+permalink: /vip
 layout: default-container
 ---
 
