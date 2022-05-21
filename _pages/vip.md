@@ -1,7 +1,7 @@
 ---
 title: Stage Stop VIP Event Space
-titlewhite: VIP
-titleaccent: Stage Stop
+titlewhite: Stage Stop
+titleaccent: VIP
 description: The VIP Lounge located inside of Stage Stop Gun Shop is the perfect venue for your next event
 permalink: /vip
 layout: default-container
@@ -14,13 +14,16 @@ Prior to your party, we will be contacting you to ask what channels the tv’s s
 
 {% include section.html id="VIP_LOUNGE" %}
 {% include section.html id="VIP_BAY" %}
+{% include section.html id="CLASSROOM" %}
 
+
+To book your next event - call or text: {% include phone-number.html number="(209) 864-5249" %}<br />
 
 <section>
     <div class="container">
         <div class="row vcenter">
             <div class="col-md-6 col-offset-3">
-                <h5 class="mt-3">GET IN TOUCH</h5>
+                <h5 class="mt-3">SUBMIT YOUR INQUIRY</h5>
                 <div class="spacer spacer-line border-primary ml-0">&nbsp;</div>
                 <p class="lead">
                     Complete the below form to inquire about reserving the space for your next event!
