@@ -1,7 +1,7 @@
 ---
 section-id: CLASSROOM
 title: Classroom/Banquet Room
-image: /images/range/class.jpg
+image: /images/range/banquet.jpg
 layout: section-image-right
 ---
 

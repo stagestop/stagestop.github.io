@@ -1,15 +1,15 @@
 ---
 title: VIP Event Space
-titlewhite: VIP Event Space
-titleaccent: 
-description: Contact us to book your next event in our VIP accomodations
+titlewhite: Event Space
+titleaccent: VIP
+description: Contact us to book your next event in our VIP accommodations
 permalink: /vip
 layout: default-container
 ---
 
 # VIP Rentals
 
-Prior to your party, we will be contacting you to ask what channels the tv’s should be programmed to and what kind of music your guests would enjoy so that we can have that set up prior to your arrival.  Also, if you can have all guests sign our waiver prior to arrival (we will send you the link for that), it really helps speed up the check in process.  If you can send your coordinator a guest list by at least 3:00 pm the business day prior to the party, we can precheck them to confirm that waivers have been signed. This step will also speed up that check in process when they get here.  
+Whether you are planning a party or a meeting, Stage Stop Gun Shop & Indoor Range is the perfect event venue.  We have a beautifully decorated VIP Lounge, a large banquet room that can accommodate approx 100 guests and a VIP Bay that is attached to the lounge.  All three areas can be rented indivually or can be combined based on your needs.  
 
 
 {% include section.html id="VIP_LOUNGE" %}
@@ -17,7 +17,7 @@ Prior to your party, we will be contacting you to ask what channels the tv’s s
 {% include section.html id="CLASSROOM" %}
 
 
-To book your next event - call or text: {% include phone-number.html number="(209) 864-5249" %}<br />
+#   To book your next event - call or text: {% include phone-number.html number="(209) 864-5249" %}<br />
 
 <section>
     <div class="container">
