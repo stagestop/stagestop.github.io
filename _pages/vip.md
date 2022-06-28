@@ -17,7 +17,7 @@ Whether you are planning a party or a meeting, Stage Stop Gun Shop & Indoor Rang
 {% include section.html id="CLASSROOM" %}
 
 
-#   To book your next event - call or text: {% include phone-number.html number="(209) 864-5249" %}<br />
+# To book your next event - call or text: {% include phone-number.html number="(209) 864-5249" %}<br />
 
 <section>
     <div class="container">
