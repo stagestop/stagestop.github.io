@@ -9,6 +9,7 @@ map-id: mapAtwater
 {% include location.html id="ATWATER" link="true" %}
 
 Phone: {% include phone-number.html number="(209) 358-4867" %}<br />
+Text: {% include phone-number.html number="(209) 326-4311" %}<br />
 Fax: {% include phone-number.html number="(209) 358-4863" %}<br />
 
 - 18,800 sq ft facility
