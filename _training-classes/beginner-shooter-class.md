@@ -6,7 +6,7 @@ files:
   - name: Class Confirmation Form
     url: '/pdf/class-confirmation.pdf'
 ---
-This is a beginner shooter class.  In this class you will learn basic firearm safety as well as basic shooting skills.  We will supply the firearm and the ammunition. In order to be registered for the class, you will need to call or come into either location to pay for your spot! 
+This is a beginner shooter class that is 4 hours.  In this class you will learn basic firearm safety as well as basic shooting skills.  We will supply the firearm and the ammunition. In order to be registered for the class, you will need to call or come into either location to pay for your spot! 
 Please review the class confirmation form ["Class Confirmation"](/pdf/class-confirmation.pdf)
 
 You will need: eye and ear protection.  No low-cut shirts or open toe shoes will be allowed in the range. 
