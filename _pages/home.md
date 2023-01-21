@@ -1,15 +1,15 @@
 ---
 layout: default
 title: Stage Stop Gun Shop
-description: |-
-    Welcome to Stage Stop Gun Shop, your Shooting Sports, Archery and Fishing headquarters!!! Stop in today to browse our excellent selection of firearms, ammo, archery supplies and fishing tackle.
+description: >
+  Welcome to Stage Stop Gun Shop, your Shooting Sports, Archery and Fishing headquarters!!! Stop in today to browse our excellent selection of firearms, ammo, archery supplies and fishing tackle.
 
-    <b>Announcement</b>: The shooting range will be closed <em>Sunday, January 22, 2023</em> from <em>3:00pm</em> to <em>6:00pm</em>. We apologize for the inconvenient.
+  **Announcement**: The shooting range will be closed *Sunday, January 22, 2023* from *3:00pm* to *6:00pm*. We apologize for the inconvenient.
 permalink: /
 button1:
-    url: /about
-    text: About Us
-    class: btn-black
+  url: /about
+  text: About Us
+  class: btn-black
 ---
 
 <section>
