@@ -1,5 +1,5 @@
 - name: Home 1
-  image: /images/hero/hero1.jpg
+  image: /images/hero/hero1-muted.jpg
   target: home
 - name: Home 2
   image: /images/hero/hero2.jpg
