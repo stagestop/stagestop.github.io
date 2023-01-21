@@ -85,7 +85,7 @@
             {% else %}
             <h3 class="header-title">{{ page.title }}</h3>
             {% endif %}
-            {% if page.description %}<p class="lead header-text">{{page.description}}</p>{% endif %}
+            {% if page.description %}<p class="lead header-text">{{page.description | markdownify}}</p>{% endif %}
             {% if page.button1 %}<a href="{{ page.button1.url }}" class="btn {{ page.button1.class }} smooth-scroll mr-2">{{ page.button1.text }}</a>{% endif %}
             {% if page.button2 %}<a href="{{ page.button2.url }}" class="btn {{ page.button2.class }} smooth-scroll mr-2">{{ page.button2.text }}</a>{% endif %}
         </div>
