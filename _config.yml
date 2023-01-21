@@ -62,7 +62,7 @@ defaults:
       page: ""
       type: pages
     values:
-      header-image: /images/hero/hero1.jpg
+      header-image: /images/hero/hero1-muted.jpg
 
 # Markdown Processors
 rdiscount:
