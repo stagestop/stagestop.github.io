@@ -2,8 +2,9 @@
 layout: default-container
 ---
 {{ content }}
+{% assign classes = site.training-classes | sort: "sort_order" %}
 
-{% for cls in site.training-classes %}
+{% for cls in classes %}
     {{ cls.output }}
     <div class="spacer">&nbsp;</div>
 {% endfor %}
