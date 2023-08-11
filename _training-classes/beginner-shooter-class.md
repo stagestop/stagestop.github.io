@@ -1,7 +1,7 @@
 ---
 id: BEGINNER_SHOOTER_CLASS
 title: Beginner Shooter Class
-sort_order: 1
+sort_order: 2
 files:
   - name: Class Confirmation Form
     url: '/pdf/2023-class-confirmation.pdf'

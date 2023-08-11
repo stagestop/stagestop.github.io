@@ -1,7 +1,7 @@
 ---
 id: CCW_RENEWAL_CLASS
 title: CCW Renewal Class
-sort_order: 1
+sort_order: 5
 files:
   - name: CCW Serial Form
     url: '/pdf/2023-ccw-serial.pdf'
