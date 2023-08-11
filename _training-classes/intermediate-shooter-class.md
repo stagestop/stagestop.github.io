@@ -1,7 +1,7 @@
 ---
 id: INTERMEDIATE_SHOOTER_CLASS
 title: Intermediate Shooter Class
-sort_order: 7
+sort_order: 8
 files:
   - name: Class Confirmation Form
     url: '/pdf/2023-class-confirmation.pdf'

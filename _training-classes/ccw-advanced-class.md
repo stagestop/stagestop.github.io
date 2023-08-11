@@ -1,7 +1,7 @@
 ---
 id: CCW_ADVANCED_CLASS
 title: CCW Advanced Class
-sort_order: 4
+sort_order: 5
 files:
   - name: Class Confirmation Form
     url: '/pdf/2023-class-confirmation.pdf'
