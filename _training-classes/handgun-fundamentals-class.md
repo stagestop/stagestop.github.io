@@ -3,8 +3,6 @@ id: HANDGUN_FUNDAMENTALS_CLASS
 title: Handgun Fundamentals Class
 sort_order: 0
 files:
-  - name: CCW Serial Form
-    url: '/pdf/2023-ccw-serial.pdf'
   - name: Class Confirmation Form
     url: '/pdf/2024-class-confirmation.pdf'
 ---
