@@ -6,7 +6,7 @@ layout: default-container
 {% assign cats = site.training-classes | group_by: "category" %}
 
 {% for cat in cats %}
-    <h2>{{ cat.name }}</h2>
+    <h2 class="mb-4 ml-2">{{ cat.name }}</h2>
 
     {% assign classes = cat.items | sort: "sort_order" %}
 
