@@ -81,9 +81,9 @@
     <header class="masthead bg-img parallax fixed-menu" style="background-image: url('{{ page.header-image }}')">
         <div class="container header-inner text-center">
             {% if page.titlewhite && page.titleaccent %}
-            <h3 class="header-title">{{ page.titlewhite }} <span class="text-primary">{{ page.titleaccent }}</span></h3>
+            <h1 class="header-title">{{ page.titlewhite }} <span class="text-primary">{{ page.titleaccent }}</span></h1>
             {% else %}
-            <h3 class="header-title">{{ page.title }}</h3>
+            <h1 class="header-title">{{ page.title }}</h1>
             {% endif %}
             {% if page.description %}<p class="lead header-text">{{page.description | markdownify}}</p>{% endif %}
             {% if page.button1 %}<a href="{{ page.button1.url }}" class="btn {{ page.button1.class }} smooth-scroll mr-2">{{ page.button1.text }}</a>{% endif %}
