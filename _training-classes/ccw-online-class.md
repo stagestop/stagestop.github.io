@@ -2,7 +2,7 @@
 id: ONLINE_CCW_CLASS
 title: Online CCW Class
 sort_order: 70
-category: Additional Training Courses
+category: CCW Courses
 files:
   - name: stagestopgunshopccw.us
     url: https://stagestopgunshopccw.us
