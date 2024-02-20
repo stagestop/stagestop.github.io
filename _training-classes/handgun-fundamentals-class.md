@@ -2,6 +2,7 @@
 id: HANDGUN_FUNDAMENTALS_CLASS
 title: Handgun Fundamentals Class
 sort_order: 0
+category: Firearm Skill Development
 files:
   - name: Class Confirmation Form
     url: '/pdf/2024-class-confirmation.pdf'

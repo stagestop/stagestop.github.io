@@ -5,6 +5,7 @@ sort_order: 50
 files:
   - name: Class Confirmation Form
     url: '/pdf/2024-class-confirmation.pdf'
+category: Firearm Skill Development
 ---
 This is a 4 hour advanced CCW class where current CCW holders will learn advanced pistol techniques and tactics which will help them prepare to effectively handle potential deadly threats and encounters.
 In order to be registered for the class, you will need to call or come into either location to pay for your spot! Please review the class confirmation form ["Class Confirmation"](/pdf/2024-class-confirmation.pdf)

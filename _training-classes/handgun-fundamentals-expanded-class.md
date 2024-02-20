@@ -2,6 +2,7 @@
 id: HANDGUN_FUNDAMENTALS_EXPANDED_CLASS
 title: Handgun Fundamentals Expanded Class
 sort_order: 10
+category: Firearm Skill Development
 files:
   - name: Class Confirmation Form
     url: '/pdf/2024-class-confirmation.pdf'

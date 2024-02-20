@@ -2,6 +2,7 @@
 id: PRE_CCW
 title: Pre CCW Class
 sort_order: 20
+category: Firearm Skill Development
 files:
   - name: Class Confirmation Form
     url: '/pdf/2024-class-confirmation.pdf'

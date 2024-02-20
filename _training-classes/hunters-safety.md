@@ -2,6 +2,7 @@
 id: HUNTERS_SAFETY
 title: Hunters Safety
 sort_order: 70
+category: Additional Training Courses
 ---
 This class alone is not a qualification for a hunter education certificate.  Access is permitted to this 4-hour follow-up class only after a student has completed the written home study or online component of the class (please scroll down for online component). 
 Class is limited to ages 12 and up

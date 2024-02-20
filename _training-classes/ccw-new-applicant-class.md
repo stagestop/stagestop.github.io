@@ -2,6 +2,7 @@
 id: CCW_NEW_APPLICANT_CLASS
 title: CCW New Applicant Class
 sort_order: 30
+category: CCW Courses
 files:
   - name: CCW Serial Form
     url: '/pdf/2023-ccw-serial.pdf'
