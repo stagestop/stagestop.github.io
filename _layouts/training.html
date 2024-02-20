@@ -8,3 +8,13 @@ layout: default-container
     {{ cls.output }}
     <div class="spacer">&nbsp;</div>
 {% endfor %}
+
+{% assign cats = site.training-classes | group_by: "category" %}
+
+{% for cat in cats %}
+
+{% raw %}
+{{ cat }}
+{% endraw %}
+
+{% endfor %}
