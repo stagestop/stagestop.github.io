@@ -2,21 +2,16 @@
 layout: default-container
 ---
 {{ content }}
-{% assign classes = site.training-classes | sort: "sort_order" %}
-
-{% for cls in classes %}
-    {{ cls.output }}
-    <div class="spacer">&nbsp;</div>
-{% endfor %}
 
 {% assign cats = site.training-classes | group_by: "category" %}
 
 {% for cat in cats %}
+    <h2>{{ cat.name }}</h2>
 
-<h2>{{ cat }}</h2>
+    {% assign classes = cat.items | sort: "sort_order" %}
 
-{% raw %}
-{{{ cat }}}
-{% endraw %}
-
+    {% for cls in classes %}
+        {{ cls.output }}
+        <div class="spacer">&nbsp;</div>
+    {% endfor %}
 {% endfor %}
