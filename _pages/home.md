@@ -36,17 +36,6 @@ button1:
     </div>
 </section>
 
-<section id="parallax-section" class="gym-parallax bg-img parallax">
-    <div class="container">
-        <div class="section-content-big text-center">
-            <h3>BEGINNER SHOOTING CLASS</h3>
-            <p class="lead w-75 ml-auto mr-auto mt-3 mb-3">
-            We are hosting an entry level pistol class, ages 13 and up (minors must have parental consent!) We will supply your firearm and ammunition and we will train you in basic firearm safey and basic shooting skills.
-            </p>
-        </div><!-- / section-content -->
-    </div><!-- / container -->
-</section>
-
 <section>
     <div class="container">
         <div class="row">
