@@ -4,8 +4,8 @@ title: Online CCW Renewal Class
 sort_order: 70
 category: CCW Courses
 files:
-  - name: stagestopgunshopccw.us
-    url: https://stagestopgunshopccw.us
+  - name: californiaonlineccw.com/stage-shop-gun-shop
+    url: https://californiaonlineccw.com/stage-shop-gun-shop
 ---
 __This course only applies to those renewing their current CCW license.__
 
