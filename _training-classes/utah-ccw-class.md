@@ -3,6 +3,7 @@ id: UTAH_CCW_CLASS
 title: Utah CCW Class
 sort_order: 60
 category: CCW Courses
+enable: false
 ---
 At the end of this four hour course, you will have everything you need to get your non-resident Utah CCW.
 
