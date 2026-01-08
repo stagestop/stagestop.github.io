@@ -17,11 +17,11 @@ Fax: {% include phone-number.html number="(209) 966-3888" %}<br />
 
 ##### Hours
 
-Tuesday - Friday
+Wednesday - Friday
 10:00am - 6:00pm
 
 Saturday
 10:00am - 5:00pm
 
-Sunday - Monday
+Sunday - Tuesday
 Closed
