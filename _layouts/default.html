@@ -1,212 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" class="darl bg-inverse">
   <head>
-    <script>
-      /**
-       * Simple client-side age gate (no frameworks).
-       * - Shows a full-page overlay until user confirms
-       * - Stores confirmation in localStorage so it won’t reappear for N days
-       * - Optional: redirect if they don’t meet the minimum age
-       *
-       * Usage: drop this <script> anywhere on your page.
-       */
-      (() => {
-        const config = {
-          minAge: 18, // change to 21 if you want
-          rememberDays: 30, // how long to remember confirmation
-          storageKey: "age_gate_ok_v1",
-          redirectUrl: "https://www.google.com", // where to send users who decline / underage
-          title: "Age Verification",
-          message:
-            "This site is intended for individuals who are at least {MIN_AGE} years old. " +
-            "By continuing, you confirm you meet the minimum age requirement.",
-          confirmText: "I am {MIN_AGE}+ — Enter site",
-          declineText: "I do not meet the requirement",
-        };
-
-        const now = Date.now();
-
-        // Check stored confirmation
-        try {
-          const raw = localStorage.getItem(config.storageKey);
-          if (raw) {
-            const parsed = JSON.parse(raw);
-            if (parsed && parsed.expiresAt && parsed.expiresAt > now) return; // already confirmed
-          }
-        } catch (_) {
-          // ignore storage errors
-        }
-
-        // Basic styles
-        const style = document.createElement("style");
-        style.textContent = `
-    .agegate-backdrop {
-      position: fixed; inset: 0;
-      background: rgba(0,0,0,0.72);
-      display: flex; align-items: center; justify-content: center;
-      z-index: 2147483647;
-      padding: 16px;
-    }
-    .agegate-modal {
-      width: min(520px, 100%);
-      background: #fff;
-      border-radius: 14px;
-      box-shadow: 0 10px 40px rgba(0,0,0,0.35);
-      overflow: hidden;
-      font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
-      color: #111;
-    }
-    .agegate-header {
-      padding: 18px 18px 10px;
-      font-size: 18px;
-      font-weight: 650;
-    }
-    .agegate-body {
-      padding: 0 18px 18px;
-      line-height: 1.35;
-      font-size: 14px;
-      color: #222;
-    }
-    .agegate-actions {
-      display: flex;
-      gap: 10px;
-      padding: 14px 18px 18px;
-      background: #f6f6f6;
-      flex-wrap: wrap;
-    }
-    .agegate-btn {
-      appearance: none;
-      border: 0;
-      border-radius: 10px;
-      padding: 10px 12px;
-      font-size: 14px;
-      cursor: pointer;
-      user-select: none;
-    }
-    .agegate-btn-primary {
-      background: #111;
-      color: #fff;
-      flex: 1 1 240px;
-    }
-    .agegate-btn-secondary {
-      background: #e6e6e6;
-      color: #111;
-      flex: 1 1 240px;
-    }
-    .agegate-footnote {
-      padding: 0 18px 18px;
-      font-size: 12px;
-      color: #666;
-    }
-    .agegate-focus-trap {
-      position: absolute;
-      width: 1px; height: 1px;
-      overflow: hidden;
-      clip: rect(0 0 0 0);
-      white-space: nowrap;
-    }
-  `;
-        document.head.appendChild(style);
-
-        // Build modal
-        const backdrop = document.createElement("div");
-        backdrop.className = "agegate-backdrop";
-        backdrop.setAttribute("role", "dialog");
-        backdrop.setAttribute("aria-modal", "true");
-        backdrop.setAttribute("aria-label", config.title);
-
-        const modal = document.createElement("div");
-        modal.className = "agegate-modal";
-
-        const header = document.createElement("div");
-        header.className = "agegate-header";
-        header.textContent = config.title;
-
-        const body = document.createElement("div");
-        body.className = "agegate-body";
-        body.textContent = config.message.replaceAll(
-          "{MIN_AGE}",
-          String(config.minAge)
-        );
-
-        const actions = document.createElement("div");
-        actions.className = "agegate-actions";
-
-        const btnConfirm = document.createElement("button");
-        btnConfirm.type = "button";
-        btnConfirm.className = "agegate-btn agegate-btn-primary";
-        btnConfirm.textContent = config.confirmText.replaceAll(
-          "{MIN_AGE}",
-          String(config.minAge)
-        );
-
-        const btnDecline = document.createElement("button");
-        btnDecline.type = "button";
-        btnDecline.className = "agegate-btn agegate-btn-secondary";
-        btnDecline.textContent = config.declineText;
-
-        const footnote = document.createElement("div");
-        footnote.className = "agegate-footnote";
-        footnote.textContent =
-          "Your choice will be remembered on this device for a limited time.";
-
-        actions.appendChild(btnConfirm);
-        actions.appendChild(btnDecline);
-
-        modal.appendChild(header);
-        modal.appendChild(body);
-        modal.appendChild(actions);
-        modal.appendChild(footnote);
-
-        backdrop.appendChild(modal);
-        document.body.appendChild(backdrop);
-
-        // Prevent background scroll
-        const prevOverflow = document.documentElement.style.overflow;
-        document.documentElement.style.overflow = "hidden";
-
-        function closeGate() {
-          document.documentElement.style.overflow = prevOverflow;
-          backdrop.remove();
-        }
-
-        function rememberOk() {
-          const expiresAt = now + config.rememberDays * 24 * 60 * 60 * 1000;
-          try {
-            localStorage.setItem(
-              config.storageKey,
-              JSON.stringify({ ok: true, expiresAt })
-            );
-          } catch (_) {}
-        }
-
-        btnConfirm.addEventListener("click", () => {
-          rememberOk();
-          closeGate();
-        });
-
-        btnDecline.addEventListener("click", () => {
-          // Either redirect or just close (choose your preference)
-          if (config.redirectUrl) {
-            window.location.href = config.redirectUrl;
-          } else {
-            closeGate();
-          }
-        });
-
-        // Optional: block ESC close (keep them deciding)
-        document.addEventListener(
-          "keydown",
-          (e) => {
-            if (e.key === "Escape") e.preventDefault();
-          },
-          true
-        );
-
-        // Focus management
-        btnConfirm.focus();
-      })();
-    </script>
     <!-- Meta -->
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -635,6 +429,215 @@
       });
     </script>
     <!-- / lightbox -->
+
+    <!-- 18+ Age Agreement -->
+    <script>
+      /**
+       * Simple client-side age gate (no frameworks).
+       * - Shows a full-page overlay until user confirms
+       * - Stores confirmation in localStorage so it won’t reappear for N days
+       * - Optional: redirect if they don’t meet the minimum age
+       *
+       * Usage: drop this <script> anywhere on your page.
+       */
+      (() => {
+        const config = {
+          minAge: 18, // change to 21 if you want
+          rememberDays: 30, // how long to remember confirmation
+          storageKey: "age_gate_ok_v1",
+          redirectUrl: "https://www.google.com", // where to send users who decline / underage
+          title: "Age Verification",
+          message:
+            "This site is intended for individuals who are at least {MIN_AGE} years old. " +
+            "By continuing, you confirm you meet the minimum age requirement.",
+          confirmText: "I am {MIN_AGE}+ — Enter site",
+          declineText: "I do not meet the requirement",
+        };
+
+        const now = Date.now();
+
+        // Check stored confirmation
+        try {
+          const raw = localStorage.getItem(config.storageKey);
+          if (raw) {
+            const parsed = JSON.parse(raw);
+            if (parsed && parsed.expiresAt && parsed.expiresAt > now) return; // already confirmed
+          }
+        } catch (_) {
+          // ignore storage errors
+        }
+
+        // Basic styles
+        const style = document.createElement("style");
+        style.textContent = `
+    .agegate-backdrop {
+      position: fixed; inset: 0;
+      background: rgba(0,0,0,0.72);
+      display: flex; align-items: center; justify-content: center;
+      z-index: 2147483647;
+      padding: 16px;
+    }
+    .agegate-modal {
+      width: min(520px, 100%);
+      background: #fff;
+      border-radius: 14px;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.35);
+      overflow: hidden;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+      color: #111;
+    }
+    .agegate-header {
+      padding: 18px 18px 10px;
+      font-size: 18px;
+      font-weight: 650;
+    }
+    .agegate-body {
+      padding: 0 18px 18px;
+      line-height: 1.35;
+      font-size: 14px;
+      color: #222;
+    }
+    .agegate-actions {
+      display: flex;
+      gap: 10px;
+      padding: 14px 18px 18px;
+      background: #f6f6f6;
+      flex-wrap: wrap;
+    }
+    .agegate-btn {
+      appearance: none;
+      border: 0;
+      border-radius: 10px;
+      padding: 10px 12px;
+      font-size: 14px;
+      cursor: pointer;
+      user-select: none;
+    }
+    .agegate-btn-primary {
+      background: #111;
+      color: #fff;
+      flex: 1 1 240px;
+    }
+    .agegate-btn-secondary {
+      background: #e6e6e6;
+      color: #111;
+      flex: 1 1 240px;
+    }
+    .agegate-footnote {
+      padding: 0 18px 18px;
+      font-size: 12px;
+      color: #666;
+    }
+    .agegate-focus-trap {
+      position: absolute;
+      width: 1px; height: 1px;
+      overflow: hidden;
+      clip: rect(0 0 0 0);
+      white-space: nowrap;
+    }
+  `;
+        document.head.appendChild(style);
+
+        // Build modal
+        const backdrop = document.createElement("div");
+        backdrop.className = "agegate-backdrop";
+        backdrop.setAttribute("role", "dialog");
+        backdrop.setAttribute("aria-modal", "true");
+        backdrop.setAttribute("aria-label", config.title);
+
+        const modal = document.createElement("div");
+        modal.className = "agegate-modal";
+
+        const header = document.createElement("div");
+        header.className = "agegate-header";
+        header.textContent = config.title;
+
+        const body = document.createElement("div");
+        body.className = "agegate-body";
+        body.textContent = config.message.replaceAll(
+          "{MIN_AGE}",
+          String(config.minAge)
+        );
+
+        const actions = document.createElement("div");
+        actions.className = "agegate-actions";
+
+        const btnConfirm = document.createElement("button");
+        btnConfirm.type = "button";
+        btnConfirm.className = "agegate-btn agegate-btn-primary";
+        btnConfirm.textContent = config.confirmText.replaceAll(
+          "{MIN_AGE}",
+          String(config.minAge)
+        );
+
+        const btnDecline = document.createElement("button");
+        btnDecline.type = "button";
+        btnDecline.className = "agegate-btn agegate-btn-secondary";
+        btnDecline.textContent = config.declineText;
+
+        const footnote = document.createElement("div");
+        footnote.className = "agegate-footnote";
+        footnote.textContent =
+          "Your choice will be remembered on this device for a limited time.";
+
+        actions.appendChild(btnConfirm);
+        actions.appendChild(btnDecline);
+
+        modal.appendChild(header);
+        modal.appendChild(body);
+        modal.appendChild(actions);
+        modal.appendChild(footnote);
+
+        backdrop.appendChild(modal);
+        document.body.appendChild(backdrop);
+
+        // Prevent background scroll
+        const prevOverflow = document.documentElement.style.overflow;
+        document.documentElement.style.overflow = "hidden";
+
+        function closeGate() {
+          document.documentElement.style.overflow = prevOverflow;
+          backdrop.remove();
+        }
+
+        function rememberOk() {
+          const expiresAt = now + config.rememberDays * 24 * 60 * 60 * 1000;
+          try {
+            localStorage.setItem(
+              config.storageKey,
+              JSON.stringify({ ok: true, expiresAt })
+            );
+          } catch (_) {}
+        }
+
+        btnConfirm.addEventListener("click", () => {
+          rememberOk();
+          closeGate();
+        });
+
+        btnDecline.addEventListener("click", () => {
+          // Either redirect or just close (choose your preference)
+          if (config.redirectUrl) {
+            window.location.href = config.redirectUrl;
+          } else {
+            closeGate();
+          }
+        });
+
+        // Optional: block ESC close (keep them deciding)
+        document.addEventListener(
+          "keydown",
+          (e) => {
+            if (e.key === "Escape") e.preventDefault();
+          },
+          true
+        );
+
+        // Focus management
+        btnConfirm.focus();
+      })();
+    </script>
+    <!-- / 18+ Age Agreement -->
 
     <script
       src="https://www.smartwaiver.com/m/webpl/f.js?webpl_waiver=splashpage-18496&webpl_title=Sign%20our%20waiver&webpl_align=Left&webpl_fontsize=16&webpl_background=%23f47b20&webpl_fontcolor=%23ffffff&webpl_font=Nunito%20Sans"
