@@ -1,0 +1,6 @@
+_site
+.sass-cache
+.jekyll-cache
+.git
+.DS_Store
+*.swp

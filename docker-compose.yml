@@ -1,0 +1,18 @@
+services:
+  site:
+    build: .
+    ports:
+      - "4000:4000"
+      - "35729:35729"
+    volumes:
+      # Bind-mount the repo so edits on the host are immediately visible in the container.
+      - .:/site:delegated
+      # Keep generated site output out of the host checkout unless you intentionally build it there.
+      - jekyll-site:/site/_site
+      - jekyll-cache:/site/.jekyll-cache
+    environment:
+      JEKYLL_ENV: development
+
+volumes:
+  jekyll-site:
+  jekyll-cache:
