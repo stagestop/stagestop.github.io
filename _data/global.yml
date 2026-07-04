@@ -1,11 +1,10 @@
 # Site Settings
-title: 'Stage Stop Gun Shop | Indoor Range'
-description: ''
-url: 'https://stagestop.github.io/' # the base hostname & protocol for your site
-footer_text: '©2017 Stage Stop Gun Shop All Rights Reserved www.stagestopgunshop.com'
+title: "Stage Stop Gun Shop | Indoor Range"
+description: ""
+url: "https://stagestopgunshop.com/" # the base hostname & protocol for your site
+footer_text: "Stage Stop Gun Shop. All Rights Reserved."
 googleaccess: AIzaSyCPsb2iR18DXjHDRV8_O5P47UN1o3MNPY8
 
 # Admin Settings
-admin_name: 'Diana Cook'
-admin_email: 'dcook@ssgs.us'
-
+admin_name: "Diana Cook"
+admin_email: "dcook@ssgs.us"

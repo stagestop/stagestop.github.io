@@ -16,6 +16,7 @@ include:
 exclude:
   - README.md
   - MODERNIZATION.md
+  - CONTENT_AUDIT.md
   - Dockerfile
   - docker-compose.yml
   - Gemfile

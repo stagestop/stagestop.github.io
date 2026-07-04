@@ -190,16 +190,27 @@ To use retry middleware with Faraday v2.0+, install `faraday-retry` gem
 
 ### Phase 3 — Content/data cleanup
 
-Status: Not started
+Status: Complete
 
-Goals:
+Completed work:
 
-- Review `_data/map.yml`, which appears stale/template-derived and references “Cozy Cottage”.
-- Review Google Maps API key usage and consolidate/remove duplicate map integrations.
-- Check whether the Google API key is restricted to expected domains/APIs.
-- Update stale global metadata where appropriate, such as footer year and canonical URL.
-- Audit `_posts/` for placeholder content such as `GUN MODEL HERE`.
-- Fix obvious content typos discovered during the audit.
+- Created `CONTENT_AUDIT.md`.
+- Added `CONTENT_AUDIT.md` to `_config.yml` `exclude` so the audit is not published by Jekyll.
+- Reviewed `_data/map.yml`, `_data/global.yml`, `_data/locations.yml`, `_data/sponsors.yml`, Google Maps usage, contact layouts, social includes, membership copy, and product posts.
+- Documented stale/template data, duplicate map integrations, API key concerns, stale metadata, placeholder product content, contact form placeholder subjects, obsolete social sharing links, and typo candidates.
+- No production content was changed during this audit.
+
+Primary output:
+
+- `CONTENT_AUDIT.md`
+
+Recommended follow-up tasks from the audit:
+
+- `T003A` — Safe typo/placeholder copy fixes.
+- `T003B` — Map cleanup decision.
+- `T003C` — Product post review/archive.
+- `T003D` — Global metadata/footer consolidation.
+- `T003E` — Social sharing cleanup.
 
 ### Phase 4 — Frontend dependency inventory
 
@@ -293,20 +304,18 @@ GitHub Pages native build parity would no longer be the goal; GitHub Actions wou
 
 ### Ready
 
-#### T003 — Audit content/data staleness
+#### T003B — Map cleanup decision
 
 Scope:
 
-- No code changes unless explicitly requested.
-- Produce an audit list in this file or a separate `CONTENT_AUDIT.md`.
+- Decide whether to use Google Maps JS, iframe embeds, or simple external links.
+- Confirm production Google API key and restrictions.
+- Do not remove active map behavior without confirmation.
 
 Acceptance criteria:
 
-- List stale or suspicious content/data.
-- Note recommended fix for each item.
-- Identify any items requiring business/user confirmation.
-
-### Not started
+- Chosen map strategy is documented.
+- Follow-up implementation task is defined.
 
 #### T004 — Audit frontend dependencies
 
@@ -322,6 +331,54 @@ Acceptance criteria:
 - Identify replacement candidate and migration risk.
 
 ### Done
+
+#### T003E — Social sharing cleanup
+
+Completed:
+
+- Removed unused `_includes/socialmedia.html` after confirming no direct includes.
+- Avoided preserving obsolete Google+/malformed share links.
+
+#### T003D — Global metadata/footer consolidation
+
+Completed:
+
+- Updated `_data/global.yml` canonical URL to match `CNAME`.
+- Centralized footer wording in `_data/global.yml`.
+- Updated `_layouts/default.html` footer to use generated year plus `site.data.global.footer_text`.
+
+Remaining note:
+
+- Business should still confirm the canonical URL and approved footer wording.
+
+#### T003C — Product post review/archive
+
+Partially completed:
+
+- Normalized obvious placeholder `GUN MODEL HERE` categories to `gun`.
+- Replaced one imported placeholder description.
+- Fixed obvious product post typos and an inconsistent image path.
+
+Remaining decision:
+
+- Business/legal/content review is still needed to decide whether old 2017 product posts should remain public.
+
+#### T003A — Safe typo/placeholder copy fixes
+
+Completed:
+
+- Fixed membership section typos/pluralization.
+- Fixed contact form `_subject` placeholder text.
+
+#### T003 — Audit content/data staleness
+
+Completed:
+
+- Created `CONTENT_AUDIT.md`.
+- Added `CONTENT_AUDIT.md` to Jekyll excludes.
+- Listed stale/suspicious content and data findings.
+- Added recommended follow-up tasks.
+- No production content was changed.
 
 #### T002 — Clean Jekyll config
 
@@ -406,5 +463,11 @@ Keep each task small enough to review independently.
 The next recommended task is:
 
 ```text
-T003 — Audit content/data staleness
+T003B — Map cleanup decision
+```
+
+Alternatively, if you want to continue auditing before changing more behavior, do:
+
+```text
+T004 — Audit frontend dependencies
 ```

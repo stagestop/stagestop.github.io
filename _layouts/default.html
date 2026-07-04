@@ -1,471 +1,523 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" class="darl bg-inverse">
-  <head>
-    <!-- Meta -->
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
-    <meta name="description" content="Bootstrap 4 Template" />
-    <meta name="author" content="kingstudio.ro" />
-    <!-- Favicon -->
-    <link rel="icon" href="images/favicon.png" />
-    <!-- Site Title -->
-    <title>
-      {% if page.title %}{{ page.title }} ◊ {{ site.data.global.title }}{% elsif
-      post.title %}{{ post.title }} {{ site.data.global.title }}{% else %}{{
-      site.data.global.title }} {{ site.data.global.description }}{% endif %}
-    </title>
-    <!-- Bootstrap 4 core CSS -->
-    <link href="/css/bootstrap.min.css" rel="stylesheet" />
-    <!-- Custom Styles -->
-    <link href="/css/orange.css" rel="stylesheet" />
-    <link href="/css/animate.css" rel="stylesheet" />
-    <link href="/css/owl.carousel.min.css" rel="stylesheet" />
-    <link href="/css/magnific-popup.css" rel="stylesheet" />
-    <!-- Fonts -->
-    <link
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet"
-    />
-    <link href="/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
-    <link
-      href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,800"
-      rel="stylesheet"
-    />
-    <!-- Favicon -->
-    <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png" />
-    <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png" />
-    <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png" />
-    <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png" />
-    <link
-      rel="apple-touch-icon"
-      sizes="114x114"
-      href="/apple-icon-114x114.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="120x120"
-      href="/apple-icon-120x120.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="144x144"
-      href="/apple-icon-144x144.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="152x152"
-      href="/apple-icon-152x152.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="/apple-icon-180x180.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="192x192"
-      href="/android-icon-192x192.png"
-    />
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-    <link rel="manifest" href="/manifest.json" />
-    <meta name="msapplication-TileColor" content="#ffffff" />
-    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
-    <meta name="theme-color" content="#ffffff" />
-  </head>
+    <head>
+        <!-- Meta -->
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, shrink-to-fit=no"
+        />
+        <meta name="description" content="Bootstrap 4 Template" />
+        <meta name="author" content="kingstudio.ro" />
+        <!-- Favicon -->
+        <link rel="icon" href="images/favicon.png" />
+        <!-- Site Title -->
+        <title>
+            {% if page.title %}{{ page.title }} ◊ {{ site.data.global.title }}{%
+            elsif post.title %}{{ post.title }} {{ site.data.global.title }}{%
+            else %}{{ site.data.global.title }} {{ site.data.global.description
+            }}{% endif %}
+        </title>
+        <!-- Bootstrap 4 core CSS -->
+        <link href="/css/bootstrap.min.css" rel="stylesheet" />
+        <!-- Custom Styles -->
+        <link href="/css/orange.css" rel="stylesheet" />
+        <link href="/css/animate.css" rel="stylesheet" />
+        <link href="/css/owl.carousel.min.css" rel="stylesheet" />
+        <link href="/css/magnific-popup.css" rel="stylesheet" />
+        <!-- Fonts -->
+        <link
+            href="https://fonts.googleapis.com/icon?family=Material+Icons"
+            rel="stylesheet"
+        />
+        <link
+            href="/css/font-awesome.min.css"
+            rel="stylesheet"
+            type="text/css"
+        />
+        <link
+            href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,800"
+            rel="stylesheet"
+        />
+        <!-- Favicon -->
+        <link
+            rel="apple-touch-icon"
+            sizes="57x57"
+            href="/apple-icon-57x57.png"
+        />
+        <link
+            rel="apple-touch-icon"
+            sizes="60x60"
+            href="/apple-icon-60x60.png"
+        />
+        <link
+            rel="apple-touch-icon"
+            sizes="72x72"
+            href="/apple-icon-72x72.png"
+        />
+        <link
+            rel="apple-touch-icon"
+            sizes="76x76"
+            href="/apple-icon-76x76.png"
+        />
+        <link
+            rel="apple-touch-icon"
+            sizes="114x114"
+            href="/apple-icon-114x114.png"
+        />
+        <link
+            rel="apple-touch-icon"
+            sizes="120x120"
+            href="/apple-icon-120x120.png"
+        />
+        <link
+            rel="apple-touch-icon"
+            sizes="144x144"
+            href="/apple-icon-144x144.png"
+        />
+        <link
+            rel="apple-touch-icon"
+            sizes="152x152"
+            href="/apple-icon-152x152.png"
+        />
+        <link
+            rel="apple-touch-icon"
+            sizes="180x180"
+            href="/apple-icon-180x180.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="192x192"
+            href="/android-icon-192x192.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="/favicon-32x32.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="96x96"
+            href="/favicon-96x96.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="/favicon-16x16.png"
+        />
+        <link rel="manifest" href="/manifest.json" />
+        <meta name="msapplication-TileColor" content="#ffffff" />
+        <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
+        <meta name="theme-color" content="#ffffff" />
+    </head>
 
-  <body
-    class="has-fixed-menu dark bg-inverse"
-    data-spy="scroll"
-    data-target="#nav-scroll"
-  >
-    <div id="preloader">
-      <div class="preloader">
-        <span></span>
-        <span></span>
-      </div>
-    </div>
-
-    <div id="top"></div>
-
-    <nav
-      id="nav-scroll"
-      class="navbar navbar-toggleable-md navbar-inverse fixed-top bg-inverse custom-menu menu-pills"
+    <body
+        class="has-fixed-menu dark bg-inverse"
+        data-spy="scroll"
+        data-target="#nav-scroll"
     >
-      <div class="container">
-        <a class="navbar-brand smooth-scroll" href="#top"
-          ><img src="/graphics/stagestop-logo-masthead-lg.png" alt=""
-        /></a>
+        <div id="preloader">
+            <div class="preloader">
+                <span></span>
+                <span></span>
+            </div>
+        </div>
 
-        <button
-          class="navbar-toggler navbar-toggler-right"
-          type="button"
-          data-toggle="collapse"
-          data-target="#navbar-toggle"
-          aria-controls="navbar-toggle"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
+        <div id="top"></div>
+
+        <nav
+            id="nav-scroll"
+            class="navbar navbar-toggleable-md navbar-inverse fixed-top bg-inverse custom-menu menu-pills"
         >
-          <span class="navbar-toggler-icon"></span></button
-        ><!-- / navbar-toggler -->
+            <div class="container">
+                <a class="navbar-brand smooth-scroll" href="#top"
+                    ><img src="/graphics/stagestop-logo-masthead-lg.png" alt=""
+                /></a>
 
-        <div class="collapse navbar-collapse" id="navbar-toggle">
-          <ul class="navbar-nav ml-auto">
-            {% for nav in site.data.nav %}
-            <li class="nav-item">
-              {% if nav.title == page.title %}
-              <a class="nav-link active" href="{{ nav.url }}"
-                >{{ nav.title }}</a
-              >
-              {% else %}
-              <a class="nav-link" href="{{ nav.url }}">{{ nav.title }}</a>
-              {% endif %}
-            </li>
-            {% endfor %}
-          </ul>
-          <!-- / navbar-nav -->
-        </div>
-        <!-- / navbar-collapse -->
-      </div>
-      <!-- / container -->
-    </nav>
-    <!-- / custom-menu -->
+                <button
+                    class="navbar-toggler navbar-toggler-right"
+                    type="button"
+                    data-toggle="collapse"
+                    data-target="#navbar-toggle"
+                    aria-controls="navbar-toggle"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation"
+                >
+                    <span class="navbar-toggler-icon"></span></button
+                ><!-- / navbar-toggler -->
 
-    <header
-      class="masthead bg-img parallax fixed-menu"
-      style="background-image: url('{{ page.header-image }}')"
-    >
-      <div class="container header-inner text-center">
-        {% if page.titlewhite and page.titleaccent %}
-        <h1 class="header-title">
-          {{ page.titlewhite }}
-          <span class="text-primary">{{ page.titleaccent }}</span>
-        </h1>
-        {% else %}
-        <h1 class="header-title">{{ page.title }}</h1>
-        {% endif %} {% if page.description %}
-        <p class="lead header-text">{{page.description | markdownify}}</p>
-        {% endif %} {% if page.button1 %}<a
-          href="{{ page.button1.url }}"
-          class="btn {{ page.button1.class }} smooth-scroll mr-2"
-          >{{ page.button1.text }}</a
-        >{% endif %} {% if page.button2 %}<a
-          href="{{ page.button2.url }}"
-          class="btn {{ page.button2.class }} smooth-scroll mr-2"
-          >{{ page.button2.text }}</a
-        >{% endif %}
-      </div>
-    </header>
-
-    {{ content }}
-
-    <a
-      href="#top"
-      class="scroll-to-top is-hidden smooth-scroll"
-      data-nav-status="toggle"
-      ><i class="md-icon dp18">expand_less</i></a
-    >
-
-    <footer class="dark bg-deepgrey">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-4 widget">
-            <img
-              src="/graphics/stagestop-logo-masthead-lg.png"
-              alt="logo"
-              class="footer-logo"
-            />
-            <p>
-              Stage Stop Gun Shop, your Shooting Sports, Archery and Fishing
-              headquarters!!! Stop in today to browse our excellent selection of
-              firearms, ammo, archery supplies and fishing tackle.
-            </p>
-            <p>
-              <a href="mailto:info@ssgs.us">info@ssgs.us</a>
-            </p>
-          </div>
-          <!-- / column-->
-
-          <div class="col-lg-4 widget">
-            <h3 class="widget-title">
-              <i class="md-icon dp36 mb-1 box-icon bg-transparent text-primary"
-                >location_on</i
-              >
-              Atwater Location
-            </h3>
-            <div class="row">
-              <div class="col-sm-6">
-                <p>
-                  <strong>Monday - Friday</strong><br />
-                  10:00am - 7:00pm
-                </p>
-                <br />
-                <p>
-                  <strong>Saturday - Sunday</strong><br />
-                  10:00am - 6:00pm
-                </p>
-              </div>
-              <div class="col-sm-6">
-                <p>{% include location.html id="ATWATER" link="true" %}</p>
-                <br />
-                <p>
-                  Phone: {% include phone-number.html number="(209) 358-4867"
-                  %}<br />
-                  Fax: {% include phone-number.html number="(209) 358-4863"
-                  %}<br />
-                </p>
-              </div>
+                <div class="collapse navbar-collapse" id="navbar-toggle">
+                    <ul class="navbar-nav ml-auto">
+                        {% for nav in site.data.nav %}
+                        <li class="nav-item">
+                            {% if nav.title == page.title %}
+                            <a class="nav-link active" href="{{ nav.url }}"
+                                >{{ nav.title }}</a
+                            >
+                            {% else %}
+                            <a class="nav-link" href="{{ nav.url }}"
+                                >{{ nav.title }}</a
+                            >
+                            {% endif %}
+                        </li>
+                        {% endfor %}
+                    </ul>
+                    <!-- / navbar-nav -->
+                </div>
+                <!-- / navbar-collapse -->
             </div>
-          </div>
-          <!-- / column-->
+            <!-- / container -->
+        </nav>
+        <!-- / custom-menu -->
 
-          <div class="col-lg-4 widget">
-            <h3 class="widget-title">
-              <i class="md-icon dp36 mb-1 box-icon bg-transparent text-primary"
-                >location_on</i
-              >
-              Mariposa Location
-            </h3>
-            <div class="row">
-              <div class="col-sm-5">
-                <p>
-                  <strong>Wednesday - Friday</strong><br />
-                  10:00am - 6:00pm
+        <header
+            class="masthead bg-img parallax fixed-menu"
+            style="background-image: url('{{ page.header-image }}')"
+        >
+            <div class="container header-inner text-center">
+                {% if page.titlewhite and page.titleaccent %}
+                <h1 class="header-title">
+                    {{ page.titlewhite }}
+                    <span class="text-primary">{{ page.titleaccent }}</span>
+                </h1>
+                {% else %}
+                <h1 class="header-title">{{ page.title }}</h1>
+                {% endif %} {% if page.description %}
+                <p class="lead header-text">
+                    {{page.description | markdownify}}
                 </p>
-                <br />
-                <p>
-                  <strong>Saturday</strong><br />
-                  10:00am - 5:00pm
-                </p>
-                <br />
-                <p>
-                  <strong>Sunday - Tuesday</strong><br />
-                  <em>Closed</em>
-                </p>
-              </div>
-              <div class="col-sm-7">
-                <p>{% include location.html id="MARIPOSA" link="true" %}</p>
-                <br />
-                <p>
-                  Phone: {% include phone-number.html number="(209) 966-3777"
-                  %}<br />
-                  Fax: {% include phone-number.html number="(209) 966-3888"
-                  %}<br />
-                </p>
-              </div>
+                {% endif %} {% if page.button1 %}<a
+                    href="{{ page.button1.url }}"
+                    class="btn {{ page.button1.class }} smooth-scroll mr-2"
+                    >{{ page.button1.text }}</a
+                >{% endif %} {% if page.button2 %}<a
+                    href="{{ page.button2.url }}"
+                    class="btn {{ page.button2.class }} smooth-scroll mr-2"
+                    >{{ page.button2.text }}</a
+                >{% endif %}
             </div>
-          </div>
-          <!-- / column-->
-        </div>
-        <!-- / row -->
+        </header>
 
-        <div class="row">
-          <div class="col-lg-8 footer-left-area">
-            <p>Copyright © 2017. Stage Stop Gun Shop. All Rights Reserved.</p>
-          </div>
-          <div class="col-lg-4 social-icons footer-right-area">
-            <a
-              target="_blank"
-              title="Find Us on Facebook"
-              href="https://www.facebook.com/stagestopgunshop/"
-              ><i class="fa fa-facebook"></i
-            ></a>
-            <a
-              target="_blank"
-              title="Find Us on Instagram"
-              href="https://www.instagram.com/stagestopgunshop/"
-              ><i class="fa fa-instagram"></i
-            ></a>
-          </div>
-          <!-- / social-icons -->
-        </div>
-        <!-- / row -->
-      </div>
-      <!-- / container -->
-    </footer>
+        {{ content }}
 
-    <!-- Core JavaScript -->
-    <script src="/js/jquery.min.js"></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0//js/tether.min.js"
-      integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb"
-      crossorigin="anonymous"
-    ></script>
-    <script src="/js/bootstrap.min.js"></script>
-    <!-- / Core JavaScript -->
+        <a
+            href="#top"
+            class="scroll-to-top is-hidden smooth-scroll"
+            data-nav-status="toggle"
+            ><i class="md-icon dp18">expand_less</i></a
+        >
 
-    <!-- preloader -->
-    <script src="/js/preloader.js"></script>
-    <!-- / preloader -->
+        <footer class="dark bg-deepgrey">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 widget">
+                        <img
+                            src="/graphics/stagestop-logo-masthead-lg.png"
+                            alt="logo"
+                            class="footer-logo"
+                        />
+                        <p>
+                            Stage Stop Gun Shop, your Shooting Sports, Archery
+                            and Fishing headquarters!!! Stop in today to browse
+                            our excellent selection of firearms, ammo, archery
+                            supplies and fishing tackle.
+                        </p>
+                        <p>
+                            <a href="mailto:info@ssgs.us">info@ssgs.us</a>
+                        </p>
+                    </div>
+                    <!-- / column-->
 
-    <!-- Smooth Scrolling -->
-    <script src="/js/jquery.easing.min.js"></script>
-    <script src="/js/smooth-scroll.js"></script>
-    <!-- / Smooth Scrolling -->
+                    <div class="col-lg-4 widget">
+                        <h3 class="widget-title">
+                            <i
+                                class="md-icon dp36 mb-1 box-icon bg-transparent text-primary"
+                                >location_on</i
+                            >
+                            Atwater Location
+                        </h3>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <p>
+                                    <strong>Monday - Friday</strong><br />
+                                    10:00am - 7:00pm
+                                </p>
+                                <br />
+                                <p>
+                                    <strong>Saturday - Sunday</strong><br />
+                                    10:00am - 6:00pm
+                                </p>
+                            </div>
+                            <div class="col-sm-6">
+                                <p>
+                                    {% include location.html id="ATWATER"
+                                    link="true" %}
+                                </p>
+                                <br />
+                                <p>
+                                    Phone: {% include phone-number.html
+                                    number="(209) 358-4867" %}<br />
+                                    Fax: {% include phone-number.html
+                                    number="(209) 358-4863" %}<br />
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- / column-->
 
-    <!-- Portfolio Script -->
-    <script src="/js/jquery.shuffle.min.js"></script>
-    <script src="/js/portfolio.js"></script>
-    <script>
-      $(document).ready(function () {
-        if (Modernizr.touch) {
-          // show the close overlay button
-          $(".close-overlay").removeClass("hidden");
-          // handle the adding of hover class when clicked
-          $(".img").click(function (e) {
-            if (!$(this).hasClass("hover")) {
-              $(this).addClass("hover");
-            }
-          });
-          // handle the closing of the overlay
-          $(".close-overlay").click(function (e) {
-            e.preventDefault();
-            e.stopPropagation();
-            if ($(this).closest(".img").hasClass("hover")) {
-              $(this).closest(".img").removeClass("hover");
-            }
-          });
-        } else {
-          // handle the mouseenter functionality
-          $(".img")
-            .mouseenter(function () {
-              $(this).addClass("hover");
-            })
-            // handle the mouseleave functionality
-            .mouseleave(function () {
-              $(this).removeClass("hover");
+                    <div class="col-lg-4 widget">
+                        <h3 class="widget-title">
+                            <i
+                                class="md-icon dp36 mb-1 box-icon bg-transparent text-primary"
+                                >location_on</i
+                            >
+                            Mariposa Location
+                        </h3>
+                        <div class="row">
+                            <div class="col-sm-5">
+                                <p>
+                                    <strong>Wednesday - Friday</strong><br />
+                                    10:00am - 6:00pm
+                                </p>
+                                <br />
+                                <p>
+                                    <strong>Saturday</strong><br />
+                                    10:00am - 5:00pm
+                                </p>
+                                <br />
+                                <p>
+                                    <strong>Sunday - Tuesday</strong><br />
+                                    <em>Closed</em>
+                                </p>
+                            </div>
+                            <div class="col-sm-7">
+                                <p>
+                                    {% include location.html id="MARIPOSA"
+                                    link="true" %}
+                                </p>
+                                <br />
+                                <p>
+                                    Phone: {% include phone-number.html
+                                    number="(209) 966-3777" %}<br />
+                                    Fax: {% include phone-number.html
+                                    number="(209) 966-3888" %}<br />
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- / column-->
+                </div>
+                <!-- / row -->
+
+                <div class="row">
+                    <div class="col-lg-8 footer-left-area">
+                        <p>
+                            Copyright © {{ site.time | date: '%Y' }}. {{
+                            site.data.global.footer_text }}
+                        </p>
+                    </div>
+                    <div class="col-lg-4 social-icons footer-right-area">
+                        <a
+                            target="_blank"
+                            title="Find Us on Facebook"
+                            href="https://www.facebook.com/stagestopgunshop/"
+                            ><i class="fa fa-facebook"></i
+                        ></a>
+                        <a
+                            target="_blank"
+                            title="Find Us on Instagram"
+                            href="https://www.instagram.com/stagestopgunshop/"
+                            ><i class="fa fa-instagram"></i
+                        ></a>
+                    </div>
+                    <!-- / social-icons -->
+                </div>
+                <!-- / row -->
+            </div>
+            <!-- / container -->
+        </footer>
+
+        <!-- Core JavaScript -->
+        <script src="/js/jquery.min.js"></script>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0//js/tether.min.js"
+            integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb"
+            crossorigin="anonymous"
+        ></script>
+        <script src="/js/bootstrap.min.js"></script>
+        <!-- / Core JavaScript -->
+
+        <!-- preloader -->
+        <script src="/js/preloader.js"></script>
+        <!-- / preloader -->
+
+        <!-- Smooth Scrolling -->
+        <script src="/js/jquery.easing.min.js"></script>
+        <script src="/js/smooth-scroll.js"></script>
+        <!-- / Smooth Scrolling -->
+
+        <!-- Portfolio Script -->
+        <script src="/js/jquery.shuffle.min.js"></script>
+        <script src="/js/portfolio.js"></script>
+        <script>
+            $(document).ready(function () {
+                if (Modernizr.touch) {
+                    // show the close overlay button
+                    $(".close-overlay").removeClass("hidden");
+                    // handle the adding of hover class when clicked
+                    $(".img").click(function (e) {
+                        if (!$(this).hasClass("hover")) {
+                            $(this).addClass("hover");
+                        }
+                    });
+                    // handle the closing of the overlay
+                    $(".close-overlay").click(function (e) {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        if ($(this).closest(".img").hasClass("hover")) {
+                            $(this).closest(".img").removeClass("hover");
+                        }
+                    });
+                } else {
+                    // handle the mouseenter functionality
+                    $(".img")
+                        .mouseenter(function () {
+                            $(this).addClass("hover");
+                        })
+                        // handle the mouseleave functionality
+                        .mouseleave(function () {
+                            $(this).removeClass("hover");
+                        });
+                }
             });
-        }
-      });
-    </script>
-    <!-- / Portfolio Script -->
+        </script>
+        <!-- / Portfolio Script -->
 
-    <!-- Tooltips -->
-    <script>
-      $(function () {
-        $('[data-toggle="tooltip"]').tooltip();
-      });
-    </script>
-    <!-- / Tooltips -->
+        <!-- Tooltips -->
+        <script>
+            $(function () {
+                $('[data-toggle="tooltip"]').tooltip();
+            });
+        </script>
+        <!-- / Tooltips -->
 
-    <!-- Owl Carousel -->
-    <script src="/js/owl.carousel.min.js"></script>
-    <script>
-      $("#testimonials-carousel-2").owlCarousel({
-        loop: true,
-        margin: 10,
-        nav: true,
-        dots: false,
-        navText: [
-          "<i class='fa fa-angle-left'></i>",
-          "<i class='fa fa-angle-right'></i>",
-        ],
-        items: 1,
-        animateIn: "slideInRight",
-        animateOut: "slideOutLeft",
-      });
-    </script>
+        <!-- Owl Carousel -->
+        <script src="/js/owl.carousel.min.js"></script>
+        <script>
+            $("#testimonials-carousel-2").owlCarousel({
+                loop: true,
+                margin: 10,
+                nav: true,
+                dots: false,
+                navText: [
+                    "<i class='fa fa-angle-left'></i>",
+                    "<i class='fa fa-angle-right'></i>",
+                ],
+                items: 1,
+                animateIn: "slideInRight",
+                animateOut: "slideOutLeft",
+            });
+        </script>
 
-    <script>
-      $("#clients-carousel").owlCarousel({
-        loop: true,
-        margin: 30,
-        dots: false,
-        autoplay: true,
-        responsive: {
-          0: {
-            items: 1,
-          },
-          600: {
-            items: 3,
-          },
-          1000: {
-            items: 5,
-          },
-        },
-      });
-    </script>
-    <!-- / Owl Carousel -->
+        <script>
+            $("#clients-carousel").owlCarousel({
+                loop: true,
+                margin: 30,
+                dots: false,
+                autoplay: true,
+                responsive: {
+                    0: {
+                        items: 1,
+                    },
+                    600: {
+                        items: 3,
+                    },
+                    1000: {
+                        items: 5,
+                    },
+                },
+            });
+        </script>
+        <!-- / Owl Carousel -->
 
-    <!-- Hide Nav -->
-    <script src="/js/hide-nav.js"></script>
-    <!-- / Hide Nav -->
+        <!-- Hide Nav -->
+        <script src="/js/hide-nav.js"></script>
+        <!-- / Hide Nav -->
 
-    <!-- Google Maps -->
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBA40uewXP25u1A4o9u8ueBimZZwIdNLkY"></script>
-    <script src="/js/map.js"></script>
-    <!-- / Google Maps -->
+        <!-- Google Maps -->
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBA40uewXP25u1A4o9u8ueBimZZwIdNLkY"></script>
+        <script src="/js/map.js"></script>
+        <!-- / Google Maps -->
 
-    <!-- Contact Form -->
-    <script src="/js/contact-form-validator.min.js"></script>
-    <!-- / Contact Form -->
+        <!-- Contact Form -->
+        <script src="/js/contact-form-validator.min.js"></script>
+        <!-- / Contact Form -->
 
-    <!-- lightbox -->
-    <script src="/js/jquery.magnific-popup.min.js"></script>
-    <script type="text/javascript">
-      // This will create a single gallery from all elements that have class "lightbox"
-      $(".gallery-lightbox").each(function () {
-        $(this).magnificPopup({
-          delegate: "a.image-lightbox", // the selector for gallery item
-          type: "image",
-          gallery: {
-            enabled: true,
-          },
-        });
-      });
+        <!-- lightbox -->
+        <script src="/js/jquery.magnific-popup.min.js"></script>
+        <script type="text/javascript">
+            // This will create a single gallery from all elements that have class "lightbox"
+            $(".gallery-lightbox").each(function () {
+                $(this).magnificPopup({
+                    delegate: "a.image-lightbox", // the selector for gallery item
+                    type: "image",
+                    gallery: {
+                        enabled: true,
+                    },
+                });
+            });
 
-      // This will create a single gallery from all elements that have class "lightbox"
-      $(".sponsor-lightbox").each(function () {
-        $(this).magnificPopup({
-          delegate: "a.inline-lightbox", // the selector for gallery item
-          type: "inline",
-        });
-      });
-    </script>
-    <!-- / lightbox -->
+            // This will create a single gallery from all elements that have class "lightbox"
+            $(".sponsor-lightbox").each(function () {
+                $(this).magnificPopup({
+                    delegate: "a.inline-lightbox", // the selector for gallery item
+                    type: "inline",
+                });
+            });
+        </script>
+        <!-- / lightbox -->
 
-    <!-- 18+ Age Agreement -->
-    <script>
-      (() => {
-        const config = {
-          minAge: 18,
-          rememberDays: 30,
-          storageKey: "age_gate_ok_v1",
-          redirectUrl: "https://www.google.com", // set "" to just block without redirect
-          title: "Age Verification",
-          message:
-            "This site is intended for individuals who are at least {MIN_AGE} years old. " +
-            "By continuing, you confirm you meet the minimum age requirement.",
-          confirmText: "I am {MIN_AGE}+ — Enter",
-          declineText: "No thanks",
-        };
+        <!-- 18+ Age Agreement -->
+        <script>
+            (() => {
+                const config = {
+                    minAge: 18,
+                    rememberDays: 30,
+                    storageKey: "age_gate_ok_v1",
+                    redirectUrl: "https://www.google.com", // set "" to just block without redirect
+                    title: "Age Verification",
+                    message:
+                        "This site is intended for individuals who are at least {MIN_AGE} years old. " +
+                        "By continuing, you confirm you meet the minimum age requirement.",
+                    confirmText: "I am {MIN_AGE}+ — Enter",
+                    declineText: "No thanks",
+                };
 
-        const now = Date.now();
+                const now = Date.now();
 
-        // If already confirmed, do nothing
-        try {
-          const raw = localStorage.getItem(config.storageKey);
-          if (raw) {
-            const parsed = JSON.parse(raw);
-            if (parsed?.expiresAt && parsed.expiresAt > now) return;
-          }
-        } catch {}
+                // If already confirmed, do nothing
+                try {
+                    const raw = localStorage.getItem(config.storageKey);
+                    if (raw) {
+                        const parsed = JSON.parse(raw);
+                        if (parsed?.expiresAt && parsed.expiresAt > now) return;
+                    }
+                } catch {}
 
-        // Backdrop container
-        const backdrop = document.createElement("div");
-        backdrop.className = "modal fade in show";
-        backdrop.style.display = "block";
-        backdrop.setAttribute("role", "dialog");
-        backdrop.setAttribute("aria-modal", "true");
+                // Backdrop container
+                const backdrop = document.createElement("div");
+                backdrop.className = "modal fade in show";
+                backdrop.style.display = "block";
+                backdrop.setAttribute("role", "dialog");
+                backdrop.setAttribute("aria-modal", "true");
 
-        // Modal structure (Bootstrap-ish)
-        backdrop.innerHTML = `
+                // Modal structure (Bootstrap-ish)
+                backdrop.innerHTML = `
     <div class="modal-dialog" role="document" style="margin-top:10vh;">
       <div class="modal-content" style="background-color:#292b2c;border-color: #444;">
         <div class="modal-header">
@@ -473,15 +525,15 @@
         </div>
         <div class="modal-body">
           <p>${escapeHtml(config.message).replaceAll(
-            "{MIN_AGE}",
-            String(config.minAge)
+              "{MIN_AGE}",
+              String(config.minAge),
           )}</p>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-primary" data-agegate="confirm">
             ${escapeHtml(config.confirmText).replaceAll(
-              "{MIN_AGE}",
-              String(config.minAge)
+                "{MIN_AGE}",
+                String(config.minAge),
             )}
           </button>
           <button type="button" class="btn btn-default" data-agegate="decline">
@@ -492,88 +544,92 @@
     </div>
   `;
 
-        // Append + lock scroll
-        document.body.appendChild(backdrop);
-        const prevOverflow = document.body.style.overflow;
-        document.body.style.overflow = "hidden";
+                // Append + lock scroll
+                document.body.appendChild(backdrop);
+                const prevOverflow = document.body.style.overflow;
+                document.body.style.overflow = "hidden";
 
-        function closeGate() {
-          document.body.style.overflow = prevOverflow;
-          backdrop.remove();
-        }
+                function closeGate() {
+                    document.body.style.overflow = prevOverflow;
+                    backdrop.remove();
+                }
 
-        function rememberOk() {
-          const expiresAt = now + config.rememberDays * 24 * 60 * 60 * 1000;
-          try {
-            localStorage.setItem(
-              config.storageKey,
-              JSON.stringify({ ok: true, expiresAt })
-            );
-          } catch {}
-        }
+                function rememberOk() {
+                    const expiresAt =
+                        now + config.rememberDays * 24 * 60 * 60 * 1000;
+                    try {
+                        localStorage.setItem(
+                            config.storageKey,
+                            JSON.stringify({ ok: true, expiresAt }),
+                        );
+                    } catch {}
+                }
 
-        // Click handlers (event delegation)
-        backdrop.addEventListener("click", (e) => {
-          const btn = e.target.closest("[data-agegate]");
-          if (!btn) return;
+                // Click handlers (event delegation)
+                backdrop.addEventListener("click", (e) => {
+                    const btn = e.target.closest("[data-agegate]");
+                    if (!btn) return;
 
-          const action = btn.getAttribute("data-agegate");
-          if (action === "confirm") {
-            rememberOk();
-            closeGate();
-          } else if (action === "decline") {
-            if (config.redirectUrl) window.location.href = config.redirectUrl;
-            // If no redirectUrl, just keep the modal open (effectively blocks access)
-          }
-        });
+                    const action = btn.getAttribute("data-agegate");
+                    if (action === "confirm") {
+                        rememberOk();
+                        closeGate();
+                    } else if (action === "decline") {
+                        if (config.redirectUrl)
+                            window.location.href = config.redirectUrl;
+                        // If no redirectUrl, just keep the modal open (effectively blocks access)
+                    }
+                });
 
-        // Prevent dismiss by clicking outside
-        backdrop.addEventListener(
-          "mousedown",
-          (e) => {
-            const dialog = backdrop.querySelector(".modal-dialog");
-            if (dialog && !dialog.contains(e.target)) {
-              e.preventDefault();
-              e.stopPropagation();
-            }
-          },
-          true
-        );
+                // Prevent dismiss by clicking outside
+                backdrop.addEventListener(
+                    "mousedown",
+                    (e) => {
+                        const dialog = backdrop.querySelector(".modal-dialog");
+                        if (dialog && !dialog.contains(e.target)) {
+                            e.preventDefault();
+                            e.stopPropagation();
+                        }
+                    },
+                    true,
+                );
 
-        // Prevent ESC close
-        document.addEventListener("keydown", onKeyDown, true);
-        function onKeyDown(e) {
-          if (e.key === "Escape") {
-            e.preventDefault();
-            e.stopPropagation();
-          }
-        }
+                // Prevent ESC close
+                document.addEventListener("keydown", onKeyDown, true);
+                function onKeyDown(e) {
+                    if (e.key === "Escape") {
+                        e.preventDefault();
+                        e.stopPropagation();
+                    }
+                }
 
-        // Focus primary button
-        const primary = backdrop.querySelector('[data-agegate="confirm"]');
-        if (primary) primary.focus();
+                // Focus primary button
+                const primary = backdrop.querySelector(
+                    '[data-agegate="confirm"]',
+                );
+                if (primary) primary.focus();
 
-        // Basic HTML escape to avoid accidental injection
-        function escapeHtml(str) {
-          return String(str).replace(
-            /[&<>"']/g,
-            (m) =>
-              ({
-                "&": "&amp;",
-                "<": "&lt;",
-                ">": "&gt;",
-                '"': "&quot;",
-                "'": "&#39;",
-              }[m])
-          );
-        }
-      })();
-    </script>
-    <!-- / 18+ Age Agreement -->
+                // Basic HTML escape to avoid accidental injection
+                function escapeHtml(str) {
+                    return String(str).replace(
+                        /[&<>"']/g,
+                        (m) =>
+                            ({
+                                "&": "&amp;",
+                                "<": "&lt;",
+                                ">": "&gt;",
+                                '"': "&quot;",
+                                "'": "&#39;",
+                            })[m],
+                    );
+                }
+            })();
+        </script>
+        <!-- / 18+ Age Agreement -->
 
-    <script
-      src="https://www.smartwaiver.com/m/webpl/f.js?webpl_waiver=splashpage-18496&webpl_title=Sign%20our%20waiver&webpl_align=Left&webpl_fontsize=16&webpl_background=%23f47b20&webpl_fontcolor=%23ffffff&webpl_font=Nunito%20Sans"
-      type="text/javascript"
-    ></script>
-  </body>
+        <script
+            src="https://www.smartwaiver.com/m/webpl/f.js?webpl_waiver=splashpage-18496&webpl_title=Sign%20our%20waiver&webpl_align=Left&webpl_fontsize=16&webpl_background=%23f47b20&webpl_fontcolor=%23ffffff&webpl_font=Nunito%20Sans"
+            type="text/javascript"
+        ></script>
+    </body>
 </html>
