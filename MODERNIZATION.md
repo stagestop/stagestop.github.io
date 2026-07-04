@@ -148,9 +148,9 @@ Known non-fatal warnings remain from legacy Jekyll config.
 
 ### Phase 2 — Jekyll config cleanup
 
-Status: In progress
+Status: Complete
 
-Completed so far:
+Completed work:
 
 - Added repo/dev metadata files to `_config.yml` `exclude` so they are not published by Jekyll:
   - `README.md`
@@ -160,20 +160,33 @@ Completed so far:
   - `Gemfile`
   - `Gemfile.lock`
   - `.dockerignore`
+- Consolidated duplicate `include` config into one list containing `.htaccess` and `_pages`.
+- Replaced deprecated `gems:`/`whitelist:` config with `plugins: []`.
+- Removed inactive `jekyll-paginate` config because `paginate` was commented out and no active pagination usage was found.
+- Removed unused `rdiscount` and `redcarpet` config.
+- Removed deprecated `kramdown.coderay` config while preserving basic `kramdown` options.
 
-Remaining goals:
+Validation performed:
 
-- Replace deprecated `gems:` config with `plugins:`.
-- Review whether `jekyll-paginate` is needed since `paginate` is currently commented out.
-- Remove likely-unused `rdiscount` and `redcarpet` config.
-- Clean or remove deprecated `kramdown.coderay` config.
-- Review duplicate/conflicting `include` config.
+```sh
+docker compose run --rm site sh -c "rm -rf _site/* && bundle exec jekyll build"
+docker compose run --rm site sh -c "find _site -maxdepth 1 \( -name 'MODERNIZATION*' -o -name 'README*' -o -name 'Dockerfile' -o -name 'docker-compose.yml' -o -name 'Gemfile*' \) -print"
+docker compose up
+docker compose down
+```
 
-Expected result:
+Result:
 
-- Site still builds and serves.
-- `gems:` deprecation warning is gone.
-- Fewer legacy config warnings.
+- Site builds successfully.
+- Dev server starts successfully at `http://localhost:4000`.
+- Repo/dev metadata files are not emitted into `_site`.
+- The `gems:` and `kramdown.coderay` deprecation warnings are gone.
+
+Remaining known non-fatal warning:
+
+```text
+To use retry middleware with Faraday v2.0+, install `faraday-retry` gem
+```
 
 ### Phase 3 — Content/data cleanup
 
@@ -280,48 +293,6 @@ GitHub Pages native build parity would no longer be the goal; GitHub Actions wou
 
 ### Ready
 
-#### T002 — Clean Jekyll config
-
-Scope:
-
-- `_config.yml`
-- `README.md` only if validation/development instructions need to change
-- `MODERNIZATION.md` to record outcome
-
-Do:
-
-- Replace deprecated `gems:` with `plugins:`.
-- Decide whether to keep or remove `jekyll-paginate`.
-- Remove unused `rdiscount` and `redcarpet` config if safe.
-- Clean deprecated `kramdown.coderay` config if safe.
-- Run Docker validation.
-
-Do not:
-
-- Change frontend dependencies.
-- Change content pages/posts.
-- Change layouts.
-- Start Bootstrap migration.
-
-Acceptance criteria:
-
-- Docker build succeeds.
-- Jekyll server starts successfully.
-- No behavior-impacting content/layout changes are made.
-- Repo/dev metadata files are not emitted into `_site`.
-- `gems:` deprecation warning is eliminated.
-- Any remaining warnings are documented here.
-
-Validation:
-
-```sh
-docker compose --progress plain build
-docker compose up
-docker compose down
-```
-
-### Not started
-
 #### T003 — Audit content/data staleness
 
 Scope:
@@ -334,6 +305,8 @@ Acceptance criteria:
 - List stale or suspicious content/data.
 - Note recommended fix for each item.
 - Identify any items requiring business/user confirmation.
+
+### Not started
 
 #### T004 — Audit frontend dependencies
 
@@ -349,6 +322,15 @@ Acceptance criteria:
 - Identify replacement candidate and migration risk.
 
 ### Done
+
+#### T002 — Clean Jekyll config
+
+Completed:
+
+- Cleaned `_config.yml` legacy/deprecated settings.
+- Preserved site build behavior.
+- Verified repo/dev metadata files are excluded from `_site`.
+- Validated Docker build/server startup.
 
 #### T001 — Add reproducible Bundler setup
 
@@ -397,19 +379,9 @@ docker compose down --volumes
 
 ## Known Non-Fatal Warnings
 
-As of the end of Phase 1, the site serves but prints warnings including:
+As of the end of Phase 2, the previous `gems:` and `kramdown.coderay` deprecation warnings have been removed.
 
-```text
-Deprecation: The 'gems' configuration option has been renamed to 'plugins'.
-```
-
-And deprecated `kramdown.coderay` warnings such as:
-
-```text
-Deprecation: You are using 'kramdown.coderay' in your configuration, please use 'syntax_highlighter_opts' instead.
-```
-
-There may also be a GitHub Pages dependency warning:
+There may still be a GitHub Pages dependency warning:
 
 ```text
 To use retry middleware with Faraday v2.0+, install `faraday-retry` gem
@@ -431,19 +403,8 @@ Keep each task small enough to review independently.
 
 ## Current Next Step
 
-Continue:
+The next recommended task is:
 
 ```text
-T002 — Clean Jekyll config
+T003 — Audit content/data staleness
 ```
-
-Recent validation for the exclude safety fix:
-
-```sh
-docker compose run --rm site sh -c "rm -rf _site/* && bundle exec jekyll build && find _site -maxdepth 1 -type f | sort"
-```
-
-Result:
-
-- Build succeeded.
-- `_site` no longer contains `MODERNIZATION.md`, `MODERNIZATION.html`, `README.md`, `Dockerfile`, `docker-compose.yml`, `Gemfile`, or `Gemfile.lock`.
