@@ -3,7 +3,7 @@ Stage Stop Gun Shop Website
 
 ## Local development with Docker
 
-This repo includes a Docker-based Jekyll development setup. Ruby dependencies are managed by Bundler via `Gemfile` and `Gemfile.lock`, using the `github-pages` gem for local parity with GitHub Pages.
+This repo includes a Docker-based Jekyll development setup. Ruby dependencies are managed by Bundler via `Gemfile` and `Gemfile.lock`, and deployment is intended to run through the GitHub Actions Pages workflow.
 
 Start the site:
 
@@ -44,4 +44,3 @@ Remove the generated Docker volumes if you want a completely clean rebuild:
 ```sh
 docker compose down --volumes
 ```
-

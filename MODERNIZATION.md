@@ -41,8 +41,8 @@ Current dependency/runtime baseline:
 
 - Ruby: `~> 3.3`
 - Dependency management: Bundler
-- GitHub Pages gem: `github-pages ~> 232`
-- Jekyll: `3.10.0` via `github-pages`
+- Jekyll: `~> 4.4` (`4.4.1` in `Gemfile.lock`)
+- Deployment path: GitHub Actions Pages workflow
 - Docker development setup available through `docker-compose.yml`
 
 Current Docker behavior:
@@ -298,7 +298,7 @@ jQuery is no longer globally loaded or included in the repo.
 
 ### Phase 8 — Optional Jekyll 4 / GitHub Actions deployment
 
-Status: Ready
+Status: Complete
 
 This is optional and should happen only after the site is stable and cleaner. As of `T008A`, the pre-Phase 8 cleanup is complete enough to proceed.
 
@@ -306,12 +306,19 @@ Goal:
 
 Move beyond GitHub Pages’ built-in Jekyll version by building the site through GitHub Actions and deploying generated output.
 
-Current baseline:
+Original baseline:
 
 - GitHub Pages dependency stack: `github-pages` 232 with Jekyll 3.10.0.
 - Local dependency stack: `Gemfile` uses `github-pages ~> 232`.
 - Local runtime: Docker uses Ruby 3.3 and Bundler.
 - No existing `.github/workflows` deployment workflow is present.
+
+Current result:
+
+- `Gemfile` now uses explicit Jekyll `~> 4.4`.
+- `Gemfile.lock` resolves Jekyll `4.4.1`.
+- `.github/workflows/pages.yml` builds and deploys Pages through GitHub Actions.
+- GitHub Pages native build parity is no longer the production goal.
 
 External references checked:
 
@@ -320,12 +327,10 @@ External references checked:
 - GitHub Pages custom workflow docs: https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages
 - Jekyll RubyGems page: https://rubygems.org/gems/jekyll
 
-Recommendation:
+Completed migration path:
 
-Use a two-step migration:
-
-1. Add a GitHub Actions Pages workflow while keeping the current `github-pages` dependency stack. This changes deployment plumbing first without changing the Jekyll runtime.
-2. After the workflow is proven, switch from `github-pages` to modern Jekyll and build through Bundler in Actions.
+1. Added a GitHub Actions Pages workflow while keeping the current `github-pages` dependency stack.
+2. Switched from `github-pages` to modern Jekyll and Bundler-managed Actions/Docker builds.
 
 Recommended Jekyll target:
 
@@ -345,24 +350,52 @@ After adding the workflow, the repository’s Pages publishing source must be se
 
 ### Ready
 
-#### T008C — Jekyll 4 dependency migration
+#### T008D — Sass module migration
 
 Scope:
 
-- Replace `github-pages` with explicit modern Jekyll dependencies.
-- Target Jekyll `~> 4.4`.
-- Update `Gemfile.lock`.
-- Update Docker build and local serve behavior only if required.
-- Validate generated output differences carefully.
+- Replace Sass `@import` usage with the modern Sass module system, or otherwise choose a compatible migration strategy.
+- Keep visual output stable.
+- Do not mix this with unrelated CSS redesign.
 
 Acceptance criteria:
 
-- Docker build succeeds with the new dependency stack.
-- Key served pages return 200.
-- Generated output does not contain obvious URL/permalink/layout regressions.
-- Any intentional output differences are documented.
+- Jekyll 4 build no longer emits Sass `@import` deprecation warnings.
+- Key served pages still return 200.
+- Generated CSS remains present and site layout is not obviously regressed.
 
 ### Done
+
+#### T008C — Jekyll 4 dependency migration
+
+Completed:
+
+- Replaced `github-pages ~> 232` with explicit `jekyll ~> 4.4`.
+- Updated `Gemfile.lock` to Jekyll `4.4.1`.
+- Rebuilt the Docker image with the new dependency stack.
+- Updated README wording to reflect GitHub Actions Pages deployment instead of GitHub Pages gem parity.
+- Confirmed the existing GitHub Actions Pages workflow can continue to build through Bundler.
+
+Validation performed:
+
+```sh
+docker compose build
+docker compose run --rm site sh -c "rm -rf _site/* && JEKYLL_ENV=production bundle exec jekyll build"
+docker compose run --rm site sh -c "test -f _site/CNAME && grep -qx 'stagestopgunshop.com' _site/CNAME && grep -R 'class=\"location-map\"' _site >/dev/null && ! grep -R -I 'maps.googleapis.com/maps/api/js\|/js/map.js\|jquery.min.js\|font-awesome.min.css\|googleaccess\|id=\"map\"\|mapAtwater\|mapMariposa' _site && ! find _site -maxdepth 1 \( -name '*gun-100*.html' -o -name '*rifle-100*.html' \) | grep ."
+docker compose up
+docker compose exec site ruby -rnet/http -ruri -e "paths = ['/', '/about/', '/contact/', '/vip/', '/gallery/', '/training/']; paths.each do |path| res = Net::HTTP.get_response(URI('http://localhost:4000' + path)); raise \"#{path} #{res.code}\" unless res.code == '200'; end; old = Net::HTTP.get_response(URI('http://localhost:4000/kimber-stainless-raptor-ii.html')); raise 'old product post still public' unless old.code == '404';"
+docker compose down
+```
+
+Result:
+
+- Docker image builds with Jekyll `4.4.1`.
+- Production-mode Jekyll build succeeds.
+- Key served pages return 200.
+- Representative archived product URL returns 404.
+- Generated output preserves `CNAME`.
+- Previous Faraday retry warning is gone because the `github-pages` dependency stack was removed.
+- New non-fatal warning: Dart Sass reports deprecated `@import` usage from the current Sass structure. This is tracked as `T008D`.
 
 #### T008B — GitHub Actions Pages workflow
 
@@ -846,13 +879,15 @@ docker compose down --volumes
 
 As of the end of Phase 2, the previous `gems:` and `kramdown.coderay` deprecation warnings have been removed.
 
-There may still be a GitHub Pages dependency warning:
+The previous GitHub Pages/Faraday warning is gone after removing the `github-pages` dependency stack.
+
+There is a current Dart Sass warning from Jekyll 4’s newer Sass compiler:
 
 ```text
-To use retry middleware with Faraday v2.0+, install `faraday-retry` gem
+DEPRECATION WARNING [import]: Sass @import rules are deprecated and will be removed in Dart Sass 3.0.0.
 ```
 
-This warning comes from the GitHub Pages dependency stack and is not currently blocking local development.
+This is not currently blocking local development or builds. Track the cleanup as `T008D`.
 
 ## Git Hygiene
 
@@ -871,7 +906,7 @@ Keep each task small enough to review independently.
 The next recommended task is:
 
 ```text
-Phase 8 readiness smoke pass
+T008D — Sass module migration
 ```
 
 For frontend cleanup, the next recommended task is:
