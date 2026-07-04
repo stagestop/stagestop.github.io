@@ -345,23 +345,6 @@ After adding the workflow, the repository’s Pages publishing source must be se
 
 ### Ready
 
-#### T008B — GitHub Actions Pages workflow
-
-Scope:
-
-- Add `.github/workflows/pages.yml`.
-- Keep `Gemfile` on `github-pages ~> 232` for this task.
-- Build with Bundler in Actions and upload `_site` with `actions/upload-pages-artifact`.
-- Deploy with `actions/deploy-pages`.
-- Preserve `CNAME` in generated output.
-
-Acceptance criteria:
-
-- Docker build still succeeds locally.
-- Workflow YAML is syntactically valid enough for review.
-- Generated output still includes `CNAME`.
-- `MODERNIZATION.md` documents that GitHub Pages source must be switched to GitHub Actions.
-
 #### T008C — Jekyll 4 dependency migration
 
 Scope:
@@ -380,6 +363,37 @@ Acceptance criteria:
 - Any intentional output differences are documented.
 
 ### Done
+
+#### T008B — GitHub Actions Pages workflow
+
+Completed:
+
+- Added `.github/workflows/pages.yml`.
+- Kept `Gemfile` on `github-pages ~> 232`.
+- Configured the workflow to build with Ruby 3.3 and Bundler.
+- Configured artifact upload from `_site` with `actions/upload-pages-artifact@v4`.
+- Configured deployment with `actions/deploy-pages@v4`.
+- Preserved `CNAME` in generated output.
+
+Operational note:
+
+Before this workflow can deploy production Pages, the repository’s Pages publishing source must be changed to GitHub Actions in GitHub repository settings.
+
+Validation performed:
+
+```sh
+ruby -e "require 'yaml'; YAML.load_file('.github/workflows/pages.yml'); puts 'ok'"
+git diff --check
+docker compose run --rm site sh -c "rm -rf _site/* && JEKYLL_ENV=production bundle exec jekyll build"
+docker compose run --rm site sh -c "test -f _site/CNAME && grep -qx 'stagestopgunshop.com' _site/CNAME"
+```
+
+Result:
+
+- Workflow YAML parses locally.
+- Production-mode Docker build succeeds on the current dependency stack.
+- Generated output preserves `CNAME`.
+- Existing non-fatal Faraday retry warning remains.
 
 #### T008A — Phase 8 deployment/runtime audit
 
