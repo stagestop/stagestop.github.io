@@ -53,7 +53,7 @@ In 2011, Stage Stop Gun Shop found its first home in the historic town of Maripo
                             </div>
                         </div><!-- / sub-column -->
                     </div><!-- / row -->
-                    <button type="submit" id="form-submit" class="btn btn-primary"><i class="md-icon dp14 me-1">send</i> <span>SEND MESSAGE</span></button>
+                    <button type="submit" id="form-submit" class="btn btn-primary">{% include icon.html name="send" class="dp14 me-1" %} <span>SEND MESSAGE</span></button>
                     <div id="msgSubmit" class="h3 text-center hidden"></div>
                     <div class="clearfix"></div> 
                 </form><!-- / contactform -->

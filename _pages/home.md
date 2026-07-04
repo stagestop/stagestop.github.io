@@ -41,7 +41,7 @@ button1:
         <div class="row">
             <div class="col-md-3">
                 <div class="promo-box text-center inner-space">
-                    <i class="md-icon dp36 mb-1 box-icon bg-transparent text-primary">library_books</i>
+                    {% include icon.html name="library-books" class="dp36 mb-1 box-icon bg-transparent text-primary" %}
                     <h6 class="box-title"><a href="#x" class="promo-link">TRAINING</a></h6>
                     <p class="box-description">
                     Learn to not only be comfortable with using your firearm but also how to use it properly.
@@ -51,7 +51,7 @@ button1:
             </div><!-- / column -->
             <div class="col-md-3">
                 <div class="promo-box text-center inner-space">
-                    <i class="md-icon dp36 mb-1 box-icon bg-transparent text-primary">album</i>
+                    {% include icon.html name="album" class="dp36 mb-1 box-icon bg-transparent text-primary" %}
                     <h6 class="box-title"><a href="#x" class="promo-link">INDOOR RANGE</a></h6>
                     <p class="box-description">State of the art indoor range. We also rent firearms for use in our range.</p>
                     <a href="/range" class="btn btn-black">LEARN MORE</a>
@@ -59,7 +59,7 @@ button1:
             </div><!-- / column -->
             <div class="col-md-3">
                 <div class="promo-box text-center inner-space">
-                    <i class="md-icon dp36 mb-1 box-icon bg-transparent text-primary">play_arrow</i>
+                    {% include icon.html name="play" class="dp36 mb-1 box-icon bg-transparent text-primary" %}
                     <h6 class="box-title"><a href="#x" class="promo-link">ARCHERY</a></h6>
                     <p class="box-description">Now is the time to checkout archery. See if it's for you.</p>
                     <a href="/range" class="btn btn-black">LEARN MORE</a>
@@ -67,7 +67,7 @@ button1:
             </div><!-- / column -->
             <div class="col-md-3">
                 <div class="promo-box text-center inner-space">
-                    <i class="md-icon dp36 mb-1 box-icon bg-transparent text-primary">lock</i>
+                    {% include icon.html name="lock" class="dp36 mb-1 box-icon bg-transparent text-primary" %}
                     <h6 class="box-title"><a href="#x" class="promo-link">PERSONAL SECURITY</a></h6>
                     <p class="box-description">
                     We are happy to help guide you through your decision-making process.

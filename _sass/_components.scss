@@ -159,7 +159,7 @@
     line-height: 1.95;
 }
 
-.btn.btn-w-icon .md-icon.dp16 {
+.btn.btn-w-icon .site-icon.dp16 {
     line-height: 1.5rem;
 }
 
@@ -1273,8 +1273,7 @@ textarea:focus {
 }
 
 .checkbox input[type="checkbox"]:checked + label::after {
-    font-family: 'Material Icons';
-    content: "\E876";
+    content: "✓";
 }
 
 .checkbox input[type="checkbox"]:disabled + label {
@@ -1924,7 +1923,7 @@ nav .btn-xs {
     font-size: 18px;
 }
 
-.nav-icon .md-icon {
+.nav-icon .site-icon {
     line-height: 40px;
     width: auto;
     height: auto;
@@ -2301,8 +2300,8 @@ nav .btn-xs {
 }
 
 .dropdown-toggle::after {
-    content: "\f067";
-    font: normal normal normal 8px/1 FontAwesome;
+    content: "+";
+    font: normal normal normal 8px/1 sans-serif;
     border: none;
     position: absolute;
     top: 13px;
@@ -2798,7 +2797,7 @@ footer p {
     background: transparent;
 }
 
-footer .social-icons i {
+footer .social-icons .site-icon {
     margin-left: 10px;
 }
 

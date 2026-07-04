@@ -55,7 +55,7 @@ Whether you are planning a party or a meeting, Stage Stop Gun Shop & Indoor Rang
                             </div>
                         </div><!-- / sub-column -->
                     </div><!-- / row -->
-                    <button type="submit" id="form-submit" class="btn btn-primary"><i class="md-icon dp14 me-1">send</i> <span>SEND MESSAGE</span></button>
+                    <button type="submit" id="form-submit" class="btn btn-primary">{% include icon.html name="send" class="dp14 me-1" %} <span>SEND MESSAGE</span></button>
                     <div id="msgSubmit" class="h3 text-center hidden"></div>
                     <div class="clearfix"></div> 
                 </form><!-- / contactform -->

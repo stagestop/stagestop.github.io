@@ -227,10 +227,11 @@ header .breadcrumb {
     color: $white;
     background: $primary;
     border-radius: 50%;
+    box-sizing: border-box;
     height: 65px;
     width: 65px;
-    line-height: 65px;
     margin-bottom: 15px;
+    padding: 14px;
     -webkit-transition: ease-in-out 0.2s;
     -moz-transition: ease-in-out 0.2s;
     transition: ease-in-out 0.2s;
@@ -565,12 +566,20 @@ header .breadcrumb {
     padding-left: 15px;
 }
 
+.portfolio-type2 .effect .img,
 .portfolio-type2 .effects .img {
     position: relative;
     float: left;
     margin-bottom: 5px;
-    width: 25%;
     overflow: hidden;
+}
+
+.portfolio-type2 .effect .img {
+    width: 100%;
+}
+
+.portfolio-type2 .effects .img {
+    width: 25%;
 }
 
 .portfolio-type2 .effects .img:nth-child(n) {
@@ -599,6 +608,7 @@ header .breadcrumb {
     z-index: 99;
     background: $primary-transparent;
     overflow: hidden;
+    pointer-events: none;
     transition: all 0.5s;
     margin: 0 15px;
 }
@@ -704,6 +714,7 @@ header .breadcrumb {
 .portfolio-type2 .effect-2 .img:hover .overlay,
 .portfolio-type2 .effect-2 .img:focus-within .overlay {
     opacity: 1;
+    pointer-events: auto;
 }
 
 .portfolio-type2 .effect-2 .img.hover .overlay a.expand,
@@ -1401,11 +1412,6 @@ ul.shop-featured {
     margin: 5px;
 }
 
-.product-info .fa-star, .product-info .fa-star-half-o {
-    color: #fbc617 !important;
-    margin-top: -3px;
-}
-
 .review-form {
     margin-bottom: 20px;
     padding: 0;
@@ -1521,6 +1527,10 @@ table > thead > tr > th, table > thead > tr > td, table > tbody > tr > th, table
 .post-meta i {
     color: $secondary-hover;
     font-size: 0.875rem;
+}
+
+.post-meta .site-icon {
+    color: $secondary-hover;
 }
 
 .post-meta p {

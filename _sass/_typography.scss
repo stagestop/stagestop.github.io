@@ -163,20 +163,19 @@ form label {
     margin-bottom: .5rem;
 }
 
-.md-icon {
-    font-family: 'Material Icons';
-    text-rendering: optimizeLegibility;
-    font-feature-settings: "liga" 1;
-    font-style: normal;
-    text-transform: none;
+.site-icon {
+    fill: none;
+    stroke: currentColor;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 2;
+    color: currentColor;
+    flex: 0 0 auto;
     line-height: 1;
-    font-size: 24px;
     width: 24px;
     height: 24px;
     display: inline-block;
-    overflow: hidden;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+    vertical-align: middle;
 }
 
 .icon-item {
@@ -224,85 +223,73 @@ form label {
     color: $white;
 }
 
-.md-icon.dp10 {
-    font-size: 10px;
+.site-icon.dp10 {
     width: 10px;
     height: 10px;
     vertical-align: middle;
 }
 
-.md-icon.dp12 {
-    font-size: 12px;
+.site-icon.dp12 {
     width: 12px;
     height: 12px;
     vertical-align: middle;
 }
 
-.md-icon.dp14 {
-    font-size: 14px;
+.site-icon.dp14 {
     width: 14px;
     height: 14px;
     vertical-align: middle;
 }
 
-.md-icon.dp16 {
-    font-size: 16px;
+.site-icon.dp16 {
     width: 16px;
     height: 16px;
     vertical-align: middle;
 }
 
-.md-icon.dp18 {
-    font-size: 18px;
+.site-icon.dp18 {
     width: 18px;
     height: 18px;
     vertical-align: middle;
 }
 
-.md-icon.dp20 {
-    font-size: 20px;
+.site-icon.dp20 {
     width: 20px;
     height: 20px;
     vertical-align: middle;
 }
 
-.md-icon.dp24 {
-    font-size: 24px;
+.site-icon.dp24 {
     width: 24px;
     height: 24px;
     vertical-align: middle;
 }
 
-.md-icon.dp30 {
-    font-size: 30px;
+.site-icon.dp30 {
     width: 30px;
     height: 30px;
     vertical-align: middle;
 }
 
-.md-icon.dp36 {
-    font-size: 36px;
+.site-icon.dp36 {
     width: 36px;
     height: 36px;
     vertical-align: middle;
 }
 
-.md-icon.dp48 {
-    font-size: 48px;
+.site-icon.dp48 {
     width: 48px;
     height: 48px;
     vertical-align: middle;
 }
 
-.md-icon.dp50 {
-    font-size: 50px;
+.site-icon.dp50 {
     width: 50px;
     height: 50px;
     vertical-align: middle;
 }
 
-.md-icon.dp60 {
-    font-size: 60px;
+.site-icon.dp60 {
     width: 60px;
     height: 60px;
     vertical-align: middle;

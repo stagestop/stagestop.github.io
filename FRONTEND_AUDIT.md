@@ -25,8 +25,6 @@ CSS:
 - Bootstrap `5.3.8` CSS from jsDelivr CDN
 - `/css/orange.css`
 - `/css/animate.css`
-- Google Material Icons stylesheet
-- `/css/font-awesome.min.css`
 - Google Fonts: Nunito Sans
 
 JS:
@@ -289,60 +287,44 @@ Add a small vanilla JS enhancement only if custom inline validation messages are
 
 ### F011 — Font Awesome 4-era icon font
 
-Files:
+Status: Removed in `T004G`.
+
+Removed files:
 
 - `css/font-awesome.min.css`
-- `fonts/fontawesome-*`
-- `_layouts/default.html`
-- `_includes/followus.html`
-- `_includes/tile.html`
-- `_layouts/training-class-default.html`
+- `fonts/FontAwesome.otf`
+- `fonts/fontawesome-webfont.*`
+- `fonts/glyphicons-halflings-regular.*`
 
-Current usage:
+Current behavior:
 
-Classes like:
+- Active Font Awesome icons were replaced with inline SVGs rendered through `_includes/icon.html`.
 
-- `fa fa-facebook`
-- `fa fa-instagram`
-- `fa fa-angle-left`
-- `fa fa-files-o`
+Previous usage:
 
-Classification: Replace later.
+- Social links, training class metadata, and post tiles used classes such as `fa fa-facebook`, `fa fa-instagram`, `fa fa-files-o`, and `fa fa-angle-right`.
 
-Recommended replacements:
-
-- Bootstrap Icons if Bootstrap 5 becomes the base.
-- Font Awesome 6 if preserving icon names/visual style matters.
-- Inline SVGs for the small set of icons actually used.
-
-Risk: Medium because icons are spread across layouts/includes.
+Risk after removal: Low/Medium. The replacement covers active source usage; visually inspect icons after future design changes.
 
 ---
 
 ### F012 — Google Material Icons
 
-Files:
+Status: Removed in `T004G`.
 
-- External stylesheet in `_layouts/default.html`
-- Multiple layouts/pages with `md-icon` usage
+Removed from:
 
-Current usage:
+- `_layouts/default.html`
 
-Material icon text values such as:
+Current behavior:
 
-- `location_on`
-- `library_books`
-- `album`
-- `send`
-- `expand_less`
+- Active Material Icons were replaced with inline SVGs rendered through `_includes/icon.html`.
 
-Classification: Keep short-term, consolidate later.
+Previous usage:
 
-Recommendation:
+- Material icon text values included `location_on`, `library_books`, `album`, `send`, and `expand_less`.
 
-If moving to Bootstrap Icons or inline SVGs, replace Material Icons at the same time as Font Awesome to avoid multiple icon systems.
-
-Risk: Medium.
+Risk after removal: Low/Medium. The site now uses one inline SVG icon strategy.
 
 ---
 
@@ -518,7 +500,14 @@ Status: Complete.
 
 ### T004G — Icon consolidation
 
-Replace Font Awesome 4 and Material Icons with one icon strategy if desired.
+Status: Complete.
+
+- Replaced active Font Awesome 4 and Material Icons with inline SVGs through `_includes/icon.html`.
+- Removed Font Awesome CSS, Font Awesome fonts, Glyphicon fonts, and the Google Material Icons stylesheet.
+
+### T004H — Custom script jQuery removal
+
+Replace remaining custom jQuery scripts with vanilla JavaScript, then remove `/js/jquery.min.js` if no active source references remain.
 
 ## Recommended Modern Replacements
 
@@ -531,12 +520,11 @@ Replace Font Awesome 4 and Material Icons with one icon strategy if desired.
 | jQuery Shuffle | Removed in T004D | Replaced by vanilla filtering and existing grid layout |
 | jQuery Easing + smooth-scroll.js | CSS `scroll-behavior` + optional vanilla JS | Completed in `T004B` |
 | Bootstrap Validator | Native HTML5 validation | Formspree still validates server-side |
-| Font Awesome 4 | Bootstrap Icons / Font Awesome 6 / inline SVG | Decide with Bootstrap migration |
-| Material Icons | Bootstrap Icons / inline SVG | Consolidate icon systems later |
+| Font Awesome 4 | Inline SVG | Completed in `T004G` |
+| Material Icons | Inline SVG | Completed in `T004G` |
 | Google Maps JS | iframe/link/one restricted JS API key | Covered by `T003B` |
 
 ## Notes
 
 - Most frontend assets are globally loaded on every page, which increases page weight and maintenance risk.
-- Removing jQuery should be an end goal, not the next immediate step.
-- The safest next implementation work is `T004C` contact validation migration, followed by gallery/lightbox/filtering modernization, then Bootstrap.
+- Remaining jQuery usage is limited to custom scripts and should be removed in `T004H`.

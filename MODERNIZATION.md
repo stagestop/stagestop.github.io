@@ -284,7 +284,8 @@ Candidate replacements:
 - Owl Carousel → Splide or Swiper
 - Magnific Popup → removed in `T004D`; replaced with dependency-free modal
 - jQuery Shuffle → removed in `T004D`; replaced with vanilla filtering and existing grid layout
-- Font Awesome 4 → Bootstrap Icons, Font Awesome 6, Lucide, or inline SVGs
+- Font Awesome 4 → removed in `T004G`; replaced with inline SVGs
+- Material Icons → removed in `T004G`; replaced with inline SVGs
 
 Goal:
 
@@ -326,6 +327,23 @@ Acceptance criteria:
 
 - Chosen map strategy is documented.
 - Follow-up implementation task is defined.
+
+#### T004H — Custom script jQuery removal
+
+Scope:
+
+- Replace remaining jQuery usage in custom scripts with vanilla JavaScript:
+  - `js/preloader.js`
+  - `js/hide-nav.js`
+  - `js/map.js`
+- Remove `/js/jquery.min.js` only after confirming no active source references remain.
+- Do not change Google Maps strategy in this task; keep behavior equivalent unless `T003B` has been completed.
+
+Acceptance criteria:
+
+- Remaining custom scripts work without jQuery.
+- jQuery is no longer globally loaded if no active references remain.
+- Site builds successfully.
 
 ### Done
 
@@ -413,6 +431,38 @@ Result:
 - Dev server starts successfully at `http://0.0.0.0:4000/`.
 - Generated output uses Bootstrap `5.3.8` CDN assets and no longer references Tether or old local Bootstrap assets.
 - Generated output no longer contains the checked Bootstrap 4 alpha attributes/classes.
+- Existing non-fatal Faraday retry warning remains.
+
+#### T004G — Icon consolidation
+
+Completed:
+
+- Added `_includes/icon.html` as a small inline SVG icon renderer for active site icons.
+- Replaced active Font Awesome and Material Icons markup with inline SVG includes.
+- Removed the Google Material Icons stylesheet from `_layouts/default.html`.
+- Deleted Font Awesome CSS and unused local icon font files:
+  - `css/font-awesome.min.css`
+  - `fonts/FontAwesome.otf`
+  - `fonts/fontawesome-webfont.*`
+  - `fonts/glyphicons-halflings-regular.*`
+- Updated Sass icon sizing and related selectors from icon-font classes to `.site-icon`.
+
+Validation performed:
+
+```sh
+git diff --check
+docker compose run --rm site sh -c "rm -rf _site/* && bundle exec jekyll build"
+docker compose run --rm site sh -c "grep -R 'class=\"site-icon' _site >/dev/null && ! grep -R 'fonts.googleapis.com/icon\|font-awesome.min.css\|fa fa-\|md-icon\|fontawesome-webfont\|glyphicons-halflings' _site"
+docker compose up
+docker compose exec site ruby -ropen-uri -e "paths = ['/', '/gallery/', '/training/']; html = paths.map { |p| URI.open('http://localhost:4000' + p).read }.join; raise 'missing inline icons' unless html.include?('class=\"site-icon') && html.include?('<svg'); raise 'old icon font ref' if html.match?(/fonts.googleapis.com\/icon|font-awesome\.min\.css|fa fa-|md-icon|fontawesome-webfont|glyphicons-halflings/);"
+docker compose down
+```
+
+Result:
+
+- Site builds successfully.
+- Dev server starts successfully at `http://0.0.0.0:4000/`.
+- Generated and served pages contain inline SVG icons and no longer reference Font Awesome, Material Icons, Font Awesome fonts, or Glyphicon fonts.
 - Existing non-fatal Faraday retry warning remains.
 
 #### T004B — Smooth scroll migration
@@ -612,5 +662,5 @@ T003B — Map cleanup decision
 For frontend cleanup, the next recommended task is:
 
 ```text
-T004G — Icon consolidation
+T004H — Custom script jQuery removal
 ```
