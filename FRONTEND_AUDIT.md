@@ -44,30 +44,24 @@ JS:
 
 Files:
 
-- `js/jquery.min.js`
-- `_layouts/default.html`
+- Removed in `T004H`
 
 Current usage:
 
-Required by:
+No active usage remains.
 
-- `preloader.js`
-- `hide-nav.js`
-- `map.js`
-- inline scripts in `_layouts/default.html`
-
-Classification: Keep for now, replace later.
+Classification: Removed.
 
 Recommendation:
 
-Do not remove jQuery until the remaining custom scripts have been migrated. Bootstrap, Owl Carousel, smooth scrolling, contact validation, gallery filtering, and lightbox behavior no longer depend on jQuery after `T004A` through `T004F`.
+Do not reintroduce jQuery for site behavior. Use browser APIs or a focused dependency for any future interactive feature.
 
 Replacement path:
 
-- Move `preloader.js`, `hide-nav.js`, and `map.js` to vanilla JS.
-- Remove `/js/jquery.min.js` after no active source depends on it.
+- `preloader.js`, `hide-nav.js`, and `map.js` were moved to vanilla JS in `T004H`.
+- `/js/jquery.min.js` was removed in `T004H`.
 
-Risk: High if removed prematurely.
+Risk after removal: Low. Watch for old template snippets that assume `$` if imported later.
 
 ---
 
@@ -250,11 +244,11 @@ Current usage:
 
 Toggles `is-hidden`/`is-visible` classes on elements with `data-nav-status="toggle"` based on scroll direction.
 
-Classification: Keep short-term, rewrite later.
+Classification: Rewritten in `T004H`.
 
 Recommendation:
 
-Rewrite in vanilla JS when removing jQuery custom scripts.
+Keep this as a small vanilla script unless the scroll-to-top behavior is redesigned.
 
 Risk: Low/Medium.
 
@@ -507,14 +501,14 @@ Status: Complete.
 
 ### T004H — Custom script jQuery removal
 
-Replace remaining custom jQuery scripts with vanilla JavaScript, then remove `/js/jquery.min.js` if no active source references remain.
+Completed. Remaining custom scripts use vanilla JavaScript, and `/js/jquery.min.js` has been removed.
 
 ## Recommended Modern Replacements
 
 | Current | Recommended | Notes |
 |---|---|---|
 | Bootstrap 4 alpha + Tether | Bootstrap 5.3.8 CDN | Completed in `T004F` |
-| jQuery custom scripts | Vanilla JS | Migrate gradually |
+| jQuery custom scripts | Vanilla JS | Completed in `T004H` |
 | Owl Carousel | Removed; Splide only if needed later | Completed in `T004A` |
 | Magnific Popup | Removed in T004D | Replaced by dependency-free modal |
 | jQuery Shuffle | Removed in T004D | Replaced by vanilla filtering and existing grid layout |
@@ -527,4 +521,4 @@ Replace remaining custom jQuery scripts with vanilla JavaScript, then remove `/j
 ## Notes
 
 - Most frontend assets are globally loaded on every page, which increases page weight and maintenance risk.
-- Remaining jQuery usage is limited to custom scripts and should be removed in `T004H`.
+- jQuery has been removed from active source and generated output after `T004H`.

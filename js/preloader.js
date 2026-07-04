@@ -1,6 +1,18 @@
-//<![CDATA[
-        $(window).on('load', function() { // makes sure the whole site is loaded
-            $('#preloader').delay(350).fadeOut('slow'); // will fade out the white DIV that covers the website. 
-            $('body').delay(350).css({'overflow':'visible'});
-        })
-//]]>
+window.addEventListener("load", () => {
+    const preloader = document.getElementById("preloader");
+
+    document.body.style.overflow = "visible";
+
+    if (!preloader) {
+        return;
+    }
+
+    window.setTimeout(() => {
+        preloader.style.transition = "opacity 600ms ease";
+        preloader.style.opacity = "0";
+
+        window.setTimeout(() => {
+            preloader.style.display = "none";
+        }, 600);
+    }, 350);
+});

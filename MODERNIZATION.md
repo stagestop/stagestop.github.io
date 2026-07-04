@@ -273,23 +273,28 @@ Completed work:
 - Updated Bootstrap data attributes from `data-toggle`/`data-target`/`data-ride` to `data-bs-*`.
 - Updated old classes such as `.img-responsive`, `.navbar-toggleable-*`, `.navbar-toggler-right`, old offset classes, and directional spacing helpers.
 - Updated navbar, carousel, age-gate modal classes, and relevant Sass selectors.
-- Removed Bootstrap’s jQuery dependency. jQuery remains loaded for remaining custom scripts.
+- Removed Bootstrap’s jQuery dependency.
 
 ### Phase 7 — Replace larger jQuery plugins
 
-Status: Not started
+Status: Complete
 
-Candidate replacements:
+Completed replacements:
 
-- Owl Carousel → Splide or Swiper
+- Owl Carousel → removed in `T004A`; no active carousel target remained
 - Magnific Popup → removed in `T004D`; replaced with dependency-free modal
 - jQuery Shuffle → removed in `T004D`; replaced with vanilla filtering and existing grid layout
 - Font Awesome 4 → removed in `T004G`; replaced with inline SVGs
 - Material Icons → removed in `T004G`; replaced with inline SVGs
+- Custom jQuery scripts → converted to vanilla JavaScript in `T004H`
 
 Goal:
 
 Remove jQuery once all dependent plugins are gone.
+
+Result:
+
+jQuery is no longer globally loaded or included in the repo.
 
 ### Phase 8 — Optional Jekyll 4 / GitHub Actions deployment
 
@@ -328,24 +333,44 @@ Acceptance criteria:
 - Chosen map strategy is documented.
 - Follow-up implementation task is defined.
 
+### Done
+
 #### T004H — Custom script jQuery removal
 
-Scope:
+Completed:
 
-- Replace remaining jQuery usage in custom scripts with vanilla JavaScript:
-  - `js/preloader.js`
-  - `js/hide-nav.js`
-  - `js/map.js`
-- Remove `/js/jquery.min.js` only after confirming no active source references remain.
-- Do not change Google Maps strategy in this task; keep behavior equivalent unless `T003B` has been completed.
+- Rewrote `js/preloader.js`, `js/hide-nav.js`, and `js/map.js` to use browser APIs instead of jQuery.
+- Kept the current Google Maps JS strategy unchanged while removing the jQuery event wrapper from `js/map.js`.
+- Removed the global `/js/jquery.min.js` script load from `_layouts/default.html`.
+- Deleted `js/jquery.min.js` after confirming no active source still referenced jQuery.
+- Added `?v=t004h` cache-busting query strings to the changed custom script URLs so browsers do not reuse stale jQuery-era script responses.
 
-Acceptance criteria:
+Validation performed:
 
-- Remaining custom scripts work without jQuery.
-- jQuery is no longer globally loaded if no active references remain.
+```sh
+node --check js/preloader.js
+node --check js/hide-nav.js
+node --check js/map.js
+rg -n "jquery\.min\.js|jQuery|\$\(|\$\." --glob '!MODERNIZATION.md' --glob '!FRONTEND_AUDIT.md' .
+git diff --check
+docker compose run --rm site sh -c "rm -rf _site/* && bundle exec jekyll build"
+docker compose run --rm site sh -c "test ! -e _site/js/jquery.min.js && ! grep -R -I 'jquery.min.js\|jQuery\|\$(' _site"
+docker compose up
+docker compose exec site ruby -ropen-uri -e "home = URI.open('http://localhost:4000/').read; about = URI.open('http://localhost:4000/about/').read; scripts = %w[/js/preloader.js /js/hide-nav.js /js/map.js].map { |p| URI.open('http://localhost:4000' + p).read }.join; raise 'jquery script still loaded' if home.include?('/js/jquery.min.js') || about.include?('/js/jquery.min.js'); raise 'jquery syntax still present' if scripts.match?(/jQuery|\$\(|\$\./); raise 'missing custom scripts' unless home.include?('/js/preloader.js') && home.include?('/js/hide-nav.js') && home.include?('/js/map.js');"
+docker compose down
+docker compose up
+docker compose exec site ruby -ropen-uri -e "home = URI.open('http://localhost:4000/').read; raise 'missing cache-busted scripts' unless home.include?('/js/preloader.js?v=t004h') && home.include?('/js/hide-nav.js?v=t004h') && home.include?('/js/map.js?v=t004h'); scripts = %w[/js/preloader.js?v=t004h /js/hide-nav.js?v=t004h /js/map.js?v=t004h].map { |p| URI.open('http://localhost:4000' + p).read }.join; raise 'jquery syntax still present' if scripts.match?(/jQuery|\$\(|\$\./);"
+docker compose down
+```
+
+Result:
+
 - Site builds successfully.
-
-### Done
+- Dev server starts successfully at `http://0.0.0.0:4000/`.
+- Remaining custom scripts parse successfully without jQuery.
+- Generated and served output no longer includes or references jQuery.
+- Served HTML now points to cache-busted custom script URLs for the T004H replacements.
+- Existing non-fatal Faraday retry warning remains.
 
 #### T004C — Contact validation migration
 
@@ -662,5 +687,5 @@ T003B — Map cleanup decision
 For frontend cleanup, the next recommended task is:
 
 ```text
-T004H — Custom script jQuery removal
+None currently queued; continue with the content/map task board.
 ```

@@ -1,46 +1,39 @@
-$(document).ready(function(){
+document.addEventListener("DOMContentLoaded", () => {
+    let previousScroll = 0;
+    let scrollTimer;
 
-/** ===========================================
-    Hide / show the master navigation menu
-============================================ */
+    const toggleElements = () => document.querySelectorAll("[data-nav-status='toggle']");
+    const documentHeight = () => document.documentElement.scrollHeight;
+    const viewportHeight = () => window.innerHeight || document.documentElement.clientHeight;
 
-  // console.log('Window Height is: ' + $(window).height());
-  // console.log('Document Height is: ' + $(document).height());
-
-  var previousScroll = 0;
-
-  $(window).scroll(function(){
-
-    var currentScroll = $(this).scrollTop();
-
-    /*
-      If the current scroll position is greater than 0 (the top) AND the current scroll position is less than the document height minus the window height (the bottom) run the navigation if/else statement.
-    */
-    if (currentScroll > 0 && currentScroll < $(document).height() - $(window).height()){
-      /*
-        If the current scroll is greater than the previous scroll (i.e we're scrolling down the page), hide the nav.
-      */
-      if (currentScroll > previousScroll){
-        window.setTimeout(hideNav, 250);
-      /*
-        Else we are scrolling up (i.e the previous scroll is greater than the current scroll), so show the nav.
-      */
-      } else {
-        window.setTimeout(showNav, 250);
-      }
-      /* 
-        Set the previous scroll value equal to the current scroll.
-      */
-      previousScroll = currentScroll;
+    function showToggle() {
+        toggleElements().forEach((element) => {
+            element.classList.remove("is-hidden");
+            element.classList.add("is-visible");
+        });
     }
 
-  });
+    function hideToggle() {
+        toggleElements().forEach((element) => {
+            element.classList.remove("is-visible");
+            element.classList.add("is-hidden");
+        });
+    }
 
-  function hideNav() {
-    $("[data-nav-status='toggle']").removeClass("is-hidden").addClass("is-visible");
-  }
-  function showNav() {
-    $("[data-nav-status='toggle']").removeClass("is-visible").addClass("is-hidden");
-  }
+    window.addEventListener("scroll", () => {
+        const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
 
+        if (currentScroll > 0 && currentScroll < documentHeight() - viewportHeight()) {
+            window.clearTimeout(scrollTimer);
+            scrollTimer = window.setTimeout(() => {
+                if (currentScroll > previousScroll) {
+                    showToggle();
+                } else {
+                    hideToggle();
+                }
+
+                previousScroll = currentScroll;
+            }, 250);
+        }
+    }, { passive: true });
 });

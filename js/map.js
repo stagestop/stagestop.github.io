@@ -1,9 +1,13 @@
-$(function () {
-    function loadMap(elem, long, lat, options) {
-        var location = new google.maps.LatLng(long, lat);
-        options.center = location;
+(() => {
+    function loadMap(element, latitude, longitude, options) {
+        if (!element || !window.google || !google.maps) {
+            return;
+        }
 
-        var map = new google.maps.Map(elem, options);
+        var location = new google.maps.LatLng(latitude, longitude);
+        var mapOptions = Object.assign({}, options, { center: location });
+
+        var map = new google.maps.Map(element, mapOptions);
 
         var markerImage = 'images/marker.png';
 
@@ -37,6 +41,10 @@ $(function () {
     }
 
     function initMap() {
+        if (!window.google || !google.maps) {
+            return;
+        }
+
         var atwaterMapCanvas = document.getElementById('mapAtwater');
         var mariposaMapCanvas = document.getElementById('mapMariposa');
 
@@ -45,11 +53,11 @@ $(function () {
             panControl: false,
             scrollwheel: false,
             mapTypeId: google.maps.MapTypeId.ROADMAP
-        }
+        };
 
         loadMap(atwaterMapCanvas, 37.343979, -120.60532, mapOptions);
         loadMap(mariposaMapCanvas, 37.4884843, -119.9719196, mapOptions);
     }
 
-    google.maps.event.addDomListener(window, 'load', initMap);
-});
+    window.addEventListener("load", initMap);
+})();
