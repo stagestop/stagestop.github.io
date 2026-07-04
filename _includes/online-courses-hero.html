@@ -1,0 +1,19 @@
+{% assign hero_title = page.course_hero.title | default: "Online Courses for Responsible Firearm Owners" %}
+{% assign hero_text = page.course_hero.text | default: "Build practical safety, legal, and preparedness knowledge from home with self-paced online education." %}
+{% assign hero_cta_text = page.course_hero.cta_text | default: "Explore Online Courses" %}
+{% assign hero_cta_url = page.course_hero.cta_url | default: "https://educate.uslawshield.com/ref/437/" %}
+{% assign hero_image = page.course_hero.image | default: "/images/range/classroom1.jpg" %}
+
+<header class="course-hero bg-img parallax fixed-menu" style="background-image: url('{{ hero_image }}')">
+    <div class="course-hero__overlay"></div>
+    <div class="container course-hero__inner">
+        <div class="course-hero__content">
+            <p class="course-hero__eyebrow">Online Training</p>
+            <h1>{{ hero_title }}</h1>
+            <p class="course-hero__text">{{ hero_text }}</p>
+            <a href="{{ hero_cta_url }}" class="btn btn-primary btn-lg" target="_blank" rel="noopener">
+                {{ hero_cta_text }}
+            </a>
+        </div>
+    </div>
+</header>

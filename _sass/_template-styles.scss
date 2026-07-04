@@ -132,6 +132,65 @@ header.masthead .header-inner {
     padding-bottom: 200px;
 }
 
+.course-hero {
+    position: relative;
+    min-height: 620px;
+    overflow: hidden;
+    color: $white;
+    background-color: $dark-bg-color;
+    background-position: center;
+    background-size: cover;
+}
+
+.course-hero.fixed-menu {
+    padding-top: 82px;
+}
+
+.course-hero__overlay {
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(90deg, rgba(0, 0, 0, 0.82) 0%, rgba(0, 0, 0, 0.58) 48%, rgba(0, 0, 0, 0.18) 100%),
+        linear-gradient(0deg, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.1));
+}
+
+.course-hero__inner {
+    position: relative;
+    z-index: 1;
+    min-height: 538px;
+    display: flex;
+    align-items: center;
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.course-hero__content {
+    max-width: 680px;
+}
+
+.course-hero__eyebrow {
+    margin-bottom: 12px;
+    color: $primary;
+    font-size: 0.9rem;
+    font-weight: $bold;
+    text-transform: uppercase;
+}
+
+.course-hero h1 {
+    margin-bottom: 22px;
+    color: $white;
+    font-size: 3.25rem;
+    line-height: 1.08;
+}
+
+.course-hero__text {
+    max-width: 620px;
+    margin-bottom: 30px;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1.25rem;
+    line-height: 1.55;
+}
+
 .header-inner {
     padding-top: 80px;
     padding-bottom: 80px;

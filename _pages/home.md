@@ -4,10 +4,13 @@ title: Stage Stop Gun Shop
 description: |-
   Welcome to Stage Stop Gun Shop, your Shooting Sports, Archery and Fishing headquarters!!! Stop in today to browse our excellent selection of firearms, ammo, archery supplies and fishing tackle.
 permalink: /
-button1:
-  url: /about
-  text: About Us
-  class: btn-black
+hero: online-courses
+course_hero:
+  title: Online Courses for Responsible Firearm Owners
+  text: Learn from home with self-paced education designed to help you stay informed, prepared, and confident.
+  cta_text: Explore Online Courses
+  cta_url: https://educate.uslawshield.com/ref/437/
+  image: /images/hero/online-courses-hero.png
 ---
 
 <section>
