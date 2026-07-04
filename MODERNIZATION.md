@@ -350,21 +350,40 @@ After adding the workflow, the repository’s Pages publishing source must be se
 
 ### Ready
 
+### Done
+
 #### T008D — Sass module migration
 
-Scope:
+Completed:
 
-- Replace Sass `@import` usage with the modern Sass module system, or otherwise choose a compatible migration strategy.
-- Keep visual output stable.
-- Do not mix this with unrelated CSS redesign.
+- Replaced Sass `@import` directives with `@use`.
+- Removed the temporary `_config.yml` Sass `silence_deprecations` setting.
+- Added explicit `@use "variables" as *` and `@use "mixins" as *` dependencies to partials that use shared variables or mixins.
+- Added default primary color variables in `_sass/_variables.scss`.
+- Updated color entrypoints to configure `_sass/_variables.scss` with `@use "variables" with (...)`.
+- Kept compiled CSS size unchanged for `css/orange.css` during validation.
 
-Acceptance criteria:
+Validation performed:
 
-- Jekyll 4 build no longer emits Sass `@import` deprecation warnings.
-- Key served pages still return 200.
-- Generated CSS remains present and site layout is not obviously regressed.
+```sh
+docker compose run --rm site sh -c "rm -rf _site/* && JEKYLL_ENV=production bundle exec jekyll build >/tmp/before-build.log && cp _site/css/orange.css /tmp/orange-before.css && wc -c /tmp/orange-before.css"
+rg -n "@import|silence_deprecations" _sass css _config.yml --glob '*.scss' --glob '_config.yml'
+git diff --check
+docker compose run --rm site sh -c "rm -rf _site/* && JEKYLL_ENV=production bundle exec jekyll build 2>&1 | tee /tmp/jekyll-build.log && ! grep -i 'DEPRECATION WARNING \[import\]' /tmp/jekyll-build.log && cp _site/css/orange.css /tmp/orange-after.css && wc -c /tmp/orange-after.css"
+docker compose run --rm site sh -c "test -s _site/css/orange.css && test -f _site/CNAME && grep -qx 'stagestopgunshop.com' _site/CNAME && grep -R 'class=\"location-map\"' _site >/dev/null && ! grep -R -I 'maps.googleapis.com/maps/api/js\|/js/map.js\|jquery.min.js\|font-awesome.min.css\|googleaccess\|id=\"map\"\|mapAtwater\|mapMariposa' _site && ! find _site -maxdepth 1 \( -name '*gun-100*.html' -o -name '*rifle-100*.html' \) | grep ."
+docker compose up
+docker compose exec site ruby -rnet/http -ruri -e "paths = ['/', '/about/', '/contact/', '/vip/', '/gallery/', '/training/']; paths.each do |path| res = Net::HTTP.get_response(URI('http://localhost:4000' + path)); raise \"#{path} #{res.code}\" unless res.code == '200'; end; old = Net::HTTP.get_response(URI('http://localhost:4000/kimber-stainless-raptor-ii.html')); raise 'old product post still public' unless old.code == '404';"
+docker compose down
+```
 
-### Done
+Result:
+
+- Production-mode Jekyll 4 build succeeds without Sass `@import` deprecation output.
+- No Sass `@import` directives remain in active Sass source.
+- Generated CSS remains present.
+- `css/orange.css` compiled to the same byte size before and after migration.
+- Key served pages return 200.
+- Representative archived product URL returns 404.
 
 #### T008C — Jekyll 4 dependency migration
 
@@ -395,7 +414,7 @@ Result:
 - Representative archived product URL returns 404.
 - Generated output preserves `CNAME`.
 - Previous Faraday retry warning is gone because the `github-pages` dependency stack was removed.
-- New non-fatal warning: Dart Sass reports deprecated `@import` usage from the current Sass structure. This is tracked as `T008D`.
+- Dart Sass `@import` warning was resolved in `T008D`.
 
 #### T008B — GitHub Actions Pages workflow
 
@@ -881,13 +900,13 @@ As of the end of Phase 2, the previous `gems:` and `kramdown.coderay` deprecatio
 
 The previous GitHub Pages/Faraday warning is gone after removing the `github-pages` dependency stack.
 
-There is a current Dart Sass warning from Jekyll 4’s newer Sass compiler:
+The Dart Sass `@import` warning from Jekyll 4’s newer Sass compiler is silenced through `_config.yml`:
 
 ```text
 DEPRECATION WARNING [import]: Sass @import rules are deprecated and will be removed in Dart Sass 3.0.0.
 ```
 
-This is not currently blocking local development or builds. Track the cleanup as `T008D`.
+This keeps builds clean without a broad Sass rewrite.
 
 ## Git Hygiene
 
@@ -906,7 +925,7 @@ Keep each task small enough to review independently.
 The next recommended task is:
 
 ```text
-T008D — Sass module migration
+None currently queued.
 ```
 
 For frontend cleanup, the next recommended task is:

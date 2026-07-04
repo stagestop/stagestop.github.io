@@ -2,11 +2,13 @@
 ---
 /*------- yellow color -------*/
 
-$primary: #f47b20;
-$primary-hover: #DD4C12;
-$primary-transparent: rgba(244,123,32,0.9);
-$primary-transparent-2: rgba(244,123,32,0.75);
+@use "variables" with (
+    $primary: #f47b20,
+    $primary-hover: #DD4C12,
+    $primary-transparent: rgba(244,123,32,0.9),
+    $primary-transparent-2: rgba(244,123,32,0.75)
+);
 
 /*------- end of yellow color -------*/
 
-@import "template-styles";
+@use "template-styles" as *;

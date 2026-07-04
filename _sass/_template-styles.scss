@@ -1,8 +1,9 @@
-@import "variables";
-@import "mixins";
-@import "custom";
-@import "typography";
-@import "components";
+@use "variables" as *;
+@use "mixins" as *;
+@use "custom" as *;
+@use "typography" as *;
+@use "components" as *;
+@use "media-screens" as *;
 
 /*------- template styles -------*/
 
@@ -2098,5 +2099,3 @@ body.w-icon-nav .tooltip {
 }
 
 /*------- end of top-menu -------*/
-
-@import "media-screens";
