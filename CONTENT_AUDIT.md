@@ -104,16 +104,22 @@ Why it matters:
 
 Recommendation:
 
-Choose one map strategy:
+Decision from `T003B`:
 
-1. Prefer simple Google Maps links or iframe embeds if custom JS is unnecessary.
-2. If keeping Google Maps JS API, centralize the key in one data/config location and ensure the key is restricted to the production domain and required APIs only.
-3. Remove unused `_includes/java.html` if it is not included anywhere.
-4. Make map container IDs and JS targets consistent.
+Use Google Maps iframe embeds for visible location maps and keep the existing external Google Maps address links in `_data/locations.yml` for directions. Do not keep the Google Maps JavaScript API for ordinary store-location maps.
+
+Follow-up:
+
+1. Replace active JS maps with iframe embeds driven by location data.
+2. Remove the global Maps JS API script and `js/map.js`.
+3. Remove unused `_includes/java.html`.
+4. Remove unused `_data/map.yml` if a final search confirms no references.
+5. Remove `_data/global.yml` `googleaccess` after no active references remain.
+6. Treat exposed API keys as public and rotate, revoke, or restrict them in Google Cloud if they are still active.
 
 Requires confirmation:
 
-Yes. Confirm desired map behavior and which Google API key should remain active.
+Yes. Business/site owner should confirm the exposed keys have been rotated, revoked, or restricted outside the repo.
 
 ---
 
@@ -482,15 +488,23 @@ Requires business confirmation: Minimal
 
 ### T003B — Map cleanup decision
 
-Scope:
+Status: Complete
 
-- Decide whether to use Google Maps JS, iframe embeds, or simple external links.
-- Confirm production Google API key and restrictions.
-- Remove unused `_data/map.yml` and `_includes/java.html` only after the map strategy is chosen.
+Decision:
+
+- Use Google Maps iframe embeds plus existing external Google Maps address links.
+- Do not keep the Google Maps JavaScript API for ordinary location maps.
+
+Follow-up:
+
+- Implement as `T003F — Map iframe implementation`.
+- Remove unused `_data/map.yml` and `_includes/java.html` during implementation after a final usage search.
+- Remove `googleaccess` from `_data/global.yml` when no active references remain.
+- Rotate, revoke, or restrict the exposed API keys outside the repo if they are still active.
 
 Risk: Medium
 
-Requires business confirmation: Yes
+Requires business confirmation: Yes, for API key remediation outside the repo.
 
 ### T003C — Product post review/archive
 

@@ -364,16 +364,11 @@ Current usage:
 
 Loaded globally with a hardcoded key in `_layouts/default.html`; `js/map.js` initializes `mapAtwater` and `mapMariposa`.
 
-Classification: Decide strategy before changing.
+Classification: Replace in `T003F`.
 
 Recommendation:
 
-This overlaps with `T003B`. Choose one strategy:
-
-1. Simple external Google Maps links.
-2. Static embeds/iframes.
-3. One Google Maps JS API integration with a restricted key.
-4. Leaflet/OpenStreetMap if avoiding Google API keys.
+`T003B` chose Google Maps iframe embeds plus existing external address links. Replace the global Maps JS API load and `js/map.js` with location-data-driven iframes, then remove unused map-key/config/include artifacts.
 
 Risk: Medium.
 

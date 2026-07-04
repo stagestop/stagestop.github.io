@@ -320,20 +320,64 @@ GitHub Pages native build parity would no longer be the goal; GitHub Actions wou
 
 ### Ready
 
-#### T003B — Map cleanup decision
+#### T003F — Map iframe implementation
 
 Scope:
 
-- Decide whether to use Google Maps JS, iframe embeds, or simple external links.
-- Confirm production Google API key and restrictions.
-- Do not remove active map behavior without confirmation.
+- Replace the active Google Maps JS implementation with iframe embeds driven by location data.
+- Remove the global `maps.googleapis.com/maps/api/js` script from `_layouts/default.html`.
+- Remove `js/map.js` after no active references remain.
+- Remove unused `_includes/java.html`.
+- Remove unused `_data/map.yml` if a final search confirms no references.
+- Remove `_data/global.yml` `googleaccess` after no active references remain.
+- Keep existing external Google Maps address links for directions.
 
 Acceptance criteria:
 
-- Chosen map strategy is documented.
-- Follow-up implementation task is defined.
+- Atwater and Mariposa visible maps still render.
+- Contact/about/VIP pages do not include broken empty map containers.
+- No generated output references `maps.googleapis.com/maps/api/js`, `js/map.js`, `_includes/java.html`, `_data/map.yml`, or `googleaccess`.
+- Site builds successfully.
 
 ### Done
+
+#### T003B — Map cleanup decision
+
+Completed:
+
+- Chose Google Maps iframe embeds plus existing external address links as the target map strategy.
+- Decided not to keep the Google Maps JavaScript API for ordinary location maps.
+- Documented that the currently exposed API keys should be rotated, revoked, or restricted outside the repo if still active.
+- Added `T003F — Map iframe implementation` as the follow-up implementation task.
+
+Decision:
+
+Use Google Maps iframe embeds for visible location maps, backed by the existing external Google Maps address links in `_data/locations.yml`.
+
+Reason:
+
+The site only needs store-location maps and directions links. Iframe embeds preserve visible map panels without requiring a client-side Google Maps JavaScript API key, custom map JavaScript, or global Maps JS loading.
+
+Key policy:
+
+- No production Google Maps JavaScript API key should be required for the chosen map display strategy.
+- The two currently exposed keys should be considered public and should be rotated, revoked, or restricted in Google Cloud if they are still active.
+- If a future feature requires the Maps JS API, use a single key stored in one config/data location and restrict it by HTTP referrer and API scope before deploying it.
+
+Validation performed:
+
+```sh
+rg -n "layout: section-map|map-id:|id=\"map\"|include java|googleaccess|maps.googleapis" . --glob '!_site/**'
+git diff --check
+docker compose run --rm site sh -c "rm -rf _site/* && bundle exec jekyll build"
+```
+
+Result:
+
+- Decision is documented.
+- Follow-up implementation task is defined.
+- Site builds successfully.
+- Existing non-fatal Faraday retry warning remains.
 
 #### T004H — Custom script jQuery removal
 
@@ -681,7 +725,7 @@ Keep each task small enough to review independently.
 The next recommended task is:
 
 ```text
-T003B — Map cleanup decision
+T003F — Map iframe implementation
 ```
 
 For frontend cleanup, the next recommended task is:
