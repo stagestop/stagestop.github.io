@@ -214,40 +214,49 @@ Recommended follow-up tasks from the audit:
 
 ### Phase 4 — Frontend dependency inventory
 
-Status: Not started
+Status: Complete
 
-Goals:
+Completed work:
 
-Audit frontend assets and classify each as `keep`, `remove`, or `replace`.
+- Created `FRONTEND_AUDIT.md`.
+- Added `FRONTEND_AUDIT.md` to `_config.yml` `exclude` so the audit is not published by Jekyll.
+- Inventoried globally loaded frontend CSS/JS assets.
+- Classified dependencies as keep/remove/replace.
+- Documented usage, risks, and recommended replacement paths for Bootstrap/Tether, jQuery, Owl Carousel, Magnific Popup, jQuery Shuffle, smooth scrolling/easing, contact validation, Font Awesome, Material Icons, Animate.css, Google Maps, Smartwaiver, and Sass.
 
-Assets to review include:
+Primary output:
 
-- `jquery.min.js`
-- `bootstrap.min.js`
-- Tether CDN usage
-- `jquery.easing.min.js`
-- `smooth-scroll.js`
-- `jquery.magnific-popup.min.js`
-- `jquery.shuffle.min.js`
-- `owl.carousel.min.js`
-- `contact-form-validator.min.js`
-- `font-awesome.min.css`
-- `animate.css`
-- Google Maps JS usage
+- `FRONTEND_AUDIT.md`
 
-Expected result:
+Recommended follow-up tasks from the audit:
 
-A documented inventory of where each dependency is used and a recommended action for each.
+- `T004A` — Easy dependency removal audit/fixes.
+- `T004B` — Smooth scroll migration.
+- `T004C` — Contact validation migration.
+- `T004D` — Gallery/lightbox modernization.
+- `T004E` — Carousel decision/replacement.
+- `T004F` — Bootstrap 5 migration.
+- `T004G` — Icon consolidation.
 
 ### Phase 5 — Easy frontend removals
 
-Status: Not started
+Status: In progress
 
-Potential candidates:
+Completed work:
 
-- Replace jQuery smooth scrolling/easing with native CSS `scroll-behavior: smooth` if behavior allows.
+- Removed confirmed-unused Owl Carousel global CSS/JS and inline initializers.
+- Removed the unused Bootstrap tooltip initializer.
+- Replaced jQuery Easing + `smooth-scroll.js` with native CSS `scroll-behavior: smooth`.
+- Deleted unused files:
+  - `css/owl.carousel.min.css`
+  - `js/owl.carousel.min.js`
+  - `js/jquery.easing.min.js`
+  - `js/smooth-scroll.js`
+
+Remaining candidates:
+
 - Replace contact form validation with native HTML5 validation if sufficient.
-- Remove unused frontend files identified in Phase 4.
+- Decide whether the preloader is still desired.
 
 ### Phase 6 — Bootstrap modernization
 
@@ -317,20 +326,81 @@ Acceptance criteria:
 - Chosen map strategy is documented.
 - Follow-up implementation task is defined.
 
-#### T004 — Audit frontend dependencies
+#### T004C — Contact validation migration
 
 Scope:
 
-- No code changes unless explicitly requested.
-- Inspect frontend asset usage.
+- Replace `contact-form-validator.min.js` usage with native HTML5 validation and Formspree/server-side validation.
+- Remove `data-toggle="validator"` attributes if no longer needed.
+- Delete `js/contact-form-validator.min.js` only after confirming no active references remain.
 
 Acceptance criteria:
 
-- Inventory each frontend dependency.
-- Classify as keep/remove/replace.
-- Identify replacement candidate and migration risk.
+- Contact/VIP forms still have appropriate required fields and email validation.
+- The validator plugin is no longer globally loaded.
+- Site builds successfully.
 
 ### Done
+
+#### T004B — Smooth scroll migration
+
+Completed:
+
+- Removed `js/jquery.easing.min.js` and `js/smooth-scroll.js` from global script loading.
+- Deleted the unused easing/smooth-scroll files.
+- Added native CSS smooth scrolling in `_sass/_custom.scss`.
+- Kept existing `smooth-scroll` classes as harmless semantic hooks for now.
+
+Validation performed:
+
+```sh
+docker compose run --rm site sh -c "rm -rf _site/* && bundle exec jekyll build"
+docker compose run --rm site sh -c "find _site -maxdepth 1 \( -name 'FRONTEND_AUDIT*' -o -name 'CONTENT_AUDIT*' -o -name 'MODERNIZATION*' -o -name 'README*' \) -print"
+docker compose up
+docker compose down
+```
+
+Result:
+
+- Site builds successfully.
+- Dev server starts successfully at `http://0.0.0.0:4000/`.
+- Planning docs remain excluded from `_site`.
+
+#### T004A — Easy dependency removal audit/fixes
+
+Completed:
+
+- Confirmed Owl Carousel target IDs were not present in active source.
+- Removed global Owl Carousel CSS/JS loads and deleted the local Owl Carousel asset files.
+- Removed inline Owl Carousel initializers for `#testimonials-carousel-2` and `#clients-carousel`.
+- Removed the unused Bootstrap tooltip initializer after no active tooltip trigger attributes were found.
+
+Remaining follow-up decisions:
+
+- Preloader remains loaded pending a design/UX decision.
+- Contact validation remains loaded and is now tracked as `T004C`.
+
+Validation performed:
+
+```sh
+docker compose run --rm site sh -c "rm -rf _site/* && bundle exec jekyll build"
+docker compose up
+docker compose down
+```
+
+Result:
+
+- Site builds successfully.
+- Dev server starts successfully at `http://0.0.0.0:4000/`.
+
+#### T004 — Audit frontend dependencies
+
+Completed:
+
+- Created `FRONTEND_AUDIT.md`.
+- Added `FRONTEND_AUDIT.md` to Jekyll excludes.
+- Inventoried frontend dependencies and classified keep/remove/replace paths.
+- Documented recommended follow-up tasks.
 
 #### T003E — Social sharing cleanup
 
@@ -466,8 +536,8 @@ The next recommended task is:
 T003B — Map cleanup decision
 ```
 
-Alternatively, if you want to continue auditing before changing more behavior, do:
+For frontend cleanup, the next recommended task is:
 
 ```text
-T004 — Audit frontend dependencies
+T004C — Contact validation migration
 ```
