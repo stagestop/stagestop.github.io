@@ -134,7 +134,8 @@ header.masthead .header-inner {
 
 .course-hero {
     position: relative;
-    min-height: 620px;
+    box-sizing: border-box;
+    min-height: 0;
     overflow: hidden;
     color: $white;
     background-color: $dark-bg-color;
@@ -157,11 +158,12 @@ header.masthead .header-inner {
 .course-hero__inner {
     position: relative;
     z-index: 1;
-    min-height: 538px;
+    box-sizing: border-box;
     display: flex;
     align-items: center;
-    padding-top: 80px;
-    padding-bottom: 80px;
+    min-height: 600px;
+    padding-top: 170px;
+    padding-bottom: 170px;
 }
 
 .course-hero__content {

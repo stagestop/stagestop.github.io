@@ -123,12 +123,10 @@ header.agency-demo .header-inner {
     max-width: 100%;
 }
 
-.course-hero {
-    min-height: 560px;
-}
-
 .course-hero__inner {
-    min-height: 478px;
+    min-height: 520px;
+    padding-top: 130px;
+    padding-bottom: 130px;
 }
 
 .course-hero h1 {
@@ -298,18 +296,14 @@ footer .text-left, footer .text-right {
     text-align: center !important;
 }
 
-.course-hero {
-    min-height: 520px;
-}
-
 .course-hero__overlay {
     background: linear-gradient(90deg, rgba(0, 0, 0, 0.86) 0%, rgba(0, 0, 0, 0.66) 100%);
 }
 
 .course-hero__inner {
-    min-height: 438px;
-    padding-top: 56px;
-    padding-bottom: 56px;
+    min-height: 460px;
+    padding-top: 90px;
+    padding-bottom: 90px;
 }
 
 .course-hero h1 {
