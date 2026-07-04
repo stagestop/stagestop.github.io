@@ -260,19 +260,20 @@ Remaining candidates:
 
 ### Phase 6 — Bootstrap modernization
 
-Status: In progress
+Status: Complete
 
-Recommended target:
+Completed target:
 
-- Bootstrap `5.3.x`
+- Bootstrap `5.3.8`
 
-Expected work:
+Completed work:
 
-- Remove Tether.
-- Update Bootstrap data attributes from `data-toggle`/`data-target` to `data-bs-toggle`/`data-bs-target`.
-- Update old classes such as `.img-responsive` to `.img-fluid`.
-- Update navbar and modal behavior.
-- Remove Bootstrap’s jQuery dependency.
+- Switched Bootstrap CSS/JS from local Bootstrap `4.0.0-alpha.6` assets to official Bootstrap `5.3.8` CDN assets.
+- Removed Tether.
+- Updated Bootstrap data attributes from `data-toggle`/`data-target`/`data-ride` to `data-bs-*`.
+- Updated old classes such as `.img-responsive`, `.navbar-toggleable-*`, `.navbar-toggler-right`, old offset classes, and directional spacing helpers.
+- Updated navbar, carousel, age-gate modal classes, and relevant Sass selectors.
+- Removed Bootstrap’s jQuery dependency. jQuery remains loaded for remaining custom scripts.
 
 ### Phase 7 — Replace larger jQuery plugins
 
@@ -380,6 +381,38 @@ Result:
 - Dev server starts successfully at `http://0.0.0.0:4000/`.
 - Generated output no longer references Magnific Popup or jQuery Shuffle assets/hooks.
 - Gallery page serves the new gallery markup and script.
+- Existing non-fatal Faraday retry warning remains.
+
+#### T004F — Bootstrap 5 migration
+
+Completed:
+
+- Replaced local Bootstrap `4.0.0-alpha.6` CSS/JS with Bootstrap `5.3.8` CDN CSS and bundled JS.
+- Removed the Tether CDN script.
+- Deleted old local Bootstrap files:
+  - `css/bootstrap.min.css`
+  - `css/bootstrap.min.css.map`
+  - `js/bootstrap.min.js`
+- Updated active Bootstrap data attributes, navbar classes, hero carousel markup, image classes, offset classes, spacing helpers, age-gate modal classes, and Sass compatibility selectors.
+- Bootstrap no longer requires jQuery. jQuery remains for `preloader.js`, `hide-nav.js`, and `map.js`.
+
+Validation performed:
+
+```sh
+git diff --check
+docker compose run --rm site sh -c "rm -rf _site/* && bundle exec jekyll build"
+docker compose run --rm site sh -c "grep -R 'bootstrap@5.3.8' _site >/dev/null && ! grep -R 'cdnjs.cloudflare.com/ajax/libs/tether\|/js/bootstrap.min.js\|href=\"/css/bootstrap.min.css\|data-toggle=\|data-target=\|data-ride=\|navbar-toggleable\|img-responsive\|btn-default\|col-md-offset\|col-offset' _site"
+docker compose up
+docker compose exec site ruby -ropen-uri -e "home = URI.open('http://localhost:4000/').read; gallery = URI.open('http://localhost:4000/gallery/').read; raise 'missing bs css' unless home.include?('bootstrap@5.3.8/dist/css/bootstrap.min.css'); raise 'missing bs bundle' unless home.include?('bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js'); raise 'old collapse attrs' if home.include?('data-toggle=') || home.include?('data-target='); raise 'missing bs collapse attrs' unless home.include?('data-bs-toggle=\"collapse\"') && home.include?('data-bs-target=\"#navbar-toggle\"'); raise 'old image class' if gallery.include?('img-responsive');"
+docker compose down
+```
+
+Result:
+
+- Site builds successfully.
+- Dev server starts successfully at `http://0.0.0.0:4000/`.
+- Generated output uses Bootstrap `5.3.8` CDN assets and no longer references Tether or old local Bootstrap assets.
+- Generated output no longer contains the checked Bootstrap 4 alpha attributes/classes.
 - Existing non-fatal Faraday retry warning remains.
 
 #### T004B — Smooth scroll migration
@@ -579,5 +612,5 @@ T003B — Map cleanup decision
 For frontend cleanup, the next recommended task is:
 
 ```text
-T004F — Bootstrap 5 migration
+T004G — Icon consolidation
 ```

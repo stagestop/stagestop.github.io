@@ -1870,14 +1870,6 @@ label.btn-file {
     padding: .25rem 0;
 }
 
-.navbar-toggler-right {
-    right: 15px;
-}
-
-.navbar-toggler-left {
-    left: 15px;
-}
-
 .navbar-light .navbar-toggler-icon {
     background-image: url("../images/menu.png");
     width: 32px;
@@ -2512,11 +2504,11 @@ nav .btn-xs {
     padding: 0 1rem .75rem 1rem;
 }
 
-.popover.bs-tether-element-attached-top::after, .popover.popover-bottom::after {
+.popover.bs-popover-bottom::after, .popover.popover-bottom::after {
     border-bottom-color: $secondary;
 }
 
-.popover.bs-tether-element-attached-top::before, .popover.popover-bottom::before {
+.popover.bs-popover-bottom::before, .popover.popover-bottom::before {
     border-bottom-color: $secondary;
 }
 
@@ -2550,19 +2542,19 @@ nav .btn-xs {
     opacity: 1;
 }
 
-.tooltip.bs-tether-element-attached-bottom .tooltip-inner::before, .tooltip.tooltip-top .tooltip-inner::before {
+.tooltip.bs-tooltip-top .tooltip-inner::before, .tooltip.tooltip-top .tooltip-inner::before {
     border-top-color: $black;
 }
 
-.tooltip.bs-tether-element-attached-left .tooltip-inner::before, .tooltip.tooltip-right .tooltip-inner::before {
+.tooltip.bs-tooltip-end .tooltip-inner::before, .tooltip.tooltip-right .tooltip-inner::before {
     border-right-color: $black;
 }
 
-.tooltip.bs-tether-element-attached-top .tooltip-inner::before, .tooltip.tooltip-bottom .tooltip-inner::before {
+.tooltip.bs-tooltip-bottom .tooltip-inner::before, .tooltip.tooltip-bottom .tooltip-inner::before {
     border-bottom-color: $black;
 }
 
-.tooltip.bs-tether-element-attached-right .tooltip-inner::before, .tooltip.tooltip-left .tooltip-inner::before {
+.tooltip.bs-tooltip-start .tooltip-inner::before, .tooltip.tooltip-left .tooltip-inner::before {
     border-left-color: $black;
 }
 

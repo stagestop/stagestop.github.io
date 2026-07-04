@@ -11,14 +11,14 @@
             <li class="col-md-3 project">
                 <div class="effect effect-2 clearfix">
                     <div class="img">
-                        <img class="img-responsive" src="{{ sponsor.image }}" alt="image of {{ sponsor.name }} logo.">
+                        <img class="img-fluid" src="{{ sponsor.image }}" alt="image of {{ sponsor.name }} logo.">
                         <div class="overlay">
                             <a href="#SPNSR-{{ sponsor.id }}" class="inline-lightbox expand">+</a>
                         </div><!-- / overlay -->
                     </div><!-- / img -->
                 </div><!-- / effect-2 -->
                 <div id="SPNSR-{{ sponsor.id }}" class="white-popup gallery-inline-content" hidden>
-                    <img class="img-responsive" src="{{ sponsor.image }}" alt="image of {{ sponsor.name }} logo.">
+                    <img class="img-fluid" src="{{ sponsor.image }}" alt="image of {{ sponsor.name }} logo.">
                     {{ sponsor.summary | markdownify }}
                 </div>
             </li><!-- / project -->

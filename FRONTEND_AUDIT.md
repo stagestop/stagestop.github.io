@@ -22,7 +22,7 @@ Loaded in `_layouts/default.html`:
 
 CSS:
 
-- `/css/bootstrap.min.css`
+- Bootstrap `5.3.8` CSS from jsDelivr CDN
 - `/css/orange.css`
 - `/css/animate.css`
 - Google Material Icons stylesheet
@@ -32,8 +32,7 @@ CSS:
 JS:
 
 - `/js/jquery.min.js`
-- Tether CDN `https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0//js/tether.min.js`
-- `/js/bootstrap.min.js`
+- Bootstrap `5.3.8` bundle from jsDelivr CDN
 - `/js/preloader.js`
 - `/js/gallery.js`
 - `/js/hide-nav.js`
@@ -54,23 +53,21 @@ Current usage:
 
 Required by:
 
-- Bootstrap alpha JS
-- Tether-backed Bootstrap tooltips/popovers
 - `preloader.js`
 - `hide-nav.js`
+- `map.js`
 - inline scripts in `_layouts/default.html`
 
 Classification: Keep for now, replace later.
 
 Recommendation:
 
-Do not remove jQuery until Bootstrap and remaining custom scripts have been migrated. Owl Carousel, smooth scrolling, contact validation, gallery filtering, and lightbox behavior no longer depend on jQuery after `T004A` through `T004D`.
+Do not remove jQuery until the remaining custom scripts have been migrated. Bootstrap, Owl Carousel, smooth scrolling, contact validation, gallery filtering, and lightbox behavior no longer depend on jQuery after `T004A` through `T004F`.
 
 Replacement path:
 
-- Move custom scripts to vanilla JS.
-- Upgrade Bootstrap to 5.x.
-- Replace jQuery plugins one by one.
+- Move `preloader.js`, `hide-nav.js`, and `map.js` to vanilla JS.
+- Remove `/js/jquery.min.js` after no active source depends on it.
 
 Risk: High if removed prematurely.
 
@@ -78,61 +75,54 @@ Risk: High if removed prematurely.
 
 ### F002 — Bootstrap CSS/JS
 
+Status: Migrated in `T004F`.
+
 Files:
 
-- `css/bootstrap.min.css`
-- `css/bootstrap.min.css.map`
-- `js/bootstrap.min.js`
+- Bootstrap `5.3.8` CSS CDN in `_layouts/default.html`
+- Bootstrap `5.3.8` bundle CDN in `_layouts/default.html`
 - `_layouts/default.html`
-
-Evidence:
-
-`js/bootstrap.min.js` reports Bootstrap `4.0.0-alpha.6` internally.
 
 Current usage:
 
 - Grid classes throughout layouts/pages.
-- Navbar collapse via `data-toggle="collapse"` and `data-target="#navbar-toggle"`.
-- Carousel markup via `data-ride="carousel"`, `data-target`, and `data-slide-to` in `_includes/hero.html`.
-- Scrollspy attributes on `<body>`.
-- Tooltip plugin support remains in Bootstrap itself, but the unused global `$(...).tooltip()` initializer has been removed.
+- Navbar collapse via `data-bs-toggle="collapse"` and `data-bs-target="#navbar-toggle"`.
+- Carousel markup via Bootstrap 5 `.carousel-item` and `data-bs-*` attributes in `_includes/hero.html`.
+- Scrollspy attributes on `<body>` use `data-bs-*`.
 - General Bootstrap classes throughout the site.
 
-Classification: Replace via dedicated migration.
+Removed files:
 
-Recommended target:
+- `css/bootstrap.min.css`
+- `css/bootstrap.min.css.map`
+- `js/bootstrap.min.js`
 
-- Bootstrap `5.3.x`
+Migration notes completed:
 
-Migration notes:
+- Removed Tether.
+- Replaced active Bootstrap 4 alpha data attributes with Bootstrap 5 `data-bs-*` attributes.
+- Updated active old classes such as `navbar-toggler-right`, `.img-responsive`, `mr-*`, `ml-auto`, and old offset classes.
+- Updated custom Sass selectors for Bootstrap 5 navbar and tooltip/popover naming.
+- Bootstrap no longer depends on jQuery.
 
-- Remove Tether; Bootstrap 5 does not use it.
-- Replace `data-toggle`/`data-target` with `data-bs-toggle`/`data-bs-target`.
-- Update old classes such as `navbar-toggler-right` and `.img-responsive`.
-- Replace jQuery plugin initialization with Bootstrap 5 native JS APIs.
-- Verify carousel markup; `_includes/hero.html` currently uses `.item`, while Bootstrap 4+ expects `.carousel-item`.
-
-Risk: High. This should be its own phase.
+Risk after migration: Medium. The site still has older custom CSS originally written around Bootstrap alpha and should be visually checked when possible.
 
 ---
 
 ### F003 — Tether CDN
 
-Files:
+Status: Removed in `T004F`.
+
+Removed from:
 
 - `_layouts/default.html`
 
-Current usage:
+Previous usage:
 
-Loaded from CDN before Bootstrap JS. Required by Bootstrap 4 alpha tooltips/popovers.
+Loaded from CDN before Bootstrap 4 alpha JS. Bootstrap 5 does not use Tether.
 
-Classification: Remove only with Bootstrap migration.
+Risk after removal: Low.
 
-Recommendation:
-
-Do not remove while current Bootstrap alpha JS remains. Remove as part of Bootstrap 5 migration.
-
-Risk: Medium if removed early because Bootstrap tooltip/popover code expects Tether.
 
 ---
 
@@ -519,13 +509,12 @@ Owl Carousel was unused and removed in `T004A`. Add a modern carousel such as Sp
 
 ### T004F — Bootstrap 5 migration
 
-Dedicated high-risk phase:
+Status: Complete.
 
-- Update CSS/JS.
-- Remove Tether.
-- Update data attributes.
-- Update carousel/navbar/modal/tooltip behavior.
-- Remove Bootstrap jQuery dependency.
+- Switched Bootstrap CSS/JS to official Bootstrap `5.3.8` CDN assets.
+- Removed Tether and local Bootstrap alpha files.
+- Updated active navbar, carousel, image, offset, spacing, modal, and Sass compatibility points.
+- Bootstrap no longer depends on jQuery.
 
 ### T004G — Icon consolidation
 
@@ -535,7 +524,7 @@ Replace Font Awesome 4 and Material Icons with one icon strategy if desired.
 
 | Current | Recommended | Notes |
 |---|---|---|
-| Bootstrap 4 alpha + Tether | Bootstrap 5.3.x | Dedicated migration |
+| Bootstrap 4 alpha + Tether | Bootstrap 5.3.8 CDN | Completed in `T004F` |
 | jQuery custom scripts | Vanilla JS | Migrate gradually |
 | Owl Carousel | Removed; Splide only if needed later | Completed in `T004A` |
 | Magnific Popup | Removed in T004D | Replaced by dependency-free modal |

@@ -22,7 +22,7 @@ Whether you are planning a party or a meeting, Stage Stop Gun Shop & Indoor Rang
 <section>
     <div class="container">
         <div class="row vcenter">
-            <div class="col-md-6 col-offset-3">
+            <div class="col-md-6 offset-md-3">
                 <h5 class="mt-3">SUBMIT YOUR INQUIRY</h5>
                 <div class="spacer spacer-line border-primary ml-0">&nbsp;</div>
                 <p class="lead">
@@ -55,7 +55,7 @@ Whether you are planning a party or a meeting, Stage Stop Gun Shop & Indoor Rang
                             </div>
                         </div><!-- / sub-column -->
                     </div><!-- / row -->
-                    <button type="submit" id="form-submit" class="btn btn-primary"><i class="md-icon dp14 mr-1">send</i> <span>SEND MESSAGE</span></button>
+                    <button type="submit" id="form-submit" class="btn btn-primary"><i class="md-icon dp14 me-1">send</i> <span>SEND MESSAGE</span></button>
                     <div id="msgSubmit" class="h3 text-center hidden"></div>
                     <div class="clearfix"></div> 
                 </form><!-- / contactform -->

@@ -39,7 +39,7 @@ permalink: /contact
                             </div>
                         </div><!-- / sub-column -->
                     </div><!-- / row -->
-                    <button type="submit" id="form-submit" class="btn btn-primary"><i class="md-icon dp14 mr-1">send</i> <span>SEND MESSAGE</span></button>
+                    <button type="submit" id="form-submit" class="btn btn-primary"><i class="md-icon dp14 me-1">send</i> <span>SEND MESSAGE</span></button>
                     <div id="msgSubmit" class="h3 text-center hidden"></div>
                     <div class="clearfix"></div> 
                 </form><!-- / contactform -->

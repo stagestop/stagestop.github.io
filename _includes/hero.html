@@ -1,28 +1,28 @@
 {% assign slideFilter = {{include.filter}} %}
 {% assign slides = site.data.hero | where:"target",slideFilter %}
+{% assign slide_id = include.slide_id | default: "mainslide" %}
 
-<div id="mainslide" class="carousel slide hero" data-ride="carousel"> 
+<div id="{{ slide_id }}" class="carousel slide hero" data-bs-ride="carousel">
     <!-- indicators -->
     {% assign counter = 0 %}
-    <ol class="carousel-indicators">
+    <div class="carousel-indicators">
       {% for slide in slides %}
-      <li data-target="#{{include.slide_id}}" data-slide-to="{{ counter }}" {% if counter == 0 %}class="active"{% endif %}></li>
+      <button type="button" data-bs-target="#{{ slide_id }}" data-bs-slide-to="{{ counter }}" {% if counter == 0 %}class="active" aria-current="true"{% endif %} aria-label="Slide {{ counter | plus: 1 }}"></button>
       {% capture counter %}{{counter | plus: 1}}{% endcapture %}
       {% endfor %}
-    </ol>
+    </div>
        
      <!--slide wrapper -->
      <div class="carousel-inner" role="listbox">
      
     {% assign counter = 0 %}
     {% for slide in slides %}
-        <div class="row item{% if counter == 0 %} active{% endif %}">
+        <div class="carousel-item{% if counter == 0 %} active{% endif %}">
             <div class="col-lg-12">
-                <img src="{{ slide.image }}" class="float-right" />
+                <img src="{{ slide.image }}" class="d-block w-100" alt="" />
             </div>
         </div>
         {% capture counter %}{{counter | plus: 1}}{% endcapture %}
     {% endfor %}
  </div>
-</div>
 </div>
