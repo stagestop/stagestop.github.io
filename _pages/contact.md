@@ -44,10 +44,6 @@ permalink: /contact
                     <div class="clearfix"></div> 
                 </form><!-- / contactform -->
             </div><!-- / column -->
-            <div class="col-md-7">
-                <div id="map">
-                </div><!-- / map -->
-            </div><!-- / column -->
         </div><!-- / row -->
     </div><!-- / container -->
 </section> <!-- / contact -->

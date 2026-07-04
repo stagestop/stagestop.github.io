@@ -4,7 +4,6 @@ title: Atwater
 left-class: col-md-7
 right-class: col-md-5
 layout: section-map
-map-id: mapAtwater
 ---
 {% include location.html id="ATWATER" link="true" %}
 

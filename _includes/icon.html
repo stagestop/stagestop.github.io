@@ -1,43 +1,83 @@
-{% assign icon_name = include.name %}
-{% assign icon_class = include.class | default: "" %}
-{% assign icon_label = include.label %}
-<svg class="site-icon {{ icon_class }}"{% if icon_label %} role="img" aria-label="{{ icon_label }}"{% else %} aria-hidden="true"{% endif %} viewBox="0 0 24 24" focusable="false">
-{% case icon_name %}
-{% when "album" %}
-  <circle cx="12" cy="12" r="9"></circle><circle cx="12" cy="12" r="3"></circle>
-{% when "angle-right" %}
-  <path d="M9 5l7 7-7 7"></path>
-{% when "check-circle" %}
-  <circle cx="12" cy="12" r="9"></circle><path d="M8 12l3 3 5-6"></path>
-{% when "edit" %}
-  <path d="M4 20h4l11-11-4-4L4 16v4z"></path><path d="M13 7l4 4"></path>
-{% when "expand-less" %}
-  <path d="M6 15l6-6 6 6"></path>
-{% when "facebook" %}
-  <path d="M14 8h3V4h-3c-3 0-5 2-5 5v3H6v4h3v7h4v-7h3l1-4h-4V9c0-.6.4-1 1-1z"></path>
-{% when "favorite" %}
-  <path d="M12 21s-7-4.4-9-9a5 5 0 0 1 8-5 5 5 0 0 1 8 5c-2 4.6-9 9-9 9z"></path>
-{% when "files" %}
-  <path d="M8 7V3h8l4 4v10h-4"></path><path d="M4 7h8l4 4v10H4V7z"></path><path d="M12 7v4h4"></path>
-{% when "instagram" %}
-  <rect x="4" y="4" width="16" height="16" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17" cy="7" r="1"></circle>
-{% when "layers" %}
-  <path d="M12 3l9 5-9 5-9-5 9-5z"></path><path d="M3 12l9 5 9-5"></path><path d="M3 16l9 5 9-5"></path>
-{% when "library-books" %}
-  <path d="M6 4h12v16H6z"></path><path d="M3 7h3v13H3z"></path><path d="M9 8h6"></path><path d="M9 12h6"></path>
-{% when "location" %}
-  <path d="M12 22s7-6 7-12a7 7 0 0 0-14 0c0 6 7 12 7 12z"></path><circle cx="12" cy="10" r="2.5"></circle>
-{% when "lock" %}
-  <rect x="5" y="10" width="14" height="10" rx="2"></rect><path d="M8 10V7a4 4 0 0 1 8 0v3"></path>
-{% when "palette" %}
-  <path d="M12 3a9 9 0 0 0 0 18h2a2 2 0 0 0 1-3.7 1.5 1.5 0 0 1 .7-2.8H17a4 4 0 0 0 0-8 9 9 0 0 0-5-3.5z"></path><circle cx="7.5" cy="10" r="1"></circle><circle cx="10.5" cy="7.5" r="1"></circle><circle cx="14" cy="8" r="1"></circle>
-{% when "play" %}
-  <path d="M8 5v14l11-7L8 5z"></path>
-{% when "send" %}
-  <path d="M3 11l18-8-8 18-2-7-8-3z"></path><path d="M21 3l-10 11"></path>
-{% when "thumb-up" %}
-  <path d="M8 11v10H4V11h4z"></path><path d="M8 11l4-8 2 1v5h5a2 2 0 0 1 2 2l-2 8a2 2 0 0 1-2 2H8"></path>
-{% else %}
-  <circle cx="12" cy="12" r="9"></circle>
-{% endcase %}
+{% assign icon_name = include.name %} {% assign icon_class = include.class |
+default: "" %} {% assign icon_label = include.label %}
+<svg
+    class="site-icon {{ icon_class }}"
+    {%
+    if
+    icon_label
+    %}
+    role="img"
+    aria-label="{{ icon_label }}"
+    {%
+    else
+    %}
+    aria-hidden="true"
+    {%
+    endif
+    %}
+    viewBox="0 0 24 24"
+    focusable="false"
+>
+    {% case icon_name %} {% when "album" %}
+    <circle cx="12" cy="12" r="9"></circle>
+    <circle cx="12" cy="12" r="3"></circle>
+    {% when "angle-right" %}
+    <path d="M9 5l7 7-7 7"></path>
+    {% when "check-circle" %}
+    <circle cx="12" cy="12" r="9"></circle>
+    <path d="M8 12l3 3 5-6"></path>
+    {% when "edit" %}
+    <path d="M4 20h4l11-11-4-4L4 16v4z"></path>
+    <path d="M13 7l4 4"></path>
+    {% when "expand-less" %}
+    <path d="M6 15l6-6 6 6"></path>
+    {% when "facebook" %}
+    <path
+        d="M14 8h3V4h-3c-3 0-5 2-5 5v3H6v4h3v7h4v-7h3l1-4h-4V9c0-.6.4-1 1-1z"
+    ></path>
+    {% when "favorite" %}
+    <path
+        d="M12 21s-7-4.4-9-9a5 5 0 0 1 8-5 5 5 0 0 1 8 5c-2 4.6-9 9-9 9z"
+    ></path>
+    {% when "files" %}
+    <path d="M8 7V3h8l4 4v10h-4"></path>
+    <path d="M4 7h8l4 4v10H4V7z"></path>
+    <path d="M12 7v4h4"></path>
+    {% when "instagram" %}
+    <rect x="4" y="4" width="16" height="16" rx="5"></rect>
+    <circle cx="12" cy="12" r="4"></circle>
+    <circle cx="17" cy="7" r="1"></circle>
+    {% when "layers" %}
+    <path d="M12 3l9 5-9 5-9-5 9-5z"></path>
+    <path d="M3 12l9 5 9-5"></path>
+    <path d="M3 16l9 5 9-5"></path>
+    {% when "library-books" %}
+    <path d="M6 4h12v16H6z"></path>
+    <path d="M3 7h3v13H3z"></path>
+    <path d="M9 8h6"></path>
+    <path d="M9 12h6"></path>
+    {% when "location" %}
+    <path d="M12 22s7-6 7-12a7 7 0 0 0-14 0c0 6 7 12 7 12z"></path>
+    <circle cx="12" cy="10" r="2.5"></circle>
+    {% when "lock" %}
+    <rect x="5" y="10" width="14" height="10" rx="2"></rect>
+    <path d="M8 10V7a4 4 0 0 1 8 0v3"></path>
+    {% when "palette" %}
+    <path
+        d="M12 3a9 9 0 0 0 0 18h2a2 2 0 0 0 1-3.7 1.5 1.5 0 0 1 .7-2.8H17a4 4 0 0 0 0-8 9 9 0 0 0-5-3.5z"
+    ></path>
+    <circle cx="7.5" cy="10" r="1"></circle>
+    <circle cx="10.5" cy="7.5" r="1"></circle>
+    <circle cx="14" cy="8" r="1"></circle>
+    {% when "play" %}
+    <path d="M8 5v14l11-7L8 5z"></path>
+    {% when "send" %}
+    <path d="M3 11l18-8-8 18-2-7-8-3z"></path>
+    <path d="M21 3l-10 11"></path>
+    {% when "thumb-up" %}
+    <path d="M8 11v10H4V11h4z"></path>
+    <path d="M8 11l4-8 2 1v5h5a2 2 0 0 1 2 2l-2 8a2 2 0 0 1-2 2H8"></path>
+    {% else %}
+    <circle cx="12" cy="12" r="9"></circle>
+    {% endcase %}
 </svg>

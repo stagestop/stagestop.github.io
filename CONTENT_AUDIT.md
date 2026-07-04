@@ -42,17 +42,17 @@ Why it matters:
 
 The coordinates and title do not match Stage Stop Gun Shop. The file appears to be leftover template data.
 
-Current usage:
+Resolution:
 
-No direct references to `site.data.map` were found during the audit.
+Removed `_data/map.yml` in `T003F` after confirming the active map implementation now uses `_data/locations.yml`.
 
 Recommendation:
 
-If confirmed unused, remove `_data/map.yml`. If a map data file is desired, replace it with Stage Stop location data and wire it into the map templates/scripts intentionally.
+No further action needed unless a future map data model is introduced.
 
 Requires confirmation:
 
-No, if a final code search confirms no usage immediately before removal.
+No.
 
 ---
 
@@ -108,14 +108,20 @@ Decision from `T003B`:
 
 Use Google Maps iframe embeds for visible location maps and keep the existing external Google Maps address links in `_data/locations.yml` for directions. Do not keep the Google Maps JavaScript API for ordinary store-location maps.
 
-Follow-up:
+Resolution:
 
-1. Replace active JS maps with iframe embeds driven by location data.
-2. Remove the global Maps JS API script and `js/map.js`.
-3. Remove unused `_includes/java.html`.
-4. Remove unused `_data/map.yml` if a final search confirms no references.
-5. Remove `_data/global.yml` `googleaccess` after no active references remain.
-6. Treat exposed API keys as public and rotate, revoke, or restrict them in Google Cloud if they are still active.
+Implemented in `T003F`:
+
+1. Replaced active JS maps with iframe embeds driven by `_data/locations.yml`.
+2. Removed the global Maps JS API script and `js/map.js`.
+3. Removed unused `_includes/java.html`.
+4. Removed unused `_data/map.yml`.
+5. Removed `_data/global.yml` `googleaccess`.
+6. Removed broken empty `id="map"` containers on `/about`, `/contact`, and `/vip` without adding new visible maps.
+
+Remaining follow-up:
+
+Treat exposed API keys as public and rotate, revoke, or restrict them in Google Cloud if they are still active.
 
 Requires confirmation:
 
@@ -349,13 +355,13 @@ Why it matters:
 
 Unused includes add confusion and can contain stale keys/scripts.
 
-Recommendation:
+Resolution:
 
-If a final search confirms no references, remove or archive `_includes/java.html` after map behavior is consolidated.
+Removed `_includes/java.html` in `T003F` after map behavior was consolidated.
 
 Requires confirmation:
 
-No, if unused and after map strategy is clarified.
+No.
 
 ---
 
@@ -495,11 +501,16 @@ Decision:
 - Use Google Maps iframe embeds plus existing external Google Maps address links.
 - Do not keep the Google Maps JavaScript API for ordinary location maps.
 
-Follow-up:
+Implementation:
 
-- Implement as `T003F — Map iframe implementation`.
-- Remove unused `_data/map.yml` and `_includes/java.html` during implementation after a final usage search.
-- Remove `googleaccess` from `_data/global.yml` when no active references remain.
+- Completed in `T003F`.
+- Removed unused `_data/map.yml` and `_includes/java.html`.
+- Removed `googleaccess` from `_data/global.yml`.
+- Removed the global Maps JS API script and `js/map.js`.
+- Replaced visible maps with iframe embeds.
+
+Remaining follow-up:
+
 - Rotate, revoke, or restrict the exposed API keys outside the repo if they are still active.
 
 Risk: Medium

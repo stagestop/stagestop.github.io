@@ -352,23 +352,23 @@ Risk: Low/Medium.
 
 ### F014 — Google Maps JS API and `js/map.js`
 
+Status: Removed in `T003F`.
+
 Files:
 
-- `_layouts/default.html`
-- `js/map.js`
-- `_includes/java.html`
-- `_data/global.yml`
-- section/page map containers
+- `_includes/location-map.html`
+- `_data/locations.yml`
+- section/page iframe map embeds
 
 Current usage:
 
-Loaded globally with a hardcoded key in `_layouts/default.html`; `js/map.js` initializes `mapAtwater` and `mapMariposa`.
+Location maps render as Google Maps iframe embeds from `_data/locations.yml`. Existing external address links remain available for directions.
 
-Classification: Replace in `T003F`.
+Classification: Keep.
 
 Recommendation:
 
-`T003B` chose Google Maps iframe embeds plus existing external address links. Replace the global Maps JS API load and `js/map.js` with location-data-driven iframes, then remove unused map-key/config/include artifacts.
+Do not reintroduce the Maps JS API unless a future feature requires it. If that happens, use one restricted key from one config source.
 
 Risk: Medium.
 
@@ -419,11 +419,11 @@ Risk: Medium if changed early.
 
 ### `_includes/java.html`
 
-No direct `{% include java.html %}` references were found. It duplicates Google Maps and Smartwaiver behavior.
+Removed in `T003F`.
 
 Recommendation:
 
-Remove after `T003B` map strategy is decided.
+No further action.
 
 ### Owl Carousel targets
 

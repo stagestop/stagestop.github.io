@@ -4,7 +4,6 @@ title: Mariposa
 left-class: col-md-5
 right-class: col-md-7
 layout: section-map-right
-map-id: mapMariposa
 ---
 {% include location.html id="MARIPOSA" link="true" %}
 

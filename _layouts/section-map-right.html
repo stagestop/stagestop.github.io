@@ -12,7 +12,8 @@
                 </p>
             </div><!-- / column -->
             <div class="{{ page.right-class }}">
-                <div id="{{ page.map-id }}"></div>
+                {% assign section_id = page["section-id"] %}
+                {% include location-map.html id=section_id %}
             </div><!-- / column -->
         </div><!-- / row -->
     </div><!-- / container -->

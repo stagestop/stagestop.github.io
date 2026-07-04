@@ -5,7 +5,8 @@
     <div class="container">
         <div class="row">
             <div class="{{ page.left-class }}">
-                <div id="{{ page.map-id }}"></div>
+                {% assign section_id = page["section-id"] %}
+                {% include location-map.html id=section_id %}
             </div><!-- / column -->
             <div class="{{ page.right-class }}">
                 <h2 class="section-title mb-0">{{ page.title | upcase }}</h2>

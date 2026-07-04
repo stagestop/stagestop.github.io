@@ -1,0 +1,11 @@
+{% assign location = site.data.locations | where: "id", include.id | first %}
+{% assign map_embed = location["map-embed"] %}
+{% if location and map_embed %}
+<iframe
+    class="location-map"
+    src="{{ map_embed }}"
+    title="{{ location.name }} location map"
+    loading="lazy"
+    referrerpolicy="no-referrer-when-downgrade"
+></iframe>
+{% endif %}

@@ -60,10 +60,6 @@ Whether you are planning a party or a meeting, Stage Stop Gun Shop & Indoor Rang
                     <div class="clearfix"></div> 
                 </form><!-- / contactform -->
             </div><!-- / column -->
-            <div class="col-md-7">
-                <div id="map">
-                </div><!-- / map -->
-            </div><!-- / column -->
         </div><!-- / row -->
     </div><!-- / container -->
 </section> <!-- / contact -->

@@ -320,26 +320,41 @@ GitHub Pages native build parity would no longer be the goal; GitHub Actions wou
 
 ### Ready
 
+### Done
+
 #### T003F — Map iframe implementation
 
-Scope:
+Completed:
 
-- Replace the active Google Maps JS implementation with iframe embeds driven by location data.
-- Remove the global `maps.googleapis.com/maps/api/js` script from `_layouts/default.html`.
-- Remove `js/map.js` after no active references remain.
-- Remove unused `_includes/java.html`.
-- Remove unused `_data/map.yml` if a final search confirms no references.
-- Remove `_data/global.yml` `googleaccess` after no active references remain.
-- Keep existing external Google Maps address links for directions.
+- Added `_includes/location-map.html` for reusable location map iframes.
+- Added `map-embed` URLs to `_data/locations.yml` for Atwater and Mariposa.
+- Replaced the active Atwater and Mariposa section map containers with iframe embeds.
+- Removed legacy empty `id="map"` containers from `/about`, `/contact`, and `/vip` without adding new visible maps.
+- Removed the global Google Maps JavaScript API script from `_layouts/default.html`.
+- Removed `js/map.js`, `_includes/java.html`, and stale `_data/map.yml`.
+- Removed `_data/global.yml` `googleaccess` after no active references remained.
+- Kept existing external Google Maps address links for directions.
 
-Acceptance criteria:
+Validation performed:
 
-- Atwater and Mariposa visible maps still render.
-- Contact/about/VIP pages do not include broken empty map containers.
-- No generated output references `maps.googleapis.com/maps/api/js`, `js/map.js`, `_includes/java.html`, `_data/map.yml`, or `googleaccess`.
+```sh
+rg -n "maps.googleapis.com/maps/api/js|/js/map\.js|js/map\.js|googleaccess|_includes/java|include java|site\.data\.map|id=\"map\"|mapAtwater|mapMariposa|map-id" . --glob '!_site/**'
+git diff --check
+docker compose run --rm site sh -c "rm -rf _site/* && bundle exec jekyll build"
+docker compose run --rm site sh -c "grep -R 'class=\"location-map\"' _site >/dev/null && ! grep -R -I 'maps.googleapis.com/maps/api/js\|/js/map.js\|googleaccess\|id=\"map\"\|mapAtwater\|mapMariposa' _site"
+docker compose up
+docker compose exec site ruby -ropen-uri -e "about = URI.open('http://localhost:4000/about/').read; contact = URI.open('http://localhost:4000/contact/').read; vip = URI.open('http://localhost:4000/vip/').read; raise 'about should have exactly two location maps' unless about.scan('class=\"location-map\"').length == 2; raise 'missing location map embeds' unless about.include?('www.google.com/maps?q=601%20Atwater') && about.include?('www.google.com/maps?q=5094%20Jessie'); raise 'unexpected form-page maps' if contact.include?('class=\"location-map\"') || vip.include?('class=\"location-map\"'); raise 'old map integration present' if [about, contact, vip].join.match?(/maps.googleapis.com\/maps\/api\/js|\/js\/map\.js|id=\"map\"|mapAtwater|mapMariposa/);"
+docker compose down
+```
+
+Result:
+
 - Site builds successfully.
-
-### Done
+- Dev server starts successfully at `http://0.0.0.0:4000/`.
+- Atwater and Mariposa iframe maps render in generated and served pages.
+- `/about` renders only the two intended location-section maps; `/contact` and `/vip` do not render extra maps.
+- Generated output no longer references the Maps JS API, `js/map.js`, map API key data, or old map container IDs.
+- Existing non-fatal Faraday retry warning remains.
 
 #### T003B — Map cleanup decision
 
@@ -725,7 +740,7 @@ Keep each task small enough to review independently.
 The next recommended task is:
 
 ```text
-T003F — Map iframe implementation
+T003C — Product post review/archive
 ```
 
 For frontend cleanup, the next recommended task is:
