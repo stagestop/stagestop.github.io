@@ -298,29 +298,117 @@ jQuery is no longer globally loaded or included in the repo.
 
 ### Phase 8 — Optional Jekyll 4 / GitHub Actions deployment
 
-Status: Not started
+Status: Ready
 
-This is optional and should happen only after the site is stable and cleaner.
+This is optional and should happen only after the site is stable and cleaner. As of `T008A`, the pre-Phase 8 cleanup is complete enough to proceed.
 
 Goal:
 
 Move beyond GitHub Pages’ built-in Jekyll version by building the site through GitHub Actions and deploying generated output.
 
-Potential target:
+Current baseline:
+
+- GitHub Pages dependency stack: `github-pages` 232 with Jekyll 3.10.0.
+- Local dependency stack: `Gemfile` uses `github-pages ~> 232`.
+- Local runtime: Docker uses Ruby 3.3 and Bundler.
+- No existing `.github/workflows` deployment workflow is present.
+
+External references checked:
+
+- GitHub Pages dependency versions: https://pages.github.com/versions/
+- GitHub Pages and Jekyll docs: https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/about-github-pages-and-jekyll
+- GitHub Pages custom workflow docs: https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages
+- Jekyll RubyGems page: https://rubygems.org/gems/jekyll
+
+Recommendation:
+
+Use a two-step migration:
+
+1. Add a GitHub Actions Pages workflow while keeping the current `github-pages` dependency stack. This changes deployment plumbing first without changing the Jekyll runtime.
+2. After the workflow is proven, switch from `github-pages` to modern Jekyll and build through Bundler in Actions.
+
+Recommended Jekyll target:
 
 ```ruby
-gem "jekyll", "~> 4.3"
+gem "jekyll", "~> 4.4"
 ```
 
 Consequence:
 
 GitHub Pages native build parity would no longer be the goal; GitHub Actions would become the source of production build behavior.
 
+Operational requirement:
+
+After adding the workflow, the repository’s Pages publishing source must be set to GitHub Actions in GitHub repository settings.
+
 ## Task Board
 
 ### Ready
 
+#### T008B — GitHub Actions Pages workflow
+
+Scope:
+
+- Add `.github/workflows/pages.yml`.
+- Keep `Gemfile` on `github-pages ~> 232` for this task.
+- Build with Bundler in Actions and upload `_site` with `actions/upload-pages-artifact`.
+- Deploy with `actions/deploy-pages`.
+- Preserve `CNAME` in generated output.
+
+Acceptance criteria:
+
+- Docker build still succeeds locally.
+- Workflow YAML is syntactically valid enough for review.
+- Generated output still includes `CNAME`.
+- `MODERNIZATION.md` documents that GitHub Pages source must be switched to GitHub Actions.
+
+#### T008C — Jekyll 4 dependency migration
+
+Scope:
+
+- Replace `github-pages` with explicit modern Jekyll dependencies.
+- Target Jekyll `~> 4.4`.
+- Update `Gemfile.lock`.
+- Update Docker build and local serve behavior only if required.
+- Validate generated output differences carefully.
+
+Acceptance criteria:
+
+- Docker build succeeds with the new dependency stack.
+- Key served pages return 200.
+- Generated output does not contain obvious URL/permalink/layout regressions.
+- Any intentional output differences are documented.
+
 ### Done
+
+#### T008A — Phase 8 deployment/runtime audit
+
+Completed:
+
+- Confirmed current local stack uses `github-pages ~> 232`, which maps to Jekyll 3.10.0.
+- Confirmed no existing GitHub Actions deployment workflow is present.
+- Checked current official GitHub Pages/Jekyll workflow guidance and current upstream Jekyll version.
+- Recommended a two-step migration: add Actions deployment first, then upgrade to Jekyll 4.
+
+Validation performed:
+
+```sh
+git status --short
+sed -n '1,220p' Gemfile
+sed -n '1,120p' Gemfile.lock
+sed -n '1,120p' Dockerfile
+sed -n '1,120p' docker-compose.yml
+find .github -maxdepth 3 -type f -print
+git diff --check
+docker compose run --rm site sh -c "rm -rf _site/* && bundle exec jekyll build"
+```
+
+Result:
+
+- Phase 8 recommendation is documented.
+- Follow-up implementation tasks are defined.
+- Site builds successfully on the current stack.
+- Existing non-fatal Faraday retry warning remains.
 
 #### T003C — Product post review/archive
 
