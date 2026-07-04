@@ -260,7 +260,7 @@ Remaining candidates:
 
 ### Phase 6 — Bootstrap modernization
 
-Status: Not started
+Status: In progress
 
 Recommended target:
 
@@ -281,8 +281,8 @@ Status: Not started
 Candidate replacements:
 
 - Owl Carousel → Splide or Swiper
-- Magnific Popup → GLightbox or PhotoSwipe
-- jQuery Shuffle → vanilla JS filtering/CSS Grid or modern Shuffle.js
+- Magnific Popup → removed in `T004D`; replaced with dependency-free modal
+- jQuery Shuffle → removed in `T004D`; replaced with vanilla filtering and existing grid layout
 - Font Awesome 4 → Bootstrap Icons, Font Awesome 6, Lucide, or inline SVGs
 
 Goal:
@@ -326,21 +326,61 @@ Acceptance criteria:
 - Chosen map strategy is documented.
 - Follow-up implementation task is defined.
 
+### Done
+
 #### T004C — Contact validation migration
 
-Scope:
+Completed:
 
-- Replace `contact-form-validator.min.js` usage with native HTML5 validation and Formspree/server-side validation.
-- Remove `data-toggle="validator"` attributes if no longer needed.
-- Delete `js/contact-form-validator.min.js` only after confirming no active references remain.
+- Removed the global `/js/contact-form-validator.min.js` script load.
+- Removed `data-toggle="validator"` from active contact/VIP forms.
+- Deleted `js/contact-form-validator.min.js`.
+- Kept validation native with required name, email, and message fields plus `type="email"`.
+- Fixed `/contact` form field types and `name` attributes so native validation and Formspree submission use the expected fields.
 
-Acceptance criteria:
+Validation performed:
 
-- Contact/VIP forms still have appropriate required fields and email validation.
-- The validator plugin is no longer globally loaded.
+```sh
+docker compose run --rm site sh -c "rm -rf _site/* && bundle exec jekyll build"
+docker compose run --rm site sh -c "test ! -e js/contact-form-validator.min.js && ! grep -R 'data-toggle=\"validator\"\|contact-form-validator.min.js' _site"
+docker compose down
+```
+
+Result:
+
 - Site builds successfully.
+- Generated output no longer references the removed validator plugin or `data-toggle="validator"` hooks.
+- Existing non-fatal Faraday retry warning remains.
 
-### Done
+#### T004D — Gallery/lightbox modernization
+
+Completed:
+
+- Removed global Magnific Popup CSS/JS loads and deleted `css/magnific-popup.css` plus `js/jquery.magnific-popup.min.js`.
+- Removed jQuery Shuffle and deleted `js/jquery.shuffle.min.js` plus `js/portfolio.js`.
+- Added dependency-free `js/gallery.js` for gallery filtering, image lightbox navigation, and sponsor inline modal content.
+- Removed hardcoded Shuffle inline positioning and `shuffle-item` classes from gallery/sponsor templates.
+- Replaced Magnific-specific Sass with the new modal styles.
+
+Validation performed:
+
+```sh
+node --check js/gallery.js
+git diff --check
+docker compose run --rm site sh -c "rm -rf _site/* && bundle exec jekyll build"
+docker compose run --rm site sh -c "test -f _site/js/gallery.js && ! grep -R 'jquery.shuffle.min.js\|jquery.magnific-popup.min.js\|magnific-popup.css\|mfp-hide\|shuffle-item\|data-groups=' _site"
+docker compose up
+docker compose exec site ruby -ropen-uri -e "gallery = URI.open('http://localhost:4000/gallery/').read; script = URI.open('http://localhost:4000/js/gallery.js').read; abort('missing gallery markup') unless gallery.include?('/js/gallery.js') && gallery.include?('gallery-grid') && gallery.include?('image-lightbox'); abort('missing gallery script') unless script.include?('initLightbox')"
+docker compose down
+```
+
+Result:
+
+- Site builds successfully.
+- Dev server starts successfully at `http://0.0.0.0:4000/`.
+- Generated output no longer references Magnific Popup or jQuery Shuffle assets/hooks.
+- Gallery page serves the new gallery markup and script.
+- Existing non-fatal Faraday retry warning remains.
 
 #### T004B — Smooth scroll migration
 
@@ -539,5 +579,5 @@ T003B — Map cleanup decision
 For frontend cleanup, the next recommended task is:
 
 ```text
-T004C — Contact validation migration
+T004F — Bootstrap 5 migration
 ```

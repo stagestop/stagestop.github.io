@@ -12,29 +12,29 @@ permalink: /contact
                 <p class="lead">
                     Complete the below form or visit us at one of our locations to get in touch!
                 </p>
-                <form action="//formspree.io/info@ssgs.us" method="POST" id="contactForm" data-toggle="validator">
+                <form action="//formspree.io/info@ssgs.us" method="POST" id="contactForm">
                     <div class="row">
                         <div class="col-md-6 sub-col-left">
                             <div class="form-group">
-                                <input type="email" class="form-control" id="name" placeholder="*Name" required>
+                                <input type="text" class="form-control" id="name" name="name" placeholder="*Name" required>
                                 <div class="help-block with-errors"></div>
                             </div>
                         </div><!-- / sub-column -->
                         <div class="col-md-6 sub-col-right">
                             <div class="form-group">
-                                <input type="text" class="form-control" id="email" placeholder="*Email">
+                                <input type="email" class="form-control" id="email" name="_replyto" placeholder="*Email" required>
                                 <div class="help-block with-errors"></div>
                             </div>
                         </div><!-- / sub-column -->
                         <div class="col-md-12">
                             <div class="form-group">
-                                <input type="text" class="form-control" id="subject" placeholder="Subject">
+                                <input type="text" class="form-control" id="subject" name="_subject" placeholder="Subject">
                                 <div class="help-block with-errors"></div>
                             </div>
                         </div><!-- / sub-column -->
                         <div class="col-md-12">
                             <div class="form-group">
-                                <textarea id="message" class="form-control" rows="5" placeholder="*Message" required></textarea>
+                                <textarea id="message" name="message" class="form-control" rows="5" placeholder="*Message" required></textarea>
                                 <div class="help-block with-errors"></div>
                             </div>
                         </div><!-- / sub-column -->

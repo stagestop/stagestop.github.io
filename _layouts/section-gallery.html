@@ -15,15 +15,15 @@
         <!-- / portfolio filter -->
     </div><!-- / container-fluid -->
     <div class="container-fluid">
-        <ul class="row portfolio list-unstyled mb-0 gallery-lightbox lightbox shuffle" id="grid" style="position: relative; overflow: hidden; height: 927px; transition: height 250ms ease-out;">
+        <ul class="row portfolio list-unstyled mb-0 gallery-grid gallery-lightbox lightbox">
             {% for image in site.data.gallery %}
             <!-- project -->
-            <li class="col-md-4 project shuffle-item filtered" data-groups="[&quot;{{ image.category }}&quot;]" style="position: absolute; top: 0px; left: 0px; visibility: visible; transition: transform 250ms ease-out, opacity 250ms ease-out;">
+            <li class="col-md-4 project" data-group="{{ image.category }}">
                 <div class="effect effect-2 clearfix">
                     <div class="img">
                         <img class="img-responsive" src="{{ image.image }}" alt="">
                         <div class="overlay">
-                            <a href="{{ image.image }}" class="image-lightbox expand">+</a>
+                            <a href="{{ image.image }}" class="image-lightbox expand" data-lightbox-alt="">+</a>
                         </div><!-- / overlay -->
                     </div><!-- / img -->
                 </div><!-- / effect-2 -->

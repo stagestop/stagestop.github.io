@@ -25,7 +25,6 @@ CSS:
 - `/css/bootstrap.min.css`
 - `/css/orange.css`
 - `/css/animate.css`
-- `/css/magnific-popup.css`
 - Google Material Icons stylesheet
 - `/css/font-awesome.min.css`
 - Google Fonts: Nunito Sans
@@ -36,13 +35,10 @@ JS:
 - Tether CDN `https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0//js/tether.min.js`
 - `/js/bootstrap.min.js`
 - `/js/preloader.js`
-- `/js/jquery.shuffle.min.js`
-- `/js/portfolio.js`
+- `/js/gallery.js`
 - `/js/hide-nav.js`
 - Google Maps JS API with a hardcoded key
 - `/js/map.js`
-- `/js/contact-form-validator.min.js`
-- `/js/jquery.magnific-popup.min.js`
 - Smartwaiver script near the end of the layout
 
 ## Dependency Inventory
@@ -62,17 +58,13 @@ Required by:
 - Tether-backed Bootstrap tooltips/popovers
 - `preloader.js`
 - `hide-nav.js`
-- `portfolio.js`
-- `jquery.shuffle.min.js`
-- `jquery.magnific-popup.min.js`
-- `contact-form-validator.min.js`
 - inline scripts in `_layouts/default.html`
 
 Classification: Keep for now, replace later.
 
 Recommendation:
 
-Do not remove jQuery until Bootstrap, lightbox, gallery filtering, contact validation, and remaining custom scripts have been migrated. Owl Carousel and smooth scrolling no longer depend on jQuery after `T004A`/`T004B`.
+Do not remove jQuery until Bootstrap and remaining custom scripts have been migrated. Owl Carousel, smooth scrolling, contact validation, gallery filtering, and lightbox behavior no longer depend on jQuery after `T004A` through `T004D`.
 
 Replacement path:
 
@@ -168,58 +160,48 @@ Risk after removal: Low. Reintroduce a modern no-jQuery carousel such as Splide 
 
 ### F005 — Magnific Popup
 
-Files:
+Status: Removed in `T004D`.
+
+Removed files:
 
 - `js/jquery.magnific-popup.min.js`
 - `css/magnific-popup.css`
-- `_layouts/default.html`
-- `_layouts/section-gallery.html`
-- `_layouts/section-sponsor-gallery.html`
 
-Current usage:
+Current behavior:
+
+- `js/gallery.js` provides a small no-jQuery modal for gallery images and sponsor inline content.
+- `_sass/_template-styles.scss` contains the modal styles.
+
+Previous usage:
 
 Inline initializers target:
 
 - `.gallery-lightbox` with `a.image-lightbox`
 - `.sponsor-lightbox` with `a.inline-lightbox`
 
-Classification: Replace.
-
-Recommended replacement:
-
-- GLightbox for a lightweight no-jQuery image/inline lightbox.
-- PhotoSwipe if a more robust image gallery is desired.
-
-Risk: Medium.
+Risk after removal: Low/Medium. The replacement keeps image and inline sponsor lightbox behavior but is intentionally simpler than a full gallery library.
 
 ---
 
 ### F006 — jQuery Shuffle / portfolio filtering
 
-Files:
+Status: Removed in `T004D`.
+
+Removed files:
 
 - `js/jquery.shuffle.min.js`
 - `js/portfolio.js`
-- `_layouts/section-gallery.html`
-- `_layouts/section-sponsor-gallery.html`
 
-Current usage:
+Current behavior:
+
+- `js/gallery.js` filters gallery items by `data-group`.
+- Gallery and sponsor templates use normal Bootstrap grid markup with no Shuffle inline positioning.
+
+Previous usage:
 
 `portfolio.js` initializes `#grid` with the Shuffle plugin and reads filters from `.portfolio-filter li`.
 
-Classification: Replace or remove after testing.
-
-Recommended replacement options:
-
-1. Vanilla JS filtering with CSS Grid, if masonry layout is not required.
-2. Modern Shuffle.js package, if similar layout/filter behavior is required.
-3. MixItUp, subject to license review.
-
-Migration note:
-
-The templates include hardcoded inline positioning styles and `shuffle-item` classes. These should be cleaned when replacing the dependency.
-
-Risk: Medium.
+Risk after removal: Low/Medium. Masonry-style layout animation is gone; the site now uses the existing responsive grid.
 
 ---
 
@@ -292,31 +274,26 @@ Risk: Low/Medium.
 
 ### F010 — Contact form validator
 
-Files:
+Status: Removed in `T004C`.
+
+Removed files:
 
 - `js/contact-form-validator.min.js`
-- `_layouts/default.html`
-- `_pages/about.md`
-- `_pages/contact.md`
-- `_pages/vip.md`
 
-Current usage:
+Current behavior:
 
-Forms use `data-toggle="validator"`, which auto-initializes the Bootstrap Validator plugin.
+Contact and VIP forms rely on native HTML5 validation (`required`, `type="email"`) plus Formspree/server-side validation.
 
-The library identifies itself as:
+Previous usage:
 
-- Validator `v0.10.2`
-- Bootstrap 3-era plugin
-- Copyright 2016
+- Active forms used `data-toggle="validator"`, which auto-initialized the Bootstrap Validator plugin.
+- The deleted library identified itself as Validator `v0.10.2`, a Bootstrap 3-era plugin from 2016.
 
-Classification: Remove/replace early if native validation is sufficient.
+Risk after removal: Low.
 
-Recommended replacement:
+Follow-up:
 
-Use native HTML5 validation (`required`, `type="email"`, etc.) plus Formspree/server-side validation. Add small vanilla JS only if needed for custom messages.
-
-Risk: Low/Medium.
+Add a small vanilla JS enhancement only if custom inline validation messages are needed later.
 
 ---
 
@@ -523,11 +500,16 @@ Completed:
 
 ### T004C — Contact validation migration
 
-Remove Bootstrap Validator and rely on native validation/Formspree, with optional vanilla enhancements.
+Status: Complete.
+
+- Removed Bootstrap Validator and rely on native validation/Formspree.
 
 ### T004D — Gallery/lightbox modernization
 
-Replace Magnific Popup and jQuery Shuffle with GLightbox plus vanilla filtering/CSS Grid or modern Shuffle.js.
+Status: Complete.
+
+- Replaced Magnific Popup and jQuery Shuffle with dependency-free `js/gallery.js`.
+- Gallery filtering now uses vanilla JS and normal Bootstrap grid layout.
 
 ### T004E — Carousel decision/replacement
 
@@ -556,8 +538,8 @@ Replace Font Awesome 4 and Material Icons with one icon strategy if desired.
 | Bootstrap 4 alpha + Tether | Bootstrap 5.3.x | Dedicated migration |
 | jQuery custom scripts | Vanilla JS | Migrate gradually |
 | Owl Carousel | Removed; Splide only if needed later | Completed in `T004A` |
-| Magnific Popup | GLightbox | Good no-jQuery lightbox |
-| jQuery Shuffle | Vanilla filtering/CSS Grid or modern Shuffle.js | Depends on masonry/filter needs |
+| Magnific Popup | Removed in T004D | Replaced by dependency-free modal |
+| jQuery Shuffle | Removed in T004D | Replaced by vanilla filtering and existing grid layout |
 | jQuery Easing + smooth-scroll.js | CSS `scroll-behavior` + optional vanilla JS | Completed in `T004B` |
 | Bootstrap Validator | Native HTML5 validation | Formspree still validates server-side |
 | Font Awesome 4 | Bootstrap Icons / Font Awesome 6 / inline SVG | Decide with Bootstrap migration |

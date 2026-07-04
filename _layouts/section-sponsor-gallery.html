@@ -5,10 +5,10 @@
     <div class="spacer spacer-line border-primary">&nbsp;</div>
 
     <div class="container-fluid">
-        <ul class="row portfolio list-unstyled mb-0 sponsor-lightbox lightbox shuffle" id="grid" style="position: relative; overflow: hidden; height: 918px; transition: height 250ms ease-out;">
+        <ul class="row portfolio list-unstyled mb-0 gallery-grid sponsor-lightbox lightbox">
             {% for sponsor in site.data.sponsors %}
             <!-- project -->
-            <li class="col-md-3 project shuffle-item filtered" style="position: absolute; top: 0px; left: 0px; visibility: visible; transition: transform 250ms ease-out, opacity 250ms ease-out; opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1);">
+            <li class="col-md-3 project">
                 <div class="effect effect-2 clearfix">
                     <div class="img">
                         <img class="img-responsive" src="{{ sponsor.image }}" alt="image of {{ sponsor.name }} logo.">
@@ -17,7 +17,7 @@
                         </div><!-- / overlay -->
                     </div><!-- / img -->
                 </div><!-- / effect-2 -->
-                <div id="SPNSR-{{ sponsor.id }}" class="white-popup mfp-hide">
+                <div id="SPNSR-{{ sponsor.id }}" class="white-popup gallery-inline-content" hidden>
                     <img class="img-responsive" src="{{ sponsor.image }}" alt="image of {{ sponsor.name }} logo.">
                     {{ sponsor.summary | markdownify }}
                 </div>

@@ -26,7 +26,7 @@ In 2011, Stage Stop Gun Shop found its first home in the historic town of Maripo
                 <p class="lead">
                     Complete the below form or visit us at one of our locations to get in touch!
                 </p>
-                <form action="https://formspree.io/info@ssgs.us" method="POST" id="contactForm" data-toggle="validator">
+                <form action="https://formspree.io/info@ssgs.us" method="POST" id="contactForm">
                     <div class="row">
                         <div class="col-md-6 sub-col-left">
                             <div class="form-group">
@@ -36,7 +36,7 @@ In 2011, Stage Stop Gun Shop found its first home in the historic town of Maripo
                         </div><!-- / sub-column -->
                         <div class="col-md-6 sub-col-right">
                             <div class="form-group">
-                                <input type="email" class="form-control" name="_replyto" placeholder="*Email">
+                                <input type="email" class="form-control" name="_replyto" placeholder="*Email" required>
                                 <div class="help-block with-errors"></div>
                             </div>
                         </div><!-- / sub-column -->
