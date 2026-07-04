@@ -214,9 +214,13 @@ Resolution:
 - Normalized obvious `GUN MODEL HERE` categories to `gun`.
 - Replaced the imported placeholder description in `_posts/2017-8-11-gun-1002.md` with a description derived from the post body.
 
+Resolution:
+
+Archived all legacy 2017 product posts from generated output in `T003C` by adding `published: false` to each post. Source files remain in `_posts/` for future review or restoration.
+
 Remaining recommendation:
 
-Decide whether `_posts` product pages are still meant to be public. If not, archive/remove them from generation or hide links. If yes, complete a business/legal/content review for availability, descriptions, dates, and compliance.
+If these products should ever return to the public site, complete a business/legal/content review for availability, descriptions, dates, and compliance before republishing them.
 
 Requires confirmation:
 
@@ -256,13 +260,13 @@ Resolution:
 - Updated `_posts/2017-8-11-rifle-1008.md` front matter image from `gun-1008.jpg` to existing `rifle-1008.jpg`, matching the body image.
 - Fixed `NRaptor` → `Raptor` in `_posts/2017-8-11-gun-1002.md`.
 
-Remaining recommendation:
+Resolution:
 
-Review all product posts as a batch because these appear imported from an old data source.
+Archived the legacy product posts from generated output in `T003C`. The source files remain available for future review.
 
 Requires confirmation:
 
-Yes for product/image correctness and availability.
+Only if the archived product posts are republished later.
 
 ---
 
@@ -519,19 +523,19 @@ Requires business confirmation: Yes, for API key remediation outside the repo.
 
 ### T003C — Product post review/archive
 
-Status: Partially complete
+Status: Complete
 
 Completed:
 
 - Normalized obvious placeholder categories.
 - Replaced one imported placeholder description.
 - Fixed obvious post typos and one inconsistent image path.
+- Archived all legacy 2017 product posts from generated output with `published: false`.
+- Kept source files available for future business/legal/content review.
 
 Remaining:
 
-- Decide whether old 2017 product posts should remain public.
-- If not public, remove/archive/exclude from generated output.
-- If public, complete business/legal/content review for accuracy and availability.
+- If product posts are republished later, complete business/legal/content review for accuracy, availability, and compliance first.
 
 Risk: Medium/High
 

@@ -322,6 +322,37 @@ GitHub Pages native build parity would no longer be the goal; GitHub Actions wou
 
 ### Done
 
+#### T003C — Product post review/archive
+
+Completed:
+
+- Archived all 14 legacy 2017 product posts from public output by adding `published: false`.
+- Kept the source files in `_posts/` so product content can still be reviewed or restored later.
+- Preserved the earlier typo/category/image fixes already made to those posts.
+- Confirmed no active source queries `site.posts`; `_includes/tile.html` remains available but unused by active pages.
+
+Validation performed:
+
+```sh
+for f in _posts/*.md; do printf '%s ' "$f"; rg -n '^published: false$' "$f" | wc -l; done
+rg -n "site\.posts|post\.url|include tile|_posts|/2017/|gun-100|rifle-100|category|categories" _layouts _includes _pages _sections _data _config.yml
+git diff --check
+docker compose run --rm site sh -c "rm -rf _site/* && bundle exec jekyll build"
+docker compose run --rm site sh -c "! find _site -maxdepth 1 \( -name '*gun-100*.html' -o -name '*rifle-100*.html' \) | grep . && ! grep -R -I 'gun-100[0-9]\|rifle-100[0-9]' _site/*.html"
+docker compose up
+docker compose exec site ruby -rnet/http -ruri -e "paths = ['/', '/about/', '/contact/', '/vip/', '/gallery/', '/training/']; paths.each do |path| res = Net::HTTP.get_response(URI('http://localhost:4000' + path)); raise \"#{path} #{res.code}\" unless res.code == '200'; end; old = Net::HTTP.get_response(URI('http://localhost:4000/kimber-stainless-raptor-ii.html')); raise 'old product post still public' unless old.code == '404';"
+docker compose down
+```
+
+Result:
+
+- Site builds successfully.
+- Key served pages return 200.
+- Each legacy product post has exactly one `published: false` flag.
+- Legacy product post pages are no longer generated.
+- Representative legacy product URL returns 404.
+- Existing non-fatal Faraday retry warning remains.
+
 #### T003F — Map iframe implementation
 
 Completed:
@@ -630,15 +661,13 @@ Remaining note:
 
 #### T003C — Product post review/archive
 
-Partially completed:
+Completed:
 
 - Normalized obvious placeholder `GUN MODEL HERE` categories to `gun`.
 - Replaced one imported placeholder description.
 - Fixed obvious product post typos and an inconsistent image path.
-
-Remaining decision:
-
-- Business/legal/content review is still needed to decide whether old 2017 product posts should remain public.
+- Archived all legacy 2017 product posts from generated output with `published: false`.
+- Kept source files available for future business/legal/content review.
 
 #### T003A — Safe typo/placeholder copy fixes
 
@@ -740,7 +769,7 @@ Keep each task small enough to review independently.
 The next recommended task is:
 
 ```text
-T003C — Product post review/archive
+Phase 8 readiness smoke pass
 ```
 
 For frontend cleanup, the next recommended task is:
