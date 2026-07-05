@@ -1,6 +1,19 @@
 <!doctype html>
 <html lang="en" class="darl bg-inverse">
     <head>
+        {% assign site_title = site.data.global.title %}
+        {% assign site_description = site.data.global.description %}
+        {% assign page_description = page.description | default: site_description | strip_html | normalize_whitespace | truncate: 160 %}
+        {% if page.url == "/" %}
+            {% assign meta_title = site_title %}
+        {% elsif page.title %}
+            {% assign meta_title = page.title | append: " | " | append: site_title %}
+        {% elsif post.title %}
+            {% assign meta_title = post.title | append: " | " | append: site_title %}
+        {% else %}
+            {% assign meta_title = site_title %}
+        {% endif %}
+        {% assign meta_image = page.image | default: page.course_hero.image | default: page.header-image | default: "/graphics/stagestop-brand-logo.png" %}
         <!-- Meta -->
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -8,17 +21,23 @@
             name="viewport"
             content="width=device-width, initial-scale=1, shrink-to-fit=no"
         />
-        <meta name="description" content="Bootstrap 4 Template" />
-        <meta name="author" content="kingstudio.ro" />
+        <meta name="description" content="{{ page_description | escape }}" />
+        <meta name="author" content="Stage Stop Gun Shop" />
+        <link rel="canonical" href="{{ page.url | absolute_url }}" />
+        <meta property="og:site_name" content="{{ site_title | escape }}" />
+        <meta property="og:title" content="{{ meta_title | escape }}" />
+        <meta property="og:description" content="{{ page_description | escape }}" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="{{ page.url | absolute_url }}" />
+        <meta property="og:image" content="{{ meta_image | absolute_url }}" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="{{ meta_title | escape }}" />
+        <meta name="twitter:description" content="{{ page_description | escape }}" />
+        <meta name="twitter:image" content="{{ meta_image | absolute_url }}" />
         <!-- Favicon -->
         <link rel="icon" href="images/favicon.png" />
         <!-- Site Title -->
-        <title>
-            {% if page.title %}{{ page.title }} ◊ {{ site.data.global.title }}{%
-            elsif post.title %}{{ post.title }} {{ site.data.global.title }}{%
-            else %}{{ site.data.global.title }} {{ site.data.global.description
-            }}{% endif %}
-        </title>
+        <title>{{ meta_title | escape }}</title>
         <!-- Bootstrap 5 core CSS -->
         <link
             href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"

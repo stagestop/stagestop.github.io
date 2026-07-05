@@ -2,7 +2,7 @@
 layout: default
 title: Stage Stop Gun Shop
 description: |-
-  Welcome to Stage Stop Gun Shop, your Shooting Sports, Archery and Fishing headquarters!!! Stop in today to browse our excellent selection of firearms, ammo, archery supplies and fishing tackle.
+  Stage Stop Gun Shop & Indoor Range offers firearms, archery supplies, training, online education, indoor ranges, and Atwater and Mariposa locations.
 permalink: /
 hero: online-courses
 course_hero:

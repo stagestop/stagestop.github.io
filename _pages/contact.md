@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Contact Us
+description: Contact Stage Stop Gun Shop & Indoor Range or visit our Atwater and Mariposa locations for firearms, archery, range, training, and event space questions.
 permalink: /contact
 ---
 <section id="contact">
