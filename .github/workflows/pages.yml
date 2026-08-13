@@ -32,7 +32,15 @@ jobs:
         uses: actions/configure-pages@v6
 
       - name: Build site
-        run: bundle exec jekyll build
+        run: |
+          echo "Building site (JEKYLL_ENV=production)"
+          JEKYLL_ENV=production bundle exec jekyll build --trace
+          echo "-- _site tree (top level, truncated) --"
+          ls -la _site || true
+          echo "-- _site/css contents --"
+          ls -la _site/css || true
+          echo "-- _site/css/orange.css size (bytes) --"
+          wc -c _site/css/orange.css || true
         env:
           JEKYLL_ENV: production
 
