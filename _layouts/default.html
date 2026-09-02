@@ -1,418 +1,371 @@
 <!doctype html>
 <html lang="en" class="darl bg-inverse">
-    <head>
-        {% assign site_title = site.data.global.title %}
-        {% assign site_description = site.data.global.description %}
-        {% assign page_description = page.description | default: site_description | strip_html | normalize_whitespace | truncate: 160 %}
-        {% if page.url == "/" %}
-            {% assign meta_title = site_title %}
-        {% elsif page.title %}
-            {% assign meta_title = page.title | append: " | " | append: site_title %}
-        {% elsif post.title %}
-            {% assign meta_title = post.title | append: " | " | append: site_title %}
-        {% else %}
-            {% assign meta_title = site_title %}
-        {% endif %}
-        {% assign meta_image = page.image | default: page.course_hero.image | default: page.header-image | default: "/graphics/stagestop-brand-logo.png" %}
-        <!-- Meta -->
-        <meta charset="utf-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta
-            name="viewport"
-            content="width=device-width, initial-scale=1, shrink-to-fit=no"
-        />
-        <meta name="description" content="{{ page_description | escape }}" />
-        <meta name="author" content="Stage Stop Gun Shop" />
-        <link rel="canonical" href="{{ page.url | absolute_url }}" />
-        <meta property="og:site_name" content="{{ site_title | escape }}" />
-        <meta property="og:title" content="{{ meta_title | escape }}" />
-        <meta property="og:description" content="{{ page_description | escape }}" />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="{{ page.url | absolute_url }}" />
-        <meta property="og:image" content="{{ meta_image | absolute_url }}" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="{{ meta_title | escape }}" />
-        <meta name="twitter:description" content="{{ page_description | escape }}" />
-        <meta name="twitter:image" content="{{ meta_image | absolute_url }}" />
-        <!-- Favicon -->
-        <link rel="icon" href="images/favicon.png" />
-        <!-- Site Title -->
-        <title>{{ meta_title | escape }}</title>
-        <!-- Bootstrap 5 core CSS -->
-        <link
-            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
-            rel="stylesheet"
-            integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
-            crossorigin="anonymous"
-        />
-        <!-- Custom Styles -->
-        <link href="/css/orange.css" rel="stylesheet" />
-        <link href="/css/animate.css" rel="stylesheet" />
-        <!-- Fonts -->
-        <link
-            href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,800"
-            rel="stylesheet"
-        />
-        <!-- Favicon -->
-        <link
-            rel="apple-touch-icon"
-            sizes="57x57"
-            href="/apple-icon-57x57.png"
-        />
-        <link
-            rel="apple-touch-icon"
-            sizes="60x60"
-            href="/apple-icon-60x60.png"
-        />
-        <link
-            rel="apple-touch-icon"
-            sizes="72x72"
-            href="/apple-icon-72x72.png"
-        />
-        <link
-            rel="apple-touch-icon"
-            sizes="76x76"
-            href="/apple-icon-76x76.png"
-        />
-        <link
-            rel="apple-touch-icon"
-            sizes="114x114"
-            href="/apple-icon-114x114.png"
-        />
-        <link
-            rel="apple-touch-icon"
-            sizes="120x120"
-            href="/apple-icon-120x120.png"
-        />
-        <link
-            rel="apple-touch-icon"
-            sizes="144x144"
-            href="/apple-icon-144x144.png"
-        />
-        <link
-            rel="apple-touch-icon"
-            sizes="152x152"
-            href="/apple-icon-152x152.png"
-        />
-        <link
-            rel="apple-touch-icon"
-            sizes="180x180"
-            href="/apple-icon-180x180.png"
-        />
-        <link
-            rel="icon"
-            type="image/png"
-            sizes="192x192"
-            href="/android-icon-192x192.png"
-        />
-        <link
-            rel="icon"
-            type="image/png"
-            sizes="32x32"
-            href="/favicon-32x32.png"
-        />
-        <link
-            rel="icon"
-            type="image/png"
-            sizes="96x96"
-            href="/favicon-96x96.png"
-        />
-        <link
-            rel="icon"
-            type="image/png"
-            sizes="16x16"
-            href="/favicon-16x16.png"
-        />
-        <link rel="manifest" href="/manifest.json" />
-        <meta name="msapplication-TileColor" content="#ffffff" />
-        <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
-        <meta name="theme-color" content="#ffffff" />
-    </head>
+  <head>
+    {% assign site_title = site.data.global.title %} {% assign site_description
+    = site.data.global.description %} {% assign page_description =
+    page.description | default: site_description | strip_html |
+    normalize_whitespace | truncate: 160 %} {% if page.url == "/" %} {% assign
+    meta_title = site_title %} {% elsif page.title %} {% assign meta_title =
+    page.title | append: " | " | append: site_title %} {% elsif post.title %} {%
+    assign meta_title = post.title | append: " | " | append: site_title %} {%
+    else %} {% assign meta_title = site_title %} {% endif %} {% assign
+    meta_image = page.image | default: page.course_hero.image | default:
+    page.header-image | default: "/graphics/stagestop-brand-logo.png" %}
+    <!-- Meta -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="{{ page_description | escape }}" />
+    <meta name="author" content="Stage Stop Gun Shop" />
+    <link rel="canonical" href="{{ page.url | absolute_url }}" />
+    <meta property="og:site_name" content="{{ site_title | escape }}" />
+    <meta property="og:title" content="{{ meta_title | escape }}" />
+    <meta property="og:description" content="{{ page_description | escape }}" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="{{ page.url | absolute_url }}" />
+    <meta property="og:image" content="{{ meta_image | absolute_url }}" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="{{ meta_title | escape }}" />
+    <meta
+      name="twitter:description"
+      content="{{ page_description | escape }}"
+    />
+    <meta name="twitter:image" content="{{ meta_image | absolute_url }}" />
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.png" />
+    <!-- Site Title -->
+    <title>{{ meta_title | escape }}</title>
+    <!-- Bootstrap 5 core CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <!-- Custom Styles -->
+    <link href="/css/orange.css" rel="stylesheet" />
+    <link href="/css/animate.css" rel="stylesheet" />
+    <!-- Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,800"
+      rel="stylesheet"
+    />
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png" />
+    <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png" />
+    <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png" />
+    <link
+      rel="apple-touch-icon"
+      sizes="114x114"
+      href="/apple-icon-114x114.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="120x120"
+      href="/apple-icon-120x120.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="144x144"
+      href="/apple-icon-144x144.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="152x152"
+      href="/apple-icon-152x152.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/apple-icon-180x180.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="/android-icon-192x192.png"
+    />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
+    <meta name="theme-color" content="#ffffff" />
+  </head>
 
-    <body
-        class="has-fixed-menu dark bg-inverse"
-        data-bs-spy="scroll"
-        data-bs-target="#nav-scroll"
+  <body
+    class="has-fixed-menu dark bg-inverse"
+    data-bs-spy="scroll"
+    data-bs-target="#nav-scroll"
+  >
+    <div id="preloader">
+      <div class="preloader">
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+
+    <div id="top"></div>
+
+    <nav
+      id="nav-scroll"
+      class="navbar navbar-expand-md navbar-dark navbar-inverse fixed-top bg-inverse custom-menu menu-pills"
     >
-        <div id="preloader">
-            <div class="preloader">
-                <span></span>
-                <span></span>
-            </div>
+      <div class="container">
+        <a class="navbar-brand smooth-scroll" href="#top"
+          ><img src="/graphics/stagestop-logo-masthead-lg.png" alt=""
+        /></a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbar-toggle"
+          aria-controls="navbar-toggle"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span></button
+        ><!-- / navbar-toggler -->
+
+        <div class="collapse navbar-collapse" id="navbar-toggle">
+          <ul class="navbar-nav ms-auto">
+            {% for nav in site.data.nav %}
+            <li class="nav-item">
+              {% if nav.title == page.title %}
+              <a class="nav-link active" href="{{ nav.url }}"
+                >{{ nav.title }}</a
+              >
+              {% else %}
+              <a class="nav-link" href="{{ nav.url }}">{{ nav.title }}</a>
+              {% endif %}
+            </li>
+            {% endfor %}
+          </ul>
+          <!-- / navbar-nav -->
         </div>
+        <!-- / navbar-collapse -->
+      </div>
+      <!-- / container -->
+    </nav>
+    <!-- / custom-menu -->
 
-        <div id="top"></div>
-
-        <nav
-            id="nav-scroll"
-            class="navbar navbar-expand-md navbar-dark navbar-inverse fixed-top bg-inverse custom-menu menu-pills"
-        >
-            <div class="container">
-                <a class="navbar-brand smooth-scroll" href="#top"
-                    ><img src="/graphics/stagestop-logo-masthead-lg.png" alt=""
-                /></a>
-
-                <button
-                    class="navbar-toggler"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#navbar-toggle"
-                    aria-controls="navbar-toggle"
-                    aria-expanded="false"
-                    aria-label="Toggle navigation"
-                >
-                    <span class="navbar-toggler-icon"></span></button
-                ><!-- / navbar-toggler -->
-
-                <div class="collapse navbar-collapse" id="navbar-toggle">
-                    <ul class="navbar-nav ms-auto">
-                        {% for nav in site.data.nav %}
-                        <li class="nav-item">
-                            {% if nav.title == page.title %}
-                            <a class="nav-link active" href="{{ nav.url }}"
-                                >{{ nav.title }}</a
-                            >
-                            {% else %}
-                            <a class="nav-link" href="{{ nav.url }}"
-                                >{{ nav.title }}</a
-                            >
-                            {% endif %}
-                        </li>
-                        {% endfor %}
-                    </ul>
-                    <!-- / navbar-nav -->
-                </div>
-                <!-- / navbar-collapse -->
-            </div>
-            <!-- / container -->
-        </nav>
-        <!-- / custom-menu -->
-
-        {% if page.hero == "online-courses" %}
-            {% include online-courses-hero.html %}
+    {% if page.hero == "online-courses" %} {% include online-courses-hero.html
+    %} {% else %}
+    <header
+      class="masthead bg-img parallax fixed-menu"
+      style="background-image: url('{{ page.header-image }}')"
+    >
+      <div class="container header-inner text-center">
+        {% if page.titlewhite and page.titleaccent %}
+        <h1 class="header-title">
+          {{ page.titlewhite }}
+          <span class="text-primary">{{ page.titleaccent }}</span>
+        </h1>
         {% else %}
-            <header
-                class="masthead bg-img parallax fixed-menu"
-                style="background-image: url('{{ page.header-image }}')"
-            >
-                <div class="container header-inner text-center">
-                    {% if page.titlewhite and page.titleaccent %}
-                    <h1 class="header-title">
-                        {{ page.titlewhite }}
-                        <span class="text-primary">{{ page.titleaccent }}</span>
-                    </h1>
-                    {% else %}
-                    <h1 class="header-title">{{ page.title }}</h1>
-                    {% endif %} {% if page.description %}
-                    <p class="lead header-text">
-                        {{page.description | markdownify}}
-                    </p>
-                    {% endif %} {% if page.button1 %}<a
-                        href="{{ page.button1.url }}"
-                        class="btn {{ page.button1.class }} smooth-scroll me-2"
-                        >{{ page.button1.text }}</a
-                    >{% endif %} {% if page.button2 %}<a
-                        href="{{ page.button2.url }}"
-                        class="btn {{ page.button2.class }} smooth-scroll me-2"
-                        >{{ page.button2.text }}</a
-                    >{% endif %}
-                </div>
-            </header>
-        {% endif %}
+        <h1 class="header-title">{{ page.title }}</h1>
+        {% endif %} {% if page.description %}
+        <p class="lead header-text">{{page.description | markdownify}}</p>
+        {% endif %} {% if page.button1 %}<a
+          href="{{ page.button1.url }}"
+          class="btn {{ page.button1.class }} smooth-scroll me-2"
+          >{{ page.button1.text }}</a
+        >{% endif %} {% if page.button2 %}<a
+          href="{{ page.button2.url }}"
+          class="btn {{ page.button2.class }} smooth-scroll me-2"
+          >{{ page.button2.text }}</a
+        >{% endif %}
+      </div>
+    </header>
+    {% endif %} {{ content }}
 
-        {{ content }}
+    <a
+      href="#top"
+      class="scroll-to-top is-hidden smooth-scroll"
+      data-nav-status="toggle"
+      >{% include icon.html name="expand-less" class="dp18" %}</a
+    >
 
-        <a
-            href="#top"
-            class="scroll-to-top is-hidden smooth-scroll"
-            data-nav-status="toggle"
-            >{% include icon.html name="expand-less" class="dp18" %}</a
-        >
+    <footer class="dark bg-deepgrey">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4 widget">
+            <img
+              src="/graphics/stagestop-logo-masthead-lg.png"
+              alt="logo"
+              class="footer-logo"
+            />
+            <p>
+              Stage Stop Gun Shop, your Shooting Sports, Archery and Fishing
+              headquarters!!! Stop in today to browse our excellent selection of
+              firearms, ammo, archery supplies and fishing tackle.
+            </p>
+            <p>
+              <a href="mailto:info@ssgs.us">info@ssgs.us</a>
+            </p>
+          </div>
+          <!-- / column-->
 
-        <footer class="dark bg-deepgrey">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-4 widget">
-                        <img
-                            src="/graphics/stagestop-logo-masthead-lg.png"
-                            alt="logo"
-                            class="footer-logo"
-                        />
-                        <p>
-                            Stage Stop Gun Shop, your Shooting Sports, Archery
-                            and Fishing headquarters!!! Stop in today to browse
-                            our excellent selection of firearms, ammo, archery
-                            supplies and fishing tackle.
-                        </p>
-                        <p>
-                            <a href="mailto:info@ssgs.us">info@ssgs.us</a>
-                        </p>
-                    </div>
-                    <!-- / column-->
-
-                    <div class="col-lg-4 widget">
-                        <h3 class="widget-title">
-                            {% include icon.html name="location" class="dp36
-                            mb-1 box-icon bg-transparent text-primary" %}
-                            Atwater Location
-                        </h3>
-                        <div class="row">
-                            <div class="col-sm-6">
-                                <p>
-                                    <strong>Monday - Friday</strong><br />
-                                    10:00am - 7:00pm
-                                </p>
-                                <br />
-                                <p>
-                                    <strong>Saturday - Sunday</strong><br />
-                                    10:00am - 6:00pm
-                                </p>
-                            </div>
-                            <div class="col-sm-6">
-                                <p>
-                                    {% include location.html id="ATWATER"
-                                    link="true" %}
-                                </p>
-                                <br />
-                                <p>
-                                    Phone: {% include phone-number.html
-                                    number="(209) 358-4867" %}<br />
-                                    Fax: {% include phone-number.html
-                                    number="(209) 358-4863" %}<br />
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- / column-->
-
-                    <div class="col-lg-4 widget">
-                        <h3 class="widget-title">
-                            {% include icon.html name="location" class="dp36
-                            mb-1 box-icon bg-transparent text-primary" %}
-                            Mariposa Location
-                        </h3>
-                        <div class="row">
-                            <div class="col-sm-5">
-                                <p>
-                                    <strong>Wednesday - Friday</strong><br />
-                                    10:00am - 6:00pm
-                                </p>
-                                <br />
-                                <p>
-                                    <strong>Saturday</strong><br />
-                                    10:00am - 5:00pm
-                                </p>
-                                <br />
-                                <p>
-                                    <strong>Sunday - Tuesday</strong><br />
-                                    <em>Closed</em>
-                                </p>
-                            </div>
-                            <div class="col-sm-7">
-                                <p>
-                                    {% include location.html id="MARIPOSA"
-                                    link="true" %}
-                                </p>
-                                <br />
-                                <p>
-                                    Phone: {% include phone-number.html
-                                    number="(209) 966-3777" %}<br />
-                                    Fax: {% include phone-number.html
-                                    number="(209) 966-3888" %}<br />
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- / column-->
-                </div>
-                <!-- / row -->
-
-                <div class="row">
-                    <div class="col-lg-8 footer-left-area">
-                        <p>
-                            Copyright © {{ site.time | date: '%Y' }}. {{
-                            site.data.global.footer_text }}
-                        </p>
-                    </div>
-                    <div class="col-lg-4 social-icons footer-right-area">
-                        <a
-                            target="_blank"
-                            title="Find Us on Facebook"
-                            href="https://www.facebook.com/StageStopVIP/"
-                            >{% include icon.html name="facebook" class="dp18"
-                            label="Facebook" %}</a
-                        >
-                        <a
-                            target="_blank"
-                            title="Find Us on Instagram"
-                            href="https://www.instagram.com/stagestopgunshop/"
-                            >{% include icon.html name="instagram" class="dp18"
-                            label="Instagram" %}
-                        </a>
-                    </div>
-                    <!-- / social-icons -->
-                </div>
-                <!-- / row -->
+          <div class="col-lg-4 widget">
+            <h3 class="widget-title">
+              {% include icon.html name="location" class="dp36 mb-1 box-icon
+              bg-transparent text-primary" %} Atwater Location
+            </h3>
+            <div class="row">
+              <div class="col-sm-6">
+                <p>
+                  <strong>Monday - Friday</strong><br />
+                  10:00am - 7:00pm
+                </p>
+                <br />
+                <p>
+                  <strong>Saturday - Sunday</strong><br />
+                  10:00am - 6:00pm
+                </p>
+              </div>
+              <div class="col-sm-6">
+                <p>{% include location.html id="ATWATER" link="true" %}</p>
+                <br />
+                <p>
+                  Phone: {% include phone-number.html number="(209) 358-4867"
+                  %}<br />
+                  Fax: {% include phone-number.html number="(209) 358-4863"
+                  %}<br />
+                </p>
+              </div>
             </div>
-            <!-- / container -->
-        </footer>
+          </div>
+          <!-- / column-->
 
-        <!-- Core JavaScript -->
-        <script
-            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-            crossorigin="anonymous"
-        ></script>
-        <!-- / Core JavaScript -->
+          <div class="col-lg-4 widget">
+            <h3 class="widget-title">
+              {% include icon.html name="location" class="dp36 mb-1 box-icon
+              bg-transparent text-primary" %} Mariposa Location
+            </h3>
+            <div class="row">
+              <div class="col-sm-5">
+                <p>
+                  <strong>Wednesday - Friday</strong><br />
+                  10:00am - 6:00pm
+                </p>
+                <br />
+                <p>
+                  <strong>Saturday</strong><br />
+                  10:00am - 5:00pm
+                </p>
+                <br />
+                <p>
+                  <strong>Sunday - Tuesday</strong><br />
+                  <em>Closed</em>
+                </p>
+              </div>
+              <div class="col-sm-7">
+                <p>{% include location.html id="MARIPOSA" link="true" %}</p>
+                <br />
+                <p>
+                  Phone: {% include phone-number.html number="(209) 966-3777"
+                  %}<br />
+                  Fax: {% include phone-number.html number="(209) 966-3888"
+                  %}<br />
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- / column-->
+        </div>
+        <!-- / row -->
 
-        <!-- preloader -->
-        <script src="/js/preloader.js?v=t004h"></script>
-        <!-- / preloader -->
+        <div class="row">
+          <div class="col-lg-8 footer-left-area">
+            <p>
+              Copyright © {{ site.time | date: '%Y' }}. {{
+              site.data.global.footer_text }}
+            </p>
+          </div>
+          <div class="col-lg-4 social-icons footer-right-area">
+            <a
+              target="_blank"
+              title="Find Us on Facebook"
+              href="https://www.facebook.com/StageStopVIP/"
+              >{% include icon.html name="facebook" class="dp18"
+              label="Facebook" %}</a
+            >
+            <a
+              target="_blank"
+              title="Find Us on Instagram"
+              href="https://www.instagram.com/stagestopgunshop/"
+              >{% include icon.html name="instagram" class="dp18"
+              label="Instagram" %}
+            </a>
+          </div>
+          <!-- / social-icons -->
+        </div>
+        <!-- / row -->
+      </div>
+      <!-- / container -->
+    </footer>
 
-        <!-- Gallery -->
-        <script src="/js/gallery.js"></script>
-        <!-- / Gallery -->
+    <!-- Core JavaScript -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+    <!-- / Core JavaScript -->
 
-        <!-- Hide Nav -->
-        <script src="/js/hide-nav.js?v=t004h"></script>
-        <!-- / Hide Nav -->
+    <!-- preloader -->
+    <script src="/js/preloader.js?v=t004h"></script>
+    <!-- / preloader -->
 
-        <!-- 18+ Age Agreement -->
-        <script>
-            (() => {
-                const config = {
-                    minAge: 18,
-                    rememberDays: 30,
-                    storageKey: "age_gate_ok_v1",
-                    redirectUrl: "https://www.google.com", // set "" to just block without redirect
-                    title: "Age Verification",
-                    message:
-                        "This site is intended for individuals who are at least {MIN_AGE} years old. " +
-                        "By continuing, you confirm you meet the minimum age requirement.",
-                    confirmText: "I am {MIN_AGE}+ — Enter",
-                    declineText: "No thanks",
-                };
+    <!-- Gallery -->
+    <script src="/js/gallery.js"></script>
+    <!-- / Gallery -->
 
-                const now = Date.now();
+    <!-- Hide Nav -->
+    <script src="/js/hide-nav.js?v=t004h"></script>
+    <!-- / Hide Nav -->
 
-                // If already confirmed, do nothing
-                try {
-                    const raw = localStorage.getItem(config.storageKey);
-                    if (raw) {
-                        const parsed = JSON.parse(raw);
-                        if (parsed?.expiresAt && parsed.expiresAt > now) return;
-                    }
-                } catch {}
+    <!-- 18+ Age Agreement -->
+    <script>
+      (() => {
+        const config = {
+          minAge: 18,
+          rememberDays: 30,
+          storageKey: "age_gate_ok_v1",
+          redirectUrl: "https://www.google.com", // set "" to just block without redirect
+          title: "Age Verification",
+          message:
+            "This site is intended for individuals who are at least {MIN_AGE} years old. " +
+            "By continuing, you confirm you meet the minimum age requirement.",
+          confirmText: "I am {MIN_AGE}+ — Enter",
+          declineText: "No thanks",
+        };
 
-                // Backdrop container
-                const backdrop = document.createElement("div");
-                backdrop.className = "modal fade show";
-                backdrop.style.display = "block";
-                backdrop.setAttribute("role", "dialog");
-                backdrop.setAttribute("aria-modal", "true");
+        const now = Date.now();
 
-                // Modal structure (Bootstrap-ish)
-                backdrop.innerHTML = `
+        // If already confirmed, do nothing
+        try {
+          const raw = localStorage.getItem(config.storageKey);
+          if (raw) {
+            const parsed = JSON.parse(raw);
+            if (parsed?.expiresAt && parsed.expiresAt > now) return;
+          }
+        } catch {}
+
+        // Backdrop container
+        const backdrop = document.createElement("div");
+        backdrop.className = "modal fade show";
+        backdrop.style.display = "block";
+        backdrop.setAttribute("role", "dialog");
+        backdrop.setAttribute("aria-modal", "true");
+
+        // Modal structure (Bootstrap-ish)
+        backdrop.innerHTML = `
     <div class="modal-dialog" role="document" style="margin-top:10vh;">
       <div class="modal-content" style="background-color:#292b2c;border-color: #444;">
         <div class="modal-header">
@@ -420,15 +373,15 @@
         </div>
         <div class="modal-body">
           <p>${escapeHtml(config.message).replaceAll(
-              "{MIN_AGE}",
-              String(config.minAge),
+            "{MIN_AGE}",
+            String(config.minAge),
           )}</p>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-primary" data-agegate="confirm">
             ${escapeHtml(config.confirmText).replaceAll(
-                "{MIN_AGE}",
-                String(config.minAge),
+              "{MIN_AGE}",
+              String(config.minAge),
             )}
           </button>
           <button type="button" class="btn btn-secondary" data-agegate="decline">
@@ -439,92 +392,88 @@
     </div>
   `;
 
-                // Append + lock scroll
-                document.body.appendChild(backdrop);
-                const prevOverflow = document.body.style.overflow;
-                document.body.style.overflow = "hidden";
+        // Append + lock scroll
+        document.body.appendChild(backdrop);
+        const prevOverflow = document.body.style.overflow;
+        document.body.style.overflow = "hidden";
 
-                function closeGate() {
-                    document.body.style.overflow = prevOverflow;
-                    backdrop.remove();
-                }
+        function closeGate() {
+          document.body.style.overflow = prevOverflow;
+          backdrop.remove();
+        }
 
-                function rememberOk() {
-                    const expiresAt =
-                        now + config.rememberDays * 24 * 60 * 60 * 1000;
-                    try {
-                        localStorage.setItem(
-                            config.storageKey,
-                            JSON.stringify({ ok: true, expiresAt }),
-                        );
-                    } catch {}
-                }
+        function rememberOk() {
+          const expiresAt = now + config.rememberDays * 24 * 60 * 60 * 1000;
+          try {
+            localStorage.setItem(
+              config.storageKey,
+              JSON.stringify({ ok: true, expiresAt }),
+            );
+          } catch {}
+        }
 
-                // Click handlers (event delegation)
-                backdrop.addEventListener("click", (e) => {
-                    const btn = e.target.closest("[data-agegate]");
-                    if (!btn) return;
+        // Click handlers (event delegation)
+        backdrop.addEventListener("click", (e) => {
+          const btn = e.target.closest("[data-agegate]");
+          if (!btn) return;
 
-                    const action = btn.getAttribute("data-agegate");
-                    if (action === "confirm") {
-                        rememberOk();
-                        closeGate();
-                    } else if (action === "decline") {
-                        if (config.redirectUrl)
-                            window.location.href = config.redirectUrl;
-                        // If no redirectUrl, just keep the modal open (effectively blocks access)
-                    }
-                });
+          const action = btn.getAttribute("data-agegate");
+          if (action === "confirm") {
+            rememberOk();
+            closeGate();
+          } else if (action === "decline") {
+            if (config.redirectUrl) window.location.href = config.redirectUrl;
+            // If no redirectUrl, just keep the modal open (effectively blocks access)
+          }
+        });
 
-                // Prevent dismiss by clicking outside
-                backdrop.addEventListener(
-                    "mousedown",
-                    (e) => {
-                        const dialog = backdrop.querySelector(".modal-dialog");
-                        if (dialog && !dialog.contains(e.target)) {
-                            e.preventDefault();
-                            e.stopPropagation();
-                        }
-                    },
-                    true,
-                );
+        // Prevent dismiss by clicking outside
+        backdrop.addEventListener(
+          "mousedown",
+          (e) => {
+            const dialog = backdrop.querySelector(".modal-dialog");
+            if (dialog && !dialog.contains(e.target)) {
+              e.preventDefault();
+              e.stopPropagation();
+            }
+          },
+          true,
+        );
 
-                // Prevent ESC close
-                document.addEventListener("keydown", onKeyDown, true);
-                function onKeyDown(e) {
-                    if (e.key === "Escape") {
-                        e.preventDefault();
-                        e.stopPropagation();
-                    }
-                }
+        // Prevent ESC close
+        document.addEventListener("keydown", onKeyDown, true);
+        function onKeyDown(e) {
+          if (e.key === "Escape") {
+            e.preventDefault();
+            e.stopPropagation();
+          }
+        }
 
-                // Focus primary button
-                const primary = backdrop.querySelector(
-                    '[data-agegate="confirm"]',
-                );
-                if (primary) primary.focus();
+        // Focus primary button
+        const primary = backdrop.querySelector('[data-agegate="confirm"]');
+        if (primary) primary.focus();
 
-                // Basic HTML escape to avoid accidental injection
-                function escapeHtml(str) {
-                    return String(str).replace(
-                        /[&<>"']/g,
-                        (m) =>
-                            ({
-                                "&": "&amp;",
-                                "<": "&lt;",
-                                ">": "&gt;",
-                                '"': "&quot;",
-                                "'": "&#39;",
-                            })[m],
-                    );
-                }
-            })();
-        </script>
-        <!-- / 18+ Age Agreement -->
+        // Basic HTML escape to avoid accidental injection
+        function escapeHtml(str) {
+          return String(str).replace(
+            /[&<>"']/g,
+            (m) =>
+              ({
+                "&": "&amp;",
+                "<": "&lt;",
+                ">": "&gt;",
+                '"': "&quot;",
+                "'": "&#39;",
+              })[m],
+          );
+        }
+      })();
+    </script>
+    <!-- / 18+ Age Agreement -->
 
-        <script
-            src="https://www.smartwaiver.com/m/webpl/f.js?webpl_waiver=splashpage-18496&webpl_title=Sign%20our%20waiver&webpl_align=Left&webpl_fontsize=16&webpl_background=%23f47b20&webpl_fontcolor=%23ffffff&webpl_font=Nunito%20Sans"
-            type="text/javascript"
-        ></script>
-    </body>
+    <script
+      src="https://app.smartwaiver.com/webpl/f.js??webpl_waiver=splashpage-18496&webpl_title=Sign%20our%20waiver&webpl_align=Left&webpl_fontsize=16&webpl_background=%23f47b20&webpl_fontcolor=%23ffffff&webpl_font=Nunito%20Sans"
+      type="text/javascript"
+    ></script>
+  </body>
 </html>
